@@ -1,0 +1,27 @@
+{
+  "slug": "us-ftc-ai-accuracy-policy-statement",
+  "name": "FTC proposed Policy Statement Concerning the Suppression of Accuracy in AI Systems",
+  "jurisdiction": "us",
+  "subregion": "Federal",
+  "status": "proposed",
+  "summary": "Proposed FTC policy statement, issued for public comment, stating that distorting AI outputs toward undisclosed ideological objectives could be a deceptive practice under Section 5 of the FTC Act, and that state laws requiring such deception may be impliedly preempted. It names Colorado's AI Act as an example. It responds to a directive in EO 14365. The comment period closed 31 July 2026; no final policy statement was located as of 5 October 2026.",
+  "key_obligations": [
+    "Proposed position that deceptive output distortion violates Section 5, including when done to comply with state law",
+    "Statement of agency enforcement approach, not a binding rule"
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-01",
+      "stage": "consultation",
+      "note": "FTC announced the proposed policy statement and opened public comment (docket FTC-2026-0859, as written in the press release text); Commission authorized the notice 2-0.",
+      "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy"
+    },
+    {
+      "date": "2026-07-31",
+      "stage": "proposed",
+      "note": "Public comment period closed; no final policy statement located as of 2026-10-05.",
+      "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

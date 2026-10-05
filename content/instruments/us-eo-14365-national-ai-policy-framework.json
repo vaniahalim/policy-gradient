@@ -1,0 +1,25 @@
+{
+  "slug": "us-eo-14365-national-ai-policy-framework",
+  "name": "Executive Order 14365: Ensuring a National Policy Framework for Artificial Intelligence",
+  "jurisdiction": "us",
+  "subregion": "Federal",
+  "status": "in_force",
+  "summary": "Executive order signed 11 December 2025 setting a policy of a minimally burdensome national AI framework and directing federal action against state AI laws the administration considers inconsistent with it. The order directs agencies to challenge, evaluate or condition funding on such laws and tasks advisers with preparing a legislative recommendation.",
+  "key_obligations": [
+    "Attorney General to establish an AI Litigation Task Force within 30 days to challenge inconsistent state AI laws",
+    "Commerce Secretary to publish within 90 days an evaluation of state AI laws identifying onerous ones, including those requiring alteration of truthful model outputs",
+    "Policy notice on BEAD broadband funding eligibility for states with restrictive AI laws, to the extent permitted by law",
+    "FCC Chairman to initiate, within 90 days of the Commerce identification, a proceeding to determine whether to adopt a federal AI reporting and disclosure standard that preempts conflicting state laws",
+    "FTC Chairman to issue a policy statement on when state laws requiring altered AI outputs are preempted by the FTC Act's deception prohibition",
+    "Advisers to prepare a legislative recommendation for a uniform federal framework, with carve-outs as stated: child safety protections; AI compute and data center infrastructure (other than general permitting reforms); state government procurement and use of AI; and other topics as determined"
+  ],
+  "timeline": [
+    {
+      "date": "2025-12-11",
+      "stage": "in_force",
+      "note": "Executive Order 14365 signed by the President.",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "2026-10-05-b",
+  "region": "asia",
+  "verdicts": [
+    {
+      "id": "jp-ai-promotion-act",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Third review, covering only the review2 fixes. (1) I re-fetched www8.cao.go.jp/cstp/ai/ai_act/ai_act.html. It confirms the official name 人工知能関連技術の研究開発及び活用の推進に関する法律（ＡＩ法）, promulgation and partial enforcement on 2025-06-04, and full enforcement on 2025-09-01 including the AI Strategy Headquarters (ＡＩ戦略本部). This supports the first two timeline entries and the summary. As before, the page does not mention the AI Basic Plan. (2) The 2025-12-23 entry now cites www8.cao.go.jp/cstp/stmain/20260619ai.html, which I re-fetched. The page is dated 令和8年6月19日. It names the Act (令和７年法律第53号) as the legal basis and states '我が国初の人工知能基本計画を令和７年12月23日に閣議決定したところです'. This supports the date, 'first', 'under the Act', and 'statutory AI Basic Plan' in key_obligations[0]. (3) The summary now includes the sentence about the legal basis from the consultation page. (4) The requested gap entry is present. The page says the consultation is '人工知能基本計画の改定に向け…（素案）', running 2026-06-19 to 2026-06-23, so 'draft revision' in the gap is accurate. (5) The summary also says 'The Cabinet Office press page states that the AI Basic Plan was adopted by Cabinet decision on 23 December 2025.' I re-fetched cao.go.jp/press/new_wave/20260206.html, and it says '令和7年12月23日、「人工知能基本計画」が閣議決定されました', so the claim is true. However, no timeline source_url points to that press page any more. The same fact is supported by the cited consultation page, so this does not fail the check. Using the 'in_force' stage on the 2025-12-23 entry to record a related plan is a schema approximation, and the note discloses it ('The Act's own status is unchanged'). Status in_force for the Act is correct. The cao.go.jp pages are primary. Grep finds no jp-/Japan files in content/items or content/instruments, so this is not a duplicate. Tone is neutral. Optional editor polish, not required: change 'The Cabinet Office press page states' to 'A Cabinet Office page states', or add the press URL somewhere, so the summary does not refer to an uncited page.",
+      "required_changes": []
+    },
+    {
+      "id": "in-ai-governance-guidelines",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Third review, covering only the review2 fixes. I re-fetched newsonair.gov.in/meity-unveils-india-ai-governance-guidelines-to-promote-safe-and-responsible-ai-adoption. It is dated 2025-11-05 and says 'MeitY today unveiled the India AI Governance Guidelines in New Delhi', with Principal Scientific Adviser Prof. Ajay Kumar Sood and MeitY Secretary S. Krishnan present. This supports the summary, the timeline date and the note. All three required changes are applied. (1) 'under the IndiaAI Mission' is removed. The page links the Mission to the guidelines only rhetorically and in connection with a hackathon, so removing it was correct. (2) The summary now says status 'in_force' is used loosely for a published guidance document. (3) The gap entry for the static.pib.gov.in PDF has been added. The summary makes no claims about the content of the guidelines, key_obligations is empty, and it discloses that no primary source was read and that confidence is low. This meets protocol principles 1 and 5. The note correctly labels AIR as a government broadcaster and not the issuing body. For the source_tier check, I am therefore treating the honest secondary labelling as correct. This is not a claim that the source is primary. Grep finds no in-/India files in content/items or content/instruments, so this is not a duplicate. Tone is neutral. Editor caveat: this entry is thin. It records only that the guidelines exist and when they were unveiled. Its content must be verified from the MeitY/PIB primary document before any key_obligations are added.",
+      "required_changes": []
+    }
+  ]
+}

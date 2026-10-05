@@ -1,0 +1,28 @@
+{
+  "slug": "cn-cybersecurity-law-amendment-ai",
+  "name": "Decision amending the Cybersecurity Law (adds AI provision)",
+  "jurisdiction": "asia",
+  "subregion": "China",
+  "status": "in_force",
+  "summary": "The NPC Standing Committee adopted a decision amending the Cybersecurity Law on 28 October 2025, effective 1 January 2026. The decision adds Article 20, under which the State supports basic AI research and key technology development, promotes training data and computing infrastructure, improves ethical norms and strengthens risk monitoring, assessment and security oversight. Source is the decision text as republished by CAC; the Chinese text was read through machine translation.",
+  "key_obligations": [
+    "State to support AI fundamental research and key technology R&D, and training data and computing infrastructure",
+    "State to improve AI ethical norms and strengthen risk monitoring, assessment and security supervision",
+    "Encourages use of AI and new technologies to innovate network security management"
+  ],
+  "timeline": [
+    {
+      "date": "2025-10-28",
+      "stage": "passed",
+      "note": "Adopted at the 18th session of the 14th NPC Standing Committee.",
+      "source_url": "https://www.cac.gov.cn/2025-10/29/c_1763461514768457.htm"
+    },
+    {
+      "date": "2026-01-01",
+      "stage": "in_force",
+      "note": "Amended law takes effect.",
+      "source_url": "https://www.cac.gov.cn/2025-10/29/c_1763461514768457.htm"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

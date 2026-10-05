@@ -1,0 +1,27 @@
+{
+  "slug": "us-tx-traiga-hb-149",
+  "name": "Texas Responsible Artificial Intelligence Governance Act (HB 149)",
+  "jurisdiction": "us",
+  "subregion": "Texas",
+  "status": "in_force",
+  "summary": "Texas law regulating development and deployment of AI systems, with prohibitions on certain intentional harmful uses and enforcement by the Attorney General. Signed 22 June 2025 and effective 1 January 2026 per the legislature's bill history. Obligations and the 60-day cure period below come from law-firm summaries, not the statute text.",
+  "key_obligations": [
+    "Prohibits AI systems developed or deployed to incite self-harm or crime, or to unlawfully discriminate, among other listed uses (secondary source)",
+    "Attorney General enforcement with written notice and 60-day cure period (secondary source)"
+  ],
+  "timeline": [
+    {
+      "date": "2025-06-22",
+      "stage": "passed",
+      "note": "Signed by the Governor.",
+      "source_url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+    },
+    {
+      "date": "2026-01-01",
+      "stage": "in_force",
+      "note": "Effective date per the bill history page.",
+      "source_url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

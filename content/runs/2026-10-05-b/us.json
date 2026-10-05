@@ -1,0 +1,255 @@
+{
+  "run_id": "2026-10-05-b",
+  "region": "us",
+  "window": { "from": "2026-09-05", "to": "2026-10-05" },
+  "candidates": [
+    {
+      "id": "us-ca-sb-813-ab-1405-ai-third-party-verification",
+      "title": "California governor signs SB 813 and AB 1405 on third-party AI verification and auditor registry",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "type": "law",
+      "stage": "passed",
+      "topics": ["third-party audit", "conformity verification", "state AI law"],
+      "summary": "On 9 September 2026 the California governor's office announced the signing of two bills. SB 813 (McNerney) establishes a framework for independent verification organizations to assess AI systems for compliance with state law. AB 1405 (Bauer-Kahan) creates a state registry for AI auditors with standards for their independence, transparency and integrity. Only the governor's press release was read; the chaptered bill texts, chapter numbers and operative dates were not checked.",
+      "why_it_matters": "AI developers and deployers in California could be assessed by independent verification organizations, and the state would set independence, transparency and integrity standards for auditors on its registry. Whether registration or assessment is mandatory is not stated in the press release. Operative dates and obligations must be confirmed from the bill text.",
+      "sources": [
+        {
+          "url": "https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/",
+          "publisher": "Office of the Governor of California",
+          "tier": "primary",
+          "accessed_at": "2026-10-05T12:00:00Z"
+        }
+      ],
+      "event_date": "2026-09-09",
+      "confidence": "medium",
+      "run_id": "2026-10-05-b"
+    },
+    {
+      "id": "us-ca-sept-2026-ai-bill-package-signed",
+      "title": "California governor signs package of AI bills on workplace, health care, transparency, legal practice and gene synthesis",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "type": "law",
+      "stage": "passed",
+      "topics": ["employment", "healthcare", "AI transparency", "digital replicas", "legal profession", "biosecurity"],
+      "summary": "The governor's office announced on 30 September 2026 that it signed a package of bills including, among others, SB 947 (human review before AI-based employee discipline), SB 951 (employer transparency on AI-related mass layoffs), AB 1883 (bans employer use of workplace surveillance tools in workplace bathrooms), AB 1979 (physician judgment with AI clinical tools), SB 503 (AI bias in health care decision systems), SB 574 (lawyers may not fully delegate core legal work to AI), AB 2713 and SB 1000 (watermarking, metadata and updates to the California AI Transparency Act), SB 1111 (digital replicas; not described further in the release), SB 1159 (artificial intelligence: transparency and governance; not described further in the release) and AB 1864 (customer verification and screening by gene synthesis companies). The release also lists AB 1331 and AB 2392. Descriptions are taken from the press release only; bill texts and effective dates were not read.",
+      "why_it_matters": "The package extends California AI rules into employment, health care, legal practice and content provenance. Affected employers, providers and AI vendors should check each chaptered text for operative dates and obligations, which this item does not establish.",
+      "sources": [
+        {
+          "url": "https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/",
+          "publisher": "Office of the Governor of California",
+          "tier": "primary",
+          "accessed_at": "2026-10-05T12:00:00Z"
+        }
+      ],
+      "event_date": "2026-09-30",
+      "confidence": "medium",
+      "run_id": "2026-10-05-b"
+    }
+  ],
+  "instrument_candidates": [
+    {
+      "slug": "us-eo-14365-national-ai-policy-framework",
+      "name": "Executive Order 14365: Ensuring a National Policy Framework for Artificial Intelligence",
+      "jurisdiction": "us",
+      "subregion": "Federal",
+      "status": "in_force",
+      "summary": "Executive order signed 11 December 2025 setting a policy of a minimally burdensome national AI framework and directing federal action against state AI laws the administration considers inconsistent with it. The order directs agencies to challenge, evaluate or condition funding on such laws and tasks advisers with preparing a legislative recommendation.",
+      "key_obligations": [
+        "Attorney General to establish an AI Litigation Task Force within 30 days to challenge inconsistent state AI laws",
+        "Commerce Secretary to publish within 90 days an evaluation of state AI laws identifying onerous ones, including those requiring alteration of truthful model outputs",
+        "Policy notice on BEAD broadband funding eligibility for states with restrictive AI laws, to the extent permitted by law",
+        "FCC Chairman to initiate, within 90 days of the Commerce identification, a proceeding to determine whether to adopt a federal AI reporting and disclosure standard that preempts conflicting state laws",
+        "FTC Chairman to issue a policy statement on when state laws requiring altered AI outputs are preempted by the FTC Act's deception prohibition",
+        "Advisers to prepare a legislative recommendation for a uniform federal framework, with carve-outs as stated: child safety protections; AI compute and data center infrastructure (other than general permitting reforms); state government procurement and use of AI; and other topics as determined"
+      ],
+      "timeline": [
+        {
+          "date": "2025-12-11",
+          "stage": "in_force",
+          "note": "Executive Order 14365 signed by the President.",
+          "source_url": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "us-national-ai-legislative-framework",
+      "name": "White House National AI Legislative Framework (legislative recommendations)",
+      "jurisdiction": "us",
+      "subregion": "Federal",
+      "status": "proposed",
+      "summary": "Legislative recommendations released by the White House on 20 March 2026 for Congress, stressing a uniform national policy to avoid a patchwork of conflicting state laws. These are recommendations pending legislation, not enacted law.",
+      "key_obligations": [
+        "Six stated objectives: child protection and parental controls; community and economic strength (including avoiding ratepayer funding of data centers); intellectual property and creator rights; free speech protections; innovation and competitiveness; workforce development",
+        "No binding obligations on private parties unless Congress enacts legislation"
+      ],
+      "timeline": [
+        {
+          "date": "2026-03-20",
+          "stage": "proposed",
+          "note": "White House unveiled the framework as recommendations to Congress.",
+          "source_url": "https://www.whitehouse.gov/releases/2026/03/president-donald-j-trump-unveils-national-ai-legislative-framework/"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "us-ftc-ai-accuracy-policy-statement",
+      "name": "FTC proposed Policy Statement Concerning the Suppression of Accuracy in AI Systems",
+      "jurisdiction": "us",
+      "subregion": "Federal",
+      "status": "proposed",
+      "summary": "Proposed FTC policy statement, issued for public comment, stating that distorting AI outputs toward undisclosed ideological objectives could be a deceptive practice under Section 5 of the FTC Act, and that state laws requiring such deception may be impliedly preempted. It names Colorado's AI Act as an example. It responds to a directive in EO 14365. The comment period closed 31 July 2026; no final policy statement was located as of 5 October 2026.",
+      "key_obligations": [
+        "Proposed position that deceptive output distortion violates Section 5, including when done to comply with state law",
+        "Statement of agency enforcement approach, not a binding rule"
+      ],
+      "timeline": [
+        {
+          "date": "2026-07-01",
+          "stage": "consultation",
+          "note": "FTC announced the proposed policy statement and opened public comment (docket FTC-2026-0859, as written in the press release text); Commission authorized the notice 2-0.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy"
+        },
+        {
+          "date": "2026-07-31",
+          "stage": "proposed",
+          "note": "Public comment period closed; no final policy statement located as of 2026-10-05.",
+          "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "us-ca-sb-53-frontier-ai-transparency",
+      "name": "California SB 53: Transparency in Frontier Artificial Intelligence Act",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "status": "in_force",
+      "summary": "California law on frontier models (trained above 10^26 operations). All frontier developers must publish transparency reports when deploying new or substantially modified frontier models, report critical safety incidents, and observe whistleblower protections. Large frontier developers (over $500 million annual gross revenue) must also publish a frontier AI framework, send internal-use catastrophic risk summaries to the Office of Emergency Services, and provide an anonymous internal reporting process. Enforced by the Attorney General. Effective 1 January 2026 under the California Constitution's default rule for non-urgency statutes; the CalCompute provisions become operative only upon a budget appropriation.",
+      "key_obligations": [
+        "Large frontier developers: publish a frontier AI framework, review it at least once per year and update as appropriate; publish material modifications with a justification within 30 days",
+        "Frontier developers: publish a transparency report before or concurrently with deploying a new or substantially modified frontier model",
+        "Report critical safety incidents to the Office of Emergency Services within 15 days (24 hours if imminent danger)",
+        "Large frontier developers: send OES summaries of catastrophic risk assessments from internal use every three months or on another reasonable schedule communicated to OES in writing",
+        "Whistleblower protections for covered employees of frontier developers; large frontier developers must also provide an anonymous internal reporting process",
+        "Civil penalties up to $1 million per violation, enforced by the Attorney General"
+      ],
+      "timeline": [
+        {
+          "date": "2025-09-29",
+          "stage": "passed",
+          "note": "Approved by the Governor; Chapter 138.",
+          "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB53"
+        },
+        {
+          "date": "2026-01-01",
+          "stage": "in_force",
+          "note": "Effective 1 January 2026: non-urgency statute enacted 29 September 2025, effective January 1 following a 90-day period from enactment under Cal. Const. art. IV, sec. 8(c)(1). Consistent with secondary reporting (WilmerHale).",
+          "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%208.&article=IV"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "us-co-ai-act-sb24-205-sb26-189",
+      "name": "Colorado AI Act (SB 24-205), repealed and reenacted as SB 26-189 (automated decision-making technology)",
+      "jurisdiction": "us",
+      "subregion": "Colorado",
+      "status": "amended",
+      "summary": "Colorado's 2024 algorithmic-discrimination law (SB 24-205) was delayed, then repealed and reenacted by SB 26-189 as an automated decision-making technology framework. It covers consequential decisions in education, employment, housing, financial services, insurance, health care and government benefits. Per the legislature's page, SB 26-189 was signed 14 May 2026 and developer obligations apply from 1 January 2027. Per a Norton Rose Fulbright note (court order not read), on 27 April 2026 the federal court in X.AI LLC v. Weiser granted a joint motion of the parties temporarily suspending enforcement of SB 24-205, before its 30 June 2026 effective date; the law was repealed and reenacted on 14 May 2026.",
+      "key_obligations": [
+        "Developers: provide technical documentation (intended uses, training data categories, known limitations), notify deployers of material updates, retain records 3 years",
+        "Deployers: notice to consumers of ADMT use, disclose its role within 30 days after adverse outcomes, retain records 3 years",
+        "Consumer rights to request personal data, correction of factual errors, and human review after adverse decisions",
+        "Attorney General enforcement under the Colorado Consumer Protection Act; 60-day notice and cure period through 1 January 2030"
+      ],
+      "timeline": [
+        {
+          "date": "2024-05-17",
+          "stage": "passed",
+          "note": "SB 24-205 signed by the Governor; originally effective 1 February 2026.",
+          "source_url": "https://leg.colorado.gov/bills/sb24-205"
+        },
+        {
+          "date": "2025-08-28",
+          "stage": "amended",
+          "note": "SB25B-004 signed, extending the effective date of SB 24-205's requirements to 30 June 2026.",
+          "source_url": "https://leg.colorado.gov/bills/sb25b-004"
+        },
+        {
+          "date": "2026-05-14",
+          "stage": "amended",
+          "note": "SB 26-189 signed (Chapter 131), repealing and reenacting SB 24-205 as an ADMT framework; developer obligations from 1 January 2027.",
+          "source_url": "https://leg.colorado.gov/bills/sb26-189"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "us-tx-traiga-hb-149",
+      "name": "Texas Responsible Artificial Intelligence Governance Act (HB 149)",
+      "jurisdiction": "us",
+      "subregion": "Texas",
+      "status": "in_force",
+      "summary": "Texas law regulating development and deployment of AI systems, with prohibitions on certain intentional harmful uses and enforcement by the Attorney General. Signed 22 June 2025 and effective 1 January 2026 per the legislature's bill history. Obligations and the 60-day cure period below come from law-firm summaries, not the statute text.",
+      "key_obligations": [
+        "Prohibits AI systems developed or deployed to incite self-harm or crime, or to unlawfully discriminate, among other listed uses (secondary source)",
+        "Attorney General enforcement with written notice and 60-day cure period (secondary source)"
+      ],
+      "timeline": [
+        {
+          "date": "2025-06-22",
+          "stage": "passed",
+          "note": "Signed by the Governor.",
+          "source_url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+        },
+        {
+          "date": "2026-01-01",
+          "stage": "in_force",
+          "note": "Effective date per the bill history page.",
+          "source_url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "us-ny-raise-act",
+      "name": "New York Responsible AI Safety and Education (RAISE) Act",
+      "jurisdiction": "us",
+      "subregion": "New York",
+      "status": "amended",
+      "summary": "New York frontier-model safety law. Signed 19 December 2025 (Chapter 699) and reshaped by chapter amendment S8828, signed 27 March 2026 as Chapter 96 of 2026 and effective 1 January 2027; the signing and effective date come from the Senate bill page. Per a law-firm alert (Wiley), the amendment adds a 10^26 operations and $500 million revenue threshold, a new office in the Department of Financial Services, and a 72-hour incident reporting window; those details were not checked against the S8828 text.",
+      "key_obligations": [
+        "Large frontier developers to maintain and publish safety frameworks (secondary source)",
+        "Report safety incidents within 72 hours (secondary source)",
+        "Civil penalties up to $1 million first violation and $3 million subsequent (secondary source)"
+      ],
+      "timeline": [
+        {
+          "date": "2025-12-19",
+          "stage": "passed",
+          "note": "S6953B signed by the Governor, Chapter 699.",
+          "source_url": "https://www.nysenate.gov/legislation/bills/2025/S6953"
+        },
+        {
+          "date": "2026-03-27",
+          "stage": "amended",
+          "note": "Chapter amendment S8828 signed, Chapter 96 of 2026; effective 1 January 2027.",
+          "source_url": "https://www.nysenate.gov/legislation/bills/2025/S8828"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    }
+  ],
+  "gaps": [
+    "Federal Register pages (EO 14365 publication, FTC notice) redirected to a block page; relied on whitehouse.gov and ftc.gov.",
+    "Not verified: Commerce Department evaluation of state AI laws and FTC/FCC/BEAD outcomes under EO 14365 (only secondary reports seen); DOJ AI Litigation Task Force creation 9 January 2026 (secondary only).",
+    "Court order in X.AI v. Weiser not read directly (CourtListener not checked); DOJ intervention (24 April 2026) and case status after SB 26-189 are unverified beyond a secondary note.",
+    "California September 2026 bills: chaptered texts, numbers and effective dates not read; also California AB 2013, SB 243 (chatbots), and other 2025 laws not covered.",
+    "Not researched: federal bills moving a stage in Congress (e.g. preemption or moratorium bills), Illinois HB 3773, Utah, state deepfake laws, copyright rulings, July 2025 AI Action Plan, June 2026 AI security executive order (fact sheet seen only, 2 June 2026), Trump administration OMB memos.",
+    "Existing-law check: eu/ch content only in content/instruments/; no US duplicates."
+  ]
+}

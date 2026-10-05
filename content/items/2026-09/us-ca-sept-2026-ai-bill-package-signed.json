@@ -1,0 +1,41 @@
+{
+  "id": "us-ca-sept-2026-ai-bill-package-signed",
+  "title": "California governor signs package of AI bills on workplace, health care, transparency, legal practice and gene synthesis",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "type": "law",
+  "stage": "passed",
+  "topics": [
+    "employment",
+    "healthcare",
+    "AI transparency",
+    "digital replicas",
+    "legal profession",
+    "biosecurity"
+  ],
+  "summary": "The governor's office announced on 30 September 2026 that it signed a package of bills including, among others, SB 947 (human review before AI-based employee discipline), SB 951 (employer transparency on AI-related mass layoffs), AB 1883 (bans employer use of workplace surveillance tools in workplace bathrooms), AB 1979 (physician judgment with AI clinical tools), SB 503 (AI bias in health care decision systems), SB 574 (lawyers may not fully delegate core legal work to AI), AB 2713 and SB 1000 (watermarking, metadata and updates to the California AI Transparency Act), SB 1111 (digital replicas; not described further in the release), SB 1159 (artificial intelligence: transparency and governance; not described further in the release) and AB 1864 (customer verification and screening by gene synthesis companies). The release also lists AB 1331 and AB 2392. Descriptions are taken from the press release only; bill texts and effective dates were not read.",
+  "why_it_matters": "The package extends California AI rules into employment, health care, legal practice and content provenance. Affected employers, providers and AI vendors should check each chaptered text for operative dates and obligations, which this item does not establish.",
+  "sources": [
+    {
+      "url": "https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/",
+      "publisher": "Office of the Governor of California",
+      "tier": "primary",
+      "accessed_at": "2026-10-05T12:00:00Z"
+    }
+  ],
+  "event_date": "2026-09-30",
+  "confidence": "medium",
+  "run_id": "2026-10-05-b",
+  "review": {
+    "verdict": "accept",
+    "reviewer_notes": "Second review. Re-fetched the gov.ca.gov release dated 30 September 2026. It lists 13 signed bills and mentions no vetoes. Checked each description against the release body. SB 947: employers may not rely only on AI for discipline or termination. SB 951: disclose when mass layoffs, relocations or terminations result from AI systems. AB 1883: bans workplace surveillance tools in bathrooms, and the revised wording now matches. AB 1979: providers keep their own professional judgment with AI clinical tools. SB 503: clinical decision tool developers take reasonable steps to reduce known or predictable bias. SB 574: lawyers may not fully delegate core legal work to AI. AB 2713 and SB 1000: their titles reference the California AI Transparency Act, and the body describes the watermark-deletion ban and metadata access. AB 1864: gene synthesis customer verification and screening. SB 1111 ('Digital replicas') and SB 1159 ('Artificial intelligence: transparency and governance') are now described only by their titles, as required. AB 1331 and AB 2392 are now mentioned. All required changes from review 1 have been applied. Grep found no duplicate in content/.",
+    "checks": [
+      "claim_matches_source",
+      "date_correct",
+      "status_correct",
+      "source_tier_correct",
+      "not_duplicate",
+      "neutral_tone"
+    ]
+  }
+}

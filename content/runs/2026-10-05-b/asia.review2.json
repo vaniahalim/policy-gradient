@@ -1,0 +1,70 @@
+{
+  "run_id": "2026-10-05-b",
+  "region": "asia",
+  "verdicts": [
+    {
+      "id": "cn-generative-ai-interim-measures",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched cac.gov.cn/2023-07/13/c_1690898327029107.htm. The first-review fixes are applied and match the page: Order No. 15; adopted at the 12th CAC office meeting on 2023-05-23; promulgated 2023-07-10; posted on the web 2023-07-13; effective 2023-08-15 ('自2023年8月15日起施行'). The page lists seven co-issuers: CAC, NDRC, Education, MOST, MIIT, MPS, NRTA. Each key obligation maps to an article: security assessment and algorithm filing (Art. 17), labelling under the deep synthesis rules for images, videos and similar content (Art. 12, '图片、视频等'), lawful data and IP and personal-information consent (Art. 7), service agreements (Art. 9), minors' over-reliance (Art. 10), illegal-content handling and reporting (Art. 14), complaint channels (Art. 15). Status in_force is correct. CAC is the issuing body, so primary is correct. content/instruments/ holds only ch- and eu- files, so this is not a duplicate. The machine-translation caveat is present and the tone is neutral.",
+      "required_changes": []
+    },
+    {
+      "id": "cn-ai-content-labeling-measures",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched cac.gov.cn/2025-03/14/c_1743654684782215.htm. Verified: notice 国信办通字〔2025〕2号 dated 2025-03-07; posted 2025-03-14 17:00; effective 2025-09-01. The issuers are CAC, MIIT, MPS and NRTA. Each key obligation matches the text: explicit labels by text, voice or graphic prompt (Art. 4); implicit metadata labels with content attributes, provider name or code and content ID, where Art. 5 uses 应当, so the corrected 'must' is right; platform metadata checks and prominent notices (Art. 6); user declaration and use of labelling tools, and the ban on malicious deletion, alteration, forgery or concealment (Art. 10). All first-review fixes are applied. Primary source. Not a duplicate. Tone is neutral.",
+      "required_changes": []
+    },
+    {
+      "id": "cn-cybersecurity-law-amendment-ai",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Both timeline source_urls now point to cac.gov.cn/2025-10/29/c_1763461514768457.htm, which I re-fetched. It is the text of the NPCSC decision amending the Cybersecurity Law, republished by CAC. The page confirms adoption at the 18th session of the 14th NPCSC on 2025-10-28 and an effective date of 2026-01-01. The new Article 20 text is quoted: support for AI basic theory research and algorithm and key technology R&D, training data and compute infrastructure, AI ethical norms, risk monitoring and assessment, and security supervision; second paragraph, support for using AI and other new technologies to innovate network security management. The summary and all three key obligations match. The commentary wording and '(per CAC commentary)' have been removed. The republication of the NPCSC text on the CAC site is acceptable as primary. Status in_force is correct as of 2026-10-05. Not a duplicate. Tone is neutral.",
+      "required_changes": []
+    },
+    {
+      "id": "kr-ai-basic-act",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched the law.go.kr revision list. Law No. 20676 (제정): promulgated 2025-01-21, effective 2026-01-22. Law No. 21311 (일부개정): promulgated 2026-01-20, effective 2026-01-22. It adds the 학습용데이터 definition and renames 국가인공지능위원회 to 국가인공지능전략위원회, which supports 'among others' in the note. Law No. 21065 (타법개정, Government Organization Act, 2025-10-01) is still left out of the timeline. It only changes an official's title in Art. 38, and the omission is disclosed in gaps, so it is acceptable. Re-fetched the MSIT notice at the cleaned URL, which now has no jsessionid. It loads and confirms: announced 2025-11-12; comments to 2025-12-22; high-impact AI criteria; transparency; safety requirements at 10^26 FLOPs or more; a grace period of at least one year before fines; AI Safety Institute and AI Policy Center. MSIT also mentions further comments to 2026-01-21. Omitting that does not make the note wrong. The 2025-01-21 entry is now labelled as promulgation, and the consultation note flags the draft-decree status. All first-review fixes are applied. Both sources are primary. Not a duplicate. Tone is neutral. Note for the editor: the 'passed' stage on the promulgation date remains a schema approximation, and the note now states this clearly.",
+      "required_changes": []
+    },
+    {
+      "id": "jp-ai-promotion-act",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched www8.cao.go.jp/cstp/ai/ai_act/ai_act.html. It confirms the official name (人工知能関連技術の研究開発及び活用の推進に関する法律（ＡＩ法）), promulgation and partial enforcement on 2025-06-04, and full enforcement on 2025-09-01 including the AI Strategy Headquarters provisions. That page does NOT mention the AI Basic Plan. Re-fetched cao.go.jp/press/new_wave/20260206.html. It confirms '令和7年12月23日、「人工知能基本計画」が閣議決定されました' and calls the plan Japan's first national AI strategy. It does NOT name the law the plan is based on. The Kantei agenda for 2025-12-23 lists '人工知能基本計画について（決定）', also with no legal basis. So two claims are unsupported by any cited page: key_obligations[0] says 'a statutory AI Basic Plan', and the 2025-12-23 note says 'adopted ... under the Act'. I found a primary page that does support both: www8.cao.go.jp/cstp/stmain/20260619ai.html (Cabinet Office consultation). It cites the Act (令和７年法律第53号) as the plan's legal basis and states that the first plan was adopted by Cabinet decision on 2025-12-23. The facts are correct, but the cited source does not support them, so claim_matches_source fails until the citation is fixed. All other first-review fixes are applied: Japan Times removed, 'first AI-specific law' removed, the unverified 'balance' obligation deleted, promulgation wording fixed, and the note says the Act's status is unchanged. Side finding for the editor, outside this run's window: that same page opens a consultation (2026-06-19 to 2026-06-23) on a draft revision of the AI Basic Plan. It is not in the timeline or in gaps.",
+      "required_changes": [
+        "Change the source_url of the 2025-12-23 timeline entry to https://www8.cao.go.jp/cstp/stmain/20260619ai.html. That page states both the 2025-12-23 Cabinet decision and the Act as the plan's legal basis. Alternatively, keep the press page and remove 'under the Act' from the note.",
+        "In summary, add one sentence supported by that page, e.g. 'A Cabinet Office consultation page identifies the Act as the legal basis of the AI Basic Plan.' Otherwise, change key_obligations[0] to 'Establishes an AI Strategy Headquarters' and drop 'and a statutory AI Basic Plan'.",
+        "Add to gaps: 'Cabinet Office consultation on a draft revision of the AI Basic Plan (2026-06-19 to 2026-06-23) not tracked; Act text (e-Gov) not read, Article 18 not verified.'"
+      ]
+    },
+    {
+      "id": "sg-model-ai-governance-framework-agentic-ai",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched the MDDI newsroom page. It is dated 22 January 2026, and Minister Josephine Teo announced the launch at the WEF. The page describes the framework as giving organisations guidance on technical and non-technical measures, which matches 'Guidance for organisations'. The four dimensions are quoted verbatim. 'Placing limits on agents' powers such as agents' autonomy and access to tools and data' supports key_obligations[0]. Human approval checkpoints, baseline testing and access controls across the lifecycle, and transparency and education/training support items 1 to 3. The unverified 'non-binding/voluntary' wording and the v1.5 claim have been removed from the instrument and moved to gaps, and obligations are now phrased as 'Recommends'. MDDI is a primary government source and the page names IMDA as developer. Status in_force is a schema approximation for published guidance, and the summary discloses this. Not a duplicate. Tone is neutral.",
+      "required_changes": []
+    },
+    {
+      "id": "in-ai-governance-guidelines",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched newsonair.gov.in. It confirms MeitY unveiled the India AI Governance Guidelines on 2025-11-05, with Principal Scientific Adviser Prof. Ajay Kumar Sood and MeitY Secretary S. Krishnan present. The note correctly says the broadcaster is not the issuing body, and the summary discloses that no primary source was read and that confidence is low. That disclosure satisfies the protocol. PIB PRID=2186639 still returns 403. I located the guidelines PDF on static.pib.gov.in (doc2025115685601.pdf) but it would not render as text for me either, so the content remains unverified. The sutras, pillars and other content claims have been removed, and key_obligations is empty. One claim remains unsupported: 'unveiled by MeitY under the IndiaAI Mission'. The AIR page mentions the IndiaAI Mission only in passing ('the India AI Mission will enable this ecosystem') and in connection with a hackathon. It does not say the guidelines were issued under the Mission. Secondary search snippets say so, but none was cited or read as a primary source. Status in_force for unveiled, non-statutory guidelines is a schema approximation and should be disclosed, as was done for Singapore.",
+      "required_changes": [
+        "In summary, delete 'under the IndiaAI Mission'. Suggested wording: 'Guidelines unveiled by MeitY on 5 November 2025, per a government broadcaster (All India Radio) report.'",
+        "In summary, add: \"Status 'in_force' is used loosely for a published guidance document.\"",
+        "Add to gaps: 'Guidelines PDF located at https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf but not machine-readable in this run.'"
+      ]
+    }
+  ]
+}

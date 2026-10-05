@@ -1,0 +1,18 @@
+{
+  "slug": "in-ai-governance-guidelines",
+  "name": "India AI Governance Guidelines",
+  "jurisdiction": "asia",
+  "subregion": "India",
+  "status": "in_force",
+  "summary": "Guidelines unveiled by MeitY on 5 November 2025, per a government broadcaster (All India Radio) report. The content of the document has not been verified from a primary source: the PIB page and PDF could not be read. Confidence low. Status 'in_force' is used loosely for a published guidance document.",
+  "key_obligations": [],
+  "timeline": [
+    {
+      "date": "2025-11-05",
+      "stage": "in_force",
+      "note": "Guidelines unveiled by MeitY with the Principal Scientific Adviser and MeitY Secretary present (All India Radio report; not the issuing body).",
+      "source_url": "https://www.newsonair.gov.in/meity-unveils-india-ai-governance-guidelines-to-promote-safe-and-responsible-ai-adoption"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

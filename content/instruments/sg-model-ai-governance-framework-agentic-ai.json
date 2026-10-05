@@ -1,0 +1,23 @@
+{
+  "slug": "sg-model-ai-governance-framework-agentic-ai",
+  "name": "Model AI Governance Framework for Agentic AI",
+  "jurisdiction": "asia",
+  "subregion": "Singapore",
+  "status": "in_force",
+  "summary": "Guidance for organisations launched 22 January 2026 (MDDI newsroom page). It addresses organisations deploying AI agents across four dimensions: bounding risks upfront, meaningful human accountability, technical controls across the lifecycle, and end-user transparency and training. Status 'in_force' is used loosely for a guidance document.",
+  "key_obligations": [
+    "Recommends bounding risks by limiting agent autonomy and tool/data access",
+    "Recommends defining human checkpoints and accountability",
+    "Recommends technical controls and testing through the agent lifecycle",
+    "Recommends enabling end-user responsibility through transparency and training"
+  ],
+  "timeline": [
+    {
+      "date": "2026-01-22",
+      "stage": "in_force",
+      "note": "Framework launched by Minister Josephine Teo at the World Economic Forum, Davos (MDDI).",
+      "source_url": "https://www.mddi.gov.sg/newsroom/singapore-launches-new-model-ai-governance-framework-for-agentic-ai--/"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

@@ -1,0 +1,64 @@
+{
+  "run_id": "2026-10-05-b",
+  "region": "us",
+  "verdicts": [
+    {
+      "id": "us-ca-sb-813-ab-1405-ai-third-party-verification",
+      "kind": "item",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched the gov.ca.gov release dated 9 September 2026. Confirmed SB 813 (McNerney) 'establishes a first-in-the-nation framework for independent verification organizations that can assess AI systems and models for compliance with state law'. Confirmed AB 1405 (Bauer-Kahan) creates 'a state registry for AI auditors and establishing standards for their independence, transparency, and integrity'. The release gives no chapter numbers or effective dates and does not say whether registration or assessment is mandatory. The revised why_it_matters now states that limitation and no longer infers a mandate. The earlier fix has been applied. Stage 'passed', medium confidence and primary tier (Governor's office for a signing) all fit. Grep of content/ for 'SB 813' and 'AB 1405' found matches only in this run's files."
+    },
+    {
+      "id": "us-ca-sept-2026-ai-bill-package-signed",
+      "kind": "item",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched the gov.ca.gov release dated 30 September 2026. It lists 13 signed bills and mentions no vetoes. Checked each description against the release body. SB 947: employers may not rely only on AI for discipline or termination. SB 951: disclose when mass layoffs, relocations or terminations result from AI systems. AB 1883: bans workplace surveillance tools in bathrooms, and the revised wording now matches. AB 1979: providers keep their own professional judgment with AI clinical tools. SB 503: clinical decision tool developers take reasonable steps to reduce known or predictable bias. SB 574: lawyers may not fully delegate core legal work to AI. AB 2713 and SB 1000: their titles reference the California AI Transparency Act, and the body describes the watermark-deletion ban and metadata access. AB 1864: gene synthesis customer verification and screening. SB 1111 ('Digital replicas') and SB 1159 ('Artificial intelligence: transparency and governance') are now described only by their titles, as required. AB 1331 and AB 2392 are now mentioned. All required changes from review 1 have been applied. Grep found no duplicate in content/."
+    },
+    {
+      "id": "us-eo-14365-national-ai-policy-framework",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched the whitehouse.gov order page: EO 14365, 'Ensuring a National Policy Framework for Artificial Intelligence', dated 11 December 2025. Checked each obligation against the order text. The policy is a 'minimally burdensome national policy framework'. Sec. 3: AG task force within 30 days. Sec. 4: Commerce evaluation within 90 days, including laws requiring alteration of truthful outputs. Sec. 5(a): BEAD non-deployment funds ineligibility 'to the maximum extent allowed by Federal law'; the candidate's 'to the extent permitted by law' is an acceptable paraphrase. Sec. 6, verbatim: 'Within 90 days of the publication of the identification specified in section 4 ... initiate a proceeding to determine whether to adopt a Federal reporting and disclosure standard for AI models that preempts conflicting State laws'. The FCC obligation now matches. Sec. 7: FTC policy statement. Sec. 8(b) carve-outs, verbatim: child safety; 'AI compute and data center infrastructure, other than generally applicable permitting reforms'; State government procurement and use of AI; other topics. The obligation now lists all four. The 'does not itself preempt' sentence and the misplaced 2026-03-20 'proposed' entry have both been removed. The single in_force timeline entry is correct. The URL slug ('eliminating-state-law-obstruction...') differs from the title but is the official page. No duplicate in content/."
+    },
+    {
+      "id": "us-ftc-ai-accuracy-policy-statement",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched the ftc.gov press release dated 1 July 2026. Confirmed: 'distort their systems' outputs to achieve undisclosed ideological objectives could be deceiving consumers in violation Section 5'. Colorado's AI Act is named as 'impliedly preempted to the extent it conflicts'. The release references the December executive order, records a 2-0 vote and gives a comment deadline of 31 July 2026. The docket in the release text is FTC-2026-0859, and the candidate now uses 0859. 0727 appears only in a hyperlink. Status 'proposed' and the new 2026-07-31 entry are correct. A search found the FTC legal-library entry still titled 'Proposed Policy Statement'. Secondary results report it was still proposed as of 8 September 2026. I found no final statement. The 'no final located' note is a negative finding that the cited press release cannot show; it is fair as phrased. Minor: the Federal Register publication (7 July 2026) is mentioned only in secondary results and is not claimed in the candidate, which is fine."
+    },
+    {
+      "id": "us-ca-sb-53-frontier-ai-transparency",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "status_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched leginfo SB 53. Confirmed Chapter 138, approved and filed 29 September 2025. Confirmed: >10^26 operations; >$500M revenue; annual framework review with modifications published within 30 days; transparency reports before or with deploying new frontier models; 15-day and 24-hour incident reporting; internal-use catastrophic risk summaries to OES 'every three months or pursuant to another reasonable schedule'; anonymous internal reporting; up to $1M per violation, enforced by the AG. Re-fetched WilmerHale (1 Oct 2025). It says only that the law 'takes effect in January 2026' and gives no day. The bill text has no effective date or urgency clause; the only 'operative' clause covers the CalCompute section and depends on a budget appropriation. The 2026-01-01 timeline date is therefore not stated by its cited source, so date_correct fails. The candidate does say this in its note. That shortfall also keeps source_tier_correct from passing, because the cited source is secondary. A primary basis exists. Cal. Const. art. IV §8(c)(1), fetched from leginfo, says a regular-session statute 'shall go into effect on January 1 next following a 90-day period from the date of enactment'. Enactment on 29 Sep 2025 plus 90 days gives 1 January 2026. Status in_force is correct on that basis.",
+      "required_changes": [
+        "Change the 2026-01-01 timeline entry source_url to https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%208.&article=IV and its note to: 'Effective 1 January 2026: non-urgency statute enacted 29 September 2025, effective January 1 following a 90-day period from enactment under Cal. Const. art. IV, sec. 8(c)(1). Consistent with secondary reporting (WilmerHale).'",
+        "Replace the summary's last sentence with: 'Effective 1 January 2026 under the California Constitution's default rule for non-urgency statutes; the CalCompute provisions become operative only upon a budget appropriation.'"
+      ]
+    },
+    {
+      "id": "us-co-ai-act-sb24-205-sb26-189",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched three leg.colorado.gov pages. SB 24-205: signed 17 May 2024, requirements 'on and after February 1, 2026'. SB25B-004: signed 28 August 2025, and the page says it 'extends the effective date of the requirements of Senate Bill 24-205 to June 30, 2026'. SB 26-189: signed 14 May 2026, Chapter 131, repeals and reenacts SB 24-205. The SB 26-189 page also confirms the consequential-decision areas, developer documentation from 1 January 2027, 3-year record retention, deployer notice and the 30-day post-adverse-outcome description, consumer rights, CCPA enforcement and the 60-day cure through 1 January 2030. Key obligations and dates check out, and the review-1 fixes are in (litigation entry removed, 'never took effect' reworded, SB25B-004 now primary). New problems: (1) The 2026-05-14 timeline note now bundles the X.AI v. Weiser litigation, but its source_url is leg.colorado.gov/bills/sb26-189. That page does not mention the case or any court order, so the court claims are unsupported by the cited URL. (2) The litigation description is incomplete. Per Norton Rose Fulbright, which I re-fetched, the 27 April 2026 order granted the parties' JOINT motion, so the AG agreed. Enforcement was suspended until both the 2026 session and any rulemaking conclude AND xAI's preliminary-injunction motion is decided. 'The court suspended enforcement' omits that the AG consented. The summary repeats the suspension with no sourced location in the instrument. (3) The SB25B-004 note, 'extending implementation to measures effective no later than 30 June 2026', garbles the source. Clearinghouse returned 403, and the court order was not read directly.",
+      "required_changes": [
+        "Remove all X.AI v. Weiser / DOJ text from the 2026-05-14 timeline note, so it reads: 'SB 26-189 signed (Chapter 131), repealing and reenacting SB 24-205 as an ADMT framework; developer obligations from 1 January 2027.'",
+        "In the summary, replace the court sentence with: 'Per a Norton Rose Fulbright note (court order not read), on 27 April 2026 the federal court in X.AI LLC v. Weiser granted a joint motion of the parties temporarily suspending enforcement of SB 24-205, before its 30 June 2026 effective date; the law was repealed and reenacted on 14 May 2026.' Editor should capture the litigation as a separate court-type item citing https://www.nortonrosefulbright.com/en-us/knowledge/publications/de3ad9de/xai-sues-doj-intervenes-enforcement-of-colorado-ai-act-suspended (secondary, confidence low/medium) so the claim has a source URL.",
+        "Change the SB25B-004 note to: 'SB25B-004 signed, extending the effective date of SB 24-205's requirements to 30 June 2026.'"
+      ]
+    },
+    {
+      "id": "us-ny-raise-act",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second review. Re-fetched nysenate.gov S6953: S6953B, the RAISE Act, signed 19 December 2025, Chapter 699. Re-fetched nysenate.gov S8828: signed 27 March 2026, Chapter 96, effective 1 January 2027. Both timeline entries now cite primary pages that state these facts, so review 1's tier issue is fixed. The S8828 page summary also confirms what the candidate still attributes to Wiley: the >10^26 and >$500M thresholds, the DFS office, 72-hour incident reporting, the $1M/$3M penalties and published frontier AI frameworks. The '(secondary source)' caveats are therefore over-cautious but not inaccurate. Optional for the editor: drop the caveats and the sentence saying the details were not checked against S8828, since the Senate page supports them. Status 'amended' fits. No duplicate in content/."
+    }
+  ]
+}

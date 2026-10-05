@@ -1,0 +1,28 @@
+{
+  "slug": "us-ny-raise-act",
+  "name": "New York Responsible AI Safety and Education (RAISE) Act",
+  "jurisdiction": "us",
+  "subregion": "New York",
+  "status": "amended",
+  "summary": "New York frontier-model safety law. Signed 19 December 2025 (Chapter 699) and reshaped by chapter amendment S8828, signed 27 March 2026 as Chapter 96 of 2026 and effective 1 January 2027; the signing and effective date come from the Senate bill page. Per a law-firm alert (Wiley), the amendment adds a 10^26 operations and $500 million revenue threshold, a new office in the Department of Financial Services, and a 72-hour incident reporting window; those details were not checked against the S8828 text.",
+  "key_obligations": [
+    "Large frontier developers to maintain and publish safety frameworks (secondary source)",
+    "Report safety incidents within 72 hours (secondary source)",
+    "Civil penalties up to $1 million first violation and $3 million subsequent (secondary source)"
+  ],
+  "timeline": [
+    {
+      "date": "2025-12-19",
+      "stage": "passed",
+      "note": "S6953B signed by the Governor, Chapter 699.",
+      "source_url": "https://www.nysenate.gov/legislation/bills/2025/S6953"
+    },
+    {
+      "date": "2026-03-27",
+      "stage": "amended",
+      "note": "Chapter amendment S8828 signed, Chapter 96 of 2026; effective 1 January 2027.",
+      "source_url": "https://www.nysenate.gov/legislation/bills/2025/S8828"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

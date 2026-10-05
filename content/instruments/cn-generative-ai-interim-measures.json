@@ -1,0 +1,30 @@
+{
+  "slug": "cn-generative-ai-interim-measures",
+  "name": "Interim Measures for the Management of Generative AI Services (生成式人工智能服务管理暂行办法)",
+  "jurisdiction": "asia",
+  "subregion": "China",
+  "status": "in_force",
+  "summary": "Joint measures issued by the Cyberspace Administration of China with six other bodies (NDRC, Education, Science and Technology, MIIT, Public Security, NRTA), promulgated 10 July 2023 (posted on the CAC site 13 July 2023) and effective 15 August 2023. Read via the CAC page; the Chinese text was processed by a machine-translating fetch tool, so wording is paraphrased and no article numbers are cited.",
+  "key_obligations": [
+    "Providers of services with public opinion attributes or social mobilisation capacity must carry out security assessments and comply with algorithm filing requirements under existing rules",
+    "Generated images, videos and similar content must be labelled in line with the deep synthesis rules",
+    "Training data and foundation models must be lawfully sourced, respect intellectual property, and rely on consent where personal information is used",
+    "Providers must publish service terms, protect user inputs, guard against minors' over-reliance, and run complaint channels",
+    "Illegal content must be handled by stopping generation or transmission, deleting it, optimising the model and reporting to regulators"
+  ],
+  "timeline": [
+    {
+      "date": "2023-07-10",
+      "stage": "passed",
+      "note": "Promulgated as CAC Order No. 15 (adopted at a CAC office meeting on 2023-05-23, with the consent of six other authorities); posted on the CAC site 2023-07-13.",
+      "source_url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm"
+    },
+    {
+      "date": "2023-08-15",
+      "stage": "in_force",
+      "note": "Effective date stated for the measures.",
+      "source_url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

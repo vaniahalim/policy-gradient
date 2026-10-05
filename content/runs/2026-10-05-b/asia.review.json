@@ -1,0 +1,93 @@
+{
+  "run_id": "2026-10-05-b",
+  "region": "asia",
+  "verdicts": [
+    {
+      "id": "cn-generative-ai-interim-measures",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the CAC page (cac.gov.cn/2023-07/13/c_1690898327029107.htm). Verified: the seven issuing bodies (CAC, NDRC, Education, MOST, MIIT, MPS, NRTA); effective 15 August 2023 ('自2023年8月15日起施行'). All five key obligations match the text: security assessment and algorithm filing (Art. 17), labelling under the deep synthesis rules (Art. 12), lawful data and models, IP and consent (Art. 7), service agreements (Art. 9), minors' over-reliance (Art. 10), complaint channels (Art. 15), and illegal-content handling (Art. 14). Status in_force is correct. CAC is primary. There are no Asia instruments in content/instruments/, so this is not a duplicate. Date problem: the 'passed' entry uses 2023-07-13, which is only the date the CAC web page was posted (2023年07月13日 15:00). The order itself (CAC Order No. 15) records adoption at a CAC office meeting on 2023-05-23 and was signed and promulgated on 2023-07-10 ('现予公布', dated 2023年7月10日). The summary's 'published 13 July 2023' repeats the same web-post date.",
+      "required_changes": [
+        "Change the 'passed' timeline date from 2023-07-13 to 2023-07-10 and set the note to: 'Promulgated as CAC Order No. 15 (adopted at a CAC office meeting on 2023-05-23, with the consent of six other authorities); posted on the CAC site 2023-07-13.'",
+        "In summary, replace 'published 13 July 2023' with 'promulgated 10 July 2023 (posted on the CAC site 13 July 2023)'."
+      ]
+    },
+    {
+      "id": "cn-ai-content-labeling-measures",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the CAC page (cac.gov.cn/2025-03/14/c_1743654684782215.htm). Verified: the four issuing bodies (CAC, MIIT, MPS, NRTA); effective 1 September 2025 ('本办法自2025年9月1日起施行'); explicit labels (Art. 4); implicit metadata labels with content attributes, provider name or code and content ID (Art. 5); platform metadata checks and prominent notices (Art. 6); user declaration and use of labelling tools, plus the ban on malicious deletion, alteration, forgery or concealment (Art. 10). One wording issue: Art. 5 uses '应当' (shall), so 'should embed' understates the duty. CAC is primary. Not a duplicate. Date problem: the page is notice 国信办通字〔2025〕2号, signed 2025-03-07. 2025-03-14 is only the web-post date.",
+      "required_changes": [
+        "Change the 'passed' timeline date from 2025-03-14 to 2025-03-07 and set the note to: 'Issued by joint notice 国信办通字〔2025〕2号 dated 2025-03-07; posted on the CAC site 2025-03-14.'",
+        "In summary, replace 'published 14 March 2025' with 'issued 7 March 2025 (posted on the CAC site 14 March 2025)'.",
+        "In key_obligations[1], change 'Providers should embed implicit labels' to 'Providers must embed implicit labels' (the text uses 应当)."
+      ]
+    },
+    {
+      "id": "cn-cybersecurity-law-amendment-ai",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the cited page (cac.gov.cn/2026-01/02/c_1769093523928606.htm). It is an 'expert interpretation' by Ding Xiaodong of Renmin University Law School, hosted on the CAC site. It is not the statute or the NPCSC decision. Verified on that page: adopted 2025-10-28 at the 18th session of the 14th NPCSC, effective 2026-01-01, and new Article 20 on AI research, training data, compute, ethics, risk monitoring and assessment, and security oversight, plus AI for network security management. I then found and fetched the decision text itself on CAC (cac.gov.cn/2025-10/29/c_1763461514768457.htm). It confirms the same adoption date, session, effective date and Article 20 wording. All claims are therefore correct, but the cited source is academic commentary rather than the issuing body's text, so source_tier_correct fails as submitted. Not a duplicate.",
+      "required_changes": [
+        "Change both timeline source_url values to https://www.cac.gov.cn/2025-10/29/c_1763461514768457.htm (the NPCSC decision text as republished by CAC). The expert interpretation may be kept only as supplementary context.",
+        "In summary, replace 'Per a CAC expert interpretation ... Only the CAC commentary was read, not the statute text itself' with wording that cites the decision text, e.g. 'The decision adds Article 20, under which the State supports ...'. Keep the machine-translation caveat.",
+        "In the 'passed' timeline note, remove '(per CAC commentary)'."
+      ]
+    },
+    {
+      "id": "kr-ai-basic-act",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the law.go.kr revision list. Verified: Law No. 20676 (제정) promulgated 2025-01-21, effective 2026-01-22 (one year after promulgation); amendment Law No. 21311 (일부개정) promulgated 2026-01-20, effective 2026-01-22, which adds the learning-data definition (Art. 2(12)) and renames 국가인공지능위원회 to 국가인공지능전략위원회. The list also shows an Government Organization Act amendment (Law No. 21065, 2025-10-01) that the timeline omits. That omission is minor. Re-fetched the MSIT notice. Verified: dated 2025-11-12; comments open 12 November to 22 December 2025; high-impact AI criteria; transparency; safety requirements at 10^26 FLOPs or more; grace period of at least one year before fines; AI Safety Institute and AI Policy Center. Status in_force is correct. Both sources are primary. Not a duplicate. Date problem: 2025-01-21 is the promulgation date (공포일), not the date the National Assembly passed the bill, so the 'passed' entry is labelled ambiguously. The MSIT source_url also contains a session token (;jsessionid=...), which is not a stable citation.",
+      "required_changes": [
+        "Change the 2025-01-21 timeline note to 'Promulgated as Law No. 20676 (law.go.kr); effective one year after promulgation.' Do not describe it as the passage date.",
+        "Remove ';jsessionid=aBO-HMW2y4oNRpiPJjDbV_NuiV_0iPtKthgXL-ul.AP_msit_1' from the MSIT source_url, leaving https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&mPid=2&mId=4&bbsSeqNo=42&nttSeqNo=1191.",
+        "In the 2025-11-12 consultation note, add that the items in key_obligations come from the draft decree as notified, not the final decree. The summary already says this, but the timeline should too."
+      ]
+    },
+    {
+      "id": "jp-ai-promotion-act",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["status_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the Cabinet Office page (www8.cao.go.jp/cstp/ai/ai_act/ai_act.html). Verified: official name 人工知能関連技術の研究開発及び活用の推進に関する法律; promulgated 2025-06-04 and partly enforced the same day; fully enforced 2025-09-01, including the AI Strategy Headquarters provisions. Status in_force is correct. Problems: (1) The Japan Times source returns HTTP 403, so the 2025-12-23 entry has no fetchable source. I found primary confirmation instead: the Cabinet Office press page (cao.go.jp/press/new_wave/20260206.html) says '令和7年12月23日、「人工知能基本計画」が閣議決定されました', and the Kantei cabinet agenda for 2025-12-23 lists '人工知能基本計画について（決定）'. The date is correct, but the cited source is wrong and its tier is secondary. (2) That entry uses stage 'in_force', but adopting a plan does not change the Act's legal status. (3) 'Japan's first AI-specific law' does not appear on the fetched page. (4) 'Aims to balance innovation with risk response' is admitted in the entry itself to be unverified from the statute. (5) The 2025-06-04 entry is labelled 'passed' but is the promulgation date. The Diet passage date was not verified.",
+      "required_changes": [
+        "Change the source_url of the 2025-12-23 entry to https://www.cao.go.jp/press/new_wave/20260206.html (or https://www.kantei.go.jp/jp/kakugi/2025/kakugi-2025122301.html) and set the note to: 'First AI Basic Plan adopted by Cabinet decision under the Act (Cabinet Office).' Remove the Japan Times reference.",
+        "Do not mark the 2025-12-23 entry as a status change. Either move it out of the timeline (e.g. into a separate item) or, if it stays, make the note state that the Act's status is unchanged.",
+        "In summary, remove 'Japan's first AI-specific law' unless a fetched primary source says so, and replace the 'reportedly adopted ... secondary source only' sentence with the primary-sourced statement.",
+        "Delete key_obligations[1] ('Aims to balance innovation with risk response ...'), which is unverified.",
+        "Change the 2025-06-04 note to 'Promulgated; partial enforcement from the same date (Cabinet Office page).'"
+      ]
+    },
+    {
+      "id": "sg-model-ai-governance-framework-agentic-ai",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the MDDI newsroom page. Verified: dated 22 January 2026; launched by Minister Josephine Teo at the WEF in Davos; four dimensions as quoted (bounding risks upfront by limiting autonomy and tool/data access; human checkpoints and accountability; technical controls across the agent lifecycle; end-user responsibility through transparency and education/training). MDDI and IMDA are primary. Not a duplicate. Problems: (1) The MDDI page does not say the framework is 'non-binding' or 'voluntary'. It says it provides guidance to organisations. Yet the summary, the timeline note ('described as non-binding guidance') and every key_obligation ('Voluntary: ...') rely on that characterisation. The IMDA press release and PDF did not render for me, so the voluntary status was not confirmed from a primary source. (2) The summary repeats a claim about a later v1.5 that the researcher did not read; the protocol says not to state what was not read. (3) Status in_force for an unenacted guidance document is a loose fit, as the summary admits.",
+      "required_changes": [
+        "Change the timeline note to 'Framework launched by Minister Josephine Teo at the World Economic Forum, Davos (MDDI).' Remove 'described as non-binding guidance'.",
+        "In summary, replace 'Non-binding guidance' with 'Guidance for organisations' unless a fetched primary IMDA page states voluntary or non-binding status. If one is found, cite it as a source.",
+        "Remove the 'Voluntary:' prefix from key_obligations, or justify it with a fetched primary citation. Rephrase as recommended practices, e.g. 'Recommends bounding risks by limiting agent autonomy and tool/data access'.",
+        "Delete the sentence 'Secondary sources report a later v1.5 (May-June 2026), not verified from a primary page.' and move it to gaps."
+      ]
+    },
+    {
+      "id": "in-ai-governance-guidelines",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["status_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the cited PIB URL (PRID=2186639). It returned HTTP 403 for me too, so the only cited source cannot be read by the researcher or the reviewer. The static.pib.gov.in PDF of the guidelines also did not render. A different PIB page titled 'India AI Governance Guidelines' exists at PRID=2228315 (also 403), so I cannot confirm that PRID 2186639 is the right release. I independently confirmed through All India Radio / newsonair.gov.in (government broadcaster, not the issuing body) that the guidelines were unveiled on 2025-11-05 under MeitY, with the Principal Scientific Adviser and the MeitY Secretary present. That page does NOT mention seven sutras, six pillars, action-plan timelines or a voluntary or existing-law approach. Every claim in the summary and key_obligations about the document's content therefore rests on secondary sources that are not cited in the entry. The protocol says not to state what you did not read and to cite what you did. The instrument exists and the date checks out, so it is salvageable, but as submitted it is unverifiable.",
+      "required_changes": [
+        "Change the timeline source_url to a page that actually loads and supports the date, e.g. https://www.newsonair.gov.in/meity-unveils-india-ai-governance-guidelines-to-promote-safe-and-responsible-ai-adoption. Alternatively, a readable copy of the guidelines PDF.",
+        "Either cite the specific secondary pages actually fetched for the seven sutras, six pillars and action plan, or delete those claims from summary and key_obligations.",
+        "Do not cite the PIB PRID until it is confirmed to be the 5 November 2025 release. Note in gaps that PRID 2228315 is a second candidate.",
+        "Keep confidence low. In the summary, state that the document's content has not been verified from a primary source."
+      ]
+    }
+  ]
+}

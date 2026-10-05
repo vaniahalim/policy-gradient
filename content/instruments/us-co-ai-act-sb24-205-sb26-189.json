@@ -1,0 +1,35 @@
+{
+  "slug": "us-co-ai-act-sb24-205-sb26-189",
+  "name": "Colorado AI Act (SB 24-205), repealed and reenacted as SB 26-189 (automated decision-making technology)",
+  "jurisdiction": "us",
+  "subregion": "Colorado",
+  "status": "amended",
+  "summary": "Colorado's 2024 algorithmic-discrimination law (SB 24-205) was delayed, then repealed and reenacted by SB 26-189 as an automated decision-making technology framework. It covers consequential decisions in education, employment, housing, financial services, insurance, health care and government benefits. Per the legislature's page, SB 26-189 was signed 14 May 2026 and developer obligations apply from 1 January 2027. Per a Norton Rose Fulbright note (court order not read), on 27 April 2026 the federal court in X.AI LLC v. Weiser granted a joint motion of the parties temporarily suspending enforcement of SB 24-205, before its 30 June 2026 effective date; the law was repealed and reenacted on 14 May 2026.",
+  "key_obligations": [
+    "Developers: provide technical documentation (intended uses, training data categories, known limitations), notify deployers of material updates, retain records 3 years",
+    "Deployers: notice to consumers of ADMT use, disclose its role within 30 days after adverse outcomes, retain records 3 years",
+    "Consumer rights to request personal data, correction of factual errors, and human review after adverse decisions",
+    "Attorney General enforcement under the Colorado Consumer Protection Act; 60-day notice and cure period through 1 January 2030"
+  ],
+  "timeline": [
+    {
+      "date": "2024-05-17",
+      "stage": "passed",
+      "note": "SB 24-205 signed by the Governor; originally effective 1 February 2026.",
+      "source_url": "https://leg.colorado.gov/bills/sb24-205"
+    },
+    {
+      "date": "2025-08-28",
+      "stage": "amended",
+      "note": "SB25B-004 signed, extending the effective date of SB 24-205's requirements to 30 June 2026.",
+      "source_url": "https://leg.colorado.gov/bills/sb25b-004"
+    },
+    {
+      "date": "2026-05-14",
+      "stage": "amended",
+      "note": "SB 26-189 signed (Chapter 131), repealing and reenacting SB 24-205 as an ADMT framework; developer obligations from 1 January 2027.",
+      "source_url": "https://leg.colorado.gov/bills/sb26-189"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

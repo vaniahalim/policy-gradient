@@ -1,0 +1,38 @@
+{
+  "id": "us-ca-sb-813-ab-1405-ai-third-party-verification",
+  "title": "California governor signs SB 813 and AB 1405 on third-party AI verification and auditor registry",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "type": "law",
+  "stage": "passed",
+  "topics": [
+    "third-party audit",
+    "conformity verification",
+    "state AI law"
+  ],
+  "summary": "On 9 September 2026 the California governor's office announced the signing of two bills. SB 813 (McNerney) establishes a framework for independent verification organizations to assess AI systems for compliance with state law. AB 1405 (Bauer-Kahan) creates a state registry for AI auditors with standards for their independence, transparency and integrity. Only the governor's press release was read; the chaptered bill texts, chapter numbers and operative dates were not checked.",
+  "why_it_matters": "AI developers and deployers in California could be assessed by independent verification organizations, and the state would set independence, transparency and integrity standards for auditors on its registry. Whether registration or assessment is mandatory is not stated in the press release. Operative dates and obligations must be confirmed from the bill text.",
+  "sources": [
+    {
+      "url": "https://www.gov.ca.gov/2026/09/09/governor-newsom-signs-first-in-the-nation-ai-safeguards-to-protect-californians-calls-on-the-federal-government-to-do-its-part/",
+      "publisher": "Office of the Governor of California",
+      "tier": "primary",
+      "accessed_at": "2026-10-05T12:00:00Z"
+    }
+  ],
+  "event_date": "2026-09-09",
+  "confidence": "medium",
+  "run_id": "2026-10-05-b",
+  "review": {
+    "verdict": "accept",
+    "reviewer_notes": "Second review. Re-fetched the gov.ca.gov release dated 9 September 2026. Confirmed SB 813 (McNerney) 'establishes a first-in-the-nation framework for independent verification organizations that can assess AI systems and models for compliance with state law'. Confirmed AB 1405 (Bauer-Kahan) creates 'a state registry for AI auditors and establishing standards for their independence, transparency, and integrity'. The release gives no chapter numbers or effective dates and does not say whether registration or assessment is mandatory. The revised why_it_matters now states that limitation and no longer infers a mandate. The earlier fix has been applied. Stage 'passed', medium confidence and primary tier (Governor's office for a signing) all fit. Grep of content/ for 'SB 813' and 'AB 1405' found matches only in this run's files.",
+    "checks": [
+      "claim_matches_source",
+      "date_correct",
+      "status_correct",
+      "source_tier_correct",
+      "not_duplicate",
+      "neutral_tone"
+    ]
+  }
+}

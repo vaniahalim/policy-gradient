@@ -1,0 +1,220 @@
+{
+  "run_id": "2026-10-05-b",
+  "region": "asia",
+  "window": { "from": "2026-09-05", "to": "2026-10-05" },
+  "candidates": [],
+  "instrument_candidates": [
+    {
+      "slug": "cn-generative-ai-interim-measures",
+      "name": "Interim Measures for the Management of Generative AI Services (生成式人工智能服务管理暂行办法)",
+      "jurisdiction": "asia",
+      "subregion": "China",
+      "status": "in_force",
+      "summary": "Joint measures issued by the Cyberspace Administration of China with six other bodies (NDRC, Education, Science and Technology, MIIT, Public Security, NRTA), promulgated 10 July 2023 (posted on the CAC site 13 July 2023) and effective 15 August 2023. Read via the CAC page; the Chinese text was processed by a machine-translating fetch tool, so wording is paraphrased and no article numbers are cited.",
+      "key_obligations": [
+        "Providers of services with public opinion attributes or social mobilisation capacity must carry out security assessments and comply with algorithm filing requirements under existing rules",
+        "Generated images, videos and similar content must be labelled in line with the deep synthesis rules",
+        "Training data and foundation models must be lawfully sourced, respect intellectual property, and rely on consent where personal information is used",
+        "Providers must publish service terms, protect user inputs, guard against minors' over-reliance, and run complaint channels",
+        "Illegal content must be handled by stopping generation or transmission, deleting it, optimising the model and reporting to regulators"
+      ],
+      "timeline": [
+        {
+          "date": "2023-07-10",
+          "stage": "passed",
+          "note": "Promulgated as CAC Order No. 15 (adopted at a CAC office meeting on 2023-05-23, with the consent of six other authorities); posted on the CAC site 2023-07-13.",
+          "source_url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm"
+        },
+        {
+          "date": "2023-08-15",
+          "stage": "in_force",
+          "note": "Effective date stated for the measures.",
+          "source_url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "cn-ai-content-labeling-measures",
+      "name": "Measures for Labeling AI-Generated Synthetic Content (人工智能生成合成内容标识办法)",
+      "jurisdiction": "asia",
+      "subregion": "China",
+      "status": "in_force",
+      "summary": "Measures issued by the CAC, MIIT, Ministry of Public Security and NRTA, issued 7 March 2025 (posted on the CAC site 14 March 2025) and effective 1 September 2025. Read via the CAC page through a machine-translating fetch tool; paraphrased, no article numbers cited.",
+      "key_obligations": [
+        "Service providers must add explicit, perceptible labels (text, audio, graphics or other) to AI-generated content",
+        "Providers must embed implicit labels in file metadata covering content attributes, provider name or code and content ID",
+        "Distribution platforms must verify metadata and add prominent notices to AI-generated material",
+        "Users must declare AI-generated content when publishing and use provider labelling tools",
+        "Maliciously deleting, altering, forging or hiding required labels is prohibited"
+      ],
+      "timeline": [
+        {
+          "date": "2025-03-07",
+          "stage": "passed",
+          "note": "Issued by joint notice 国信办通字〔2025〕2号 dated 2025-03-07; posted on the CAC site 2025-03-14.",
+          "source_url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
+        },
+        {
+          "date": "2025-09-01",
+          "stage": "in_force",
+          "note": "Effective date stated for the measures.",
+          "source_url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "cn-cybersecurity-law-amendment-ai",
+      "name": "Decision amending the Cybersecurity Law (adds AI provision)",
+      "jurisdiction": "asia",
+      "subregion": "China",
+      "status": "in_force",
+      "summary": "The NPC Standing Committee adopted a decision amending the Cybersecurity Law on 28 October 2025, effective 1 January 2026. The decision adds Article 20, under which the State supports basic AI research and key technology development, promotes training data and computing infrastructure, improves ethical norms and strengthens risk monitoring, assessment and security oversight. Source is the decision text as republished by CAC; the Chinese text was read through machine translation.",
+      "key_obligations": [
+        "State to support AI fundamental research and key technology R&D, and training data and computing infrastructure",
+        "State to improve AI ethical norms and strengthen risk monitoring, assessment and security supervision",
+        "Encourages use of AI and new technologies to innovate network security management"
+      ],
+      "timeline": [
+        {
+          "date": "2025-10-28",
+          "stage": "passed",
+          "note": "Adopted at the 18th session of the 14th NPC Standing Committee.",
+          "source_url": "https://www.cac.gov.cn/2025-10/29/c_1763461514768457.htm"
+        },
+        {
+          "date": "2026-01-01",
+          "stage": "in_force",
+          "note": "Amended law takes effect.",
+          "source_url": "https://www.cac.gov.cn/2025-10/29/c_1763461514768457.htm"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "kr-ai-basic-act",
+      "name": "Framework Act on AI Development and Establishment of Trust (인공지능 발전과 신뢰 기반 조성 등에 관한 기본법, AI Basic Act)",
+      "jurisdiction": "asia",
+      "subregion": "South Korea",
+      "status": "in_force",
+      "summary": "South Korea's AI framework law. The national law database (law.go.kr) lists original enactment as Law No. 20676 of 21 January 2025, effective 22 January 2026, with an amendment (Law No. 21311) dated 20 January 2026. MSIT announced a legislative notice for the draft Enforcement Decree in November 2025 covering high-impact AI criteria, transparency requirements and safety requirements for systems trained with at least 10^26 FLOPs, and stated a grace period of at least one year before administrative fines. Obligation details come from the MSIT notice of the draft decree, not from the statute text; the final decree text was not read. Law.go.kr page was machine-translated.",
+      "key_obligations": [
+        "Transparency and safety/trust requirements for AI operators, including high-impact AI criteria (per MSIT draft decree notice)",
+        "Safety requirements for AI systems trained with at least 10^26 FLOPs (per MSIT draft decree notice)",
+        "Administrative fines subject to a grace period of at least one year (per MSIT)",
+        "Establishment of supporting bodies such as an AI Safety Institute and AI Policy Center (per MSIT notice)"
+      ],
+      "timeline": [
+        {
+          "date": "2025-01-21",
+          "stage": "passed",
+          "note": "Promulgated as Law No. 20676 (law.go.kr); effective one year after promulgation.",
+          "source_url": "https://www.law.go.kr/LSW/lsRvsDocListP.do?lsId=014820&chrClsCd=010202&lsRvsGubun=all"
+        },
+        {
+          "date": "2025-11-12",
+          "stage": "consultation",
+          "note": "MSIT announced legislative notice of the draft Enforcement Decree; comment period stated to run to 22 December 2025. The key_obligations listed for the decree come from the draft decree as notified, not the final decree.",
+          "source_url": "https://www.msit.go.kr/eng/bbs/view.do?sCode=eng&mPid=2&mId=4&bbsSeqNo=42&nttSeqNo=1191"
+        },
+        {
+          "date": "2026-01-20",
+          "stage": "amended",
+          "note": "Amendment Law No. 21311 (adds learning data definition, renames the national committee, among others) per law.go.kr.",
+          "source_url": "https://www.law.go.kr/LSW/lsRvsDocListP.do?lsId=014820&chrClsCd=010202&lsRvsGubun=all"
+        },
+        {
+          "date": "2026-01-22",
+          "stage": "in_force",
+          "note": "Effective date shown on law.go.kr.",
+          "source_url": "https://www.law.go.kr/LSW/lsRvsDocListP.do?lsId=014820&chrClsCd=010202&lsRvsGubun=all"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "jp-ai-promotion-act",
+      "name": "Act on the Promotion of Research and Development and Utilization of AI-Related Technologies (AI Act)",
+      "jurisdiction": "asia",
+      "subregion": "Japan",
+      "status": "in_force",
+      "summary": "Japan's AI promotion framework statute, administered by the Cabinet Office. Per the Cabinet Office page it was promulgated 4 June 2025 and fully enforced 1 September 2025, and it establishes an AI Strategy Headquarters. The Cabinet Office press page states that the AI Basic Plan was adopted by Cabinet decision on 23 December 2025, and a Cabinet Office consultation page identifies the Act as the legal basis of the AI Basic Plan. Cabinet Office pages read via machine translation; statute text not read.",
+      "key_obligations": [
+        "Establishes an AI Strategy Headquarters and a statutory AI Basic Plan"
+      ],
+      "timeline": [
+        {
+          "date": "2025-06-04",
+          "stage": "passed",
+          "note": "Promulgated; partial enforcement from the same date (Cabinet Office page).",
+          "source_url": "https://www8.cao.go.jp/cstp/ai/ai_act/ai_act.html"
+        },
+        {
+          "date": "2025-09-01",
+          "stage": "in_force",
+          "note": "Full enforcement including AI Strategy Headquarters provisions.",
+          "source_url": "https://www8.cao.go.jp/cstp/ai/ai_act/ai_act.html"
+        },
+        {
+          "date": "2025-12-23",
+          "stage": "in_force",
+          "note": "First AI Basic Plan adopted by Cabinet decision under the Act (Cabinet Office). The Act's own status is unchanged; this entry records a related plan.",
+          "source_url": "https://www8.cao.go.jp/cstp/stmain/20260619ai.html"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "sg-model-ai-governance-framework-agentic-ai",
+      "name": "Model AI Governance Framework for Agentic AI",
+      "jurisdiction": "asia",
+      "subregion": "Singapore",
+      "status": "in_force",
+      "summary": "Guidance for organisations launched 22 January 2026 (MDDI newsroom page). It addresses organisations deploying AI agents across four dimensions: bounding risks upfront, meaningful human accountability, technical controls across the lifecycle, and end-user transparency and training. Status 'in_force' is used loosely for a guidance document.",
+      "key_obligations": [
+        "Recommends bounding risks by limiting agent autonomy and tool/data access",
+        "Recommends defining human checkpoints and accountability",
+        "Recommends technical controls and testing through the agent lifecycle",
+        "Recommends enabling end-user responsibility through transparency and training"
+      ],
+      "timeline": [
+        {
+          "date": "2026-01-22",
+          "stage": "in_force",
+          "note": "Framework launched by Minister Josephine Teo at the World Economic Forum, Davos (MDDI).",
+          "source_url": "https://www.mddi.gov.sg/newsroom/singapore-launches-new-model-ai-governance-framework-for-agentic-ai--/"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    },
+    {
+      "slug": "in-ai-governance-guidelines",
+      "name": "India AI Governance Guidelines",
+      "jurisdiction": "asia",
+      "subregion": "India",
+      "status": "in_force",
+      "summary": "Guidelines unveiled by MeitY on 5 November 2025, per a government broadcaster (All India Radio) report. The content of the document has not been verified from a primary source: the PIB page and PDF could not be read. Confidence low. Status 'in_force' is used loosely for a published guidance document.",
+      "key_obligations": [],
+      "timeline": [
+        {
+          "date": "2025-11-05",
+          "stage": "in_force",
+          "note": "Guidelines unveiled by MeitY with the Principal Scientific Adviser and MeitY Secretary present (All India Radio report; not the issuing body).",
+          "source_url": "https://www.newsonair.gov.in/meity-unveils-india-ai-governance-guidelines-to-promote-safe-and-responsible-ai-adoption"
+        }
+      ],
+      "last_verified": "2026-10-05T12:00:00Z"
+    }
+  ],
+  "gaps": [
+    "Bootstrap run: no window items proposed. No items for 2026-09-05 to 2026-10-05 were searched for in any country.",
+    "India: PIB returned 403 and the guidelines PDF was unreadable, so the document's content is unverified and confidence is low. PIB PRID 2186639 is unconfirmed as the 5 November 2025 release; PRID 2228315 is a second candidate (also 403). DPDP rules and MeitY IT Rules synthetic-media amendments not checked.",
+    "India: Guidelines PDF located at https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf but not machine-readable in this run.",
+    "Japan: AI Guidelines for Business and AI Safety Institute materials not checked; Diet passage date not verified.",
+    "Japan: Cabinet Office consultation on a draft revision of the AI Basic Plan (2026-06-19 to 2026-06-23) not tracked; Act text (e-Gov) not read, Article 18 not verified.",
+    "South Korea: final Enforcement Decree text and any later grace-period or amendment developments not read; statute text not read; Government Organization Act amendment (Law No. 21065, 2025-10-01) omitted from timeline.",
+    "Singapore: IMDA primary page truncated, so voluntary or non-binding status is unconfirmed from a primary source. Secondary sources report a later v1.5 (May-June 2026), not verified from a primary page. MAS AI risk management guidelines and the 2020 Model Framework / GenAI framework not verified.",
+    "China: all texts read via machine translation; draft AI law, TC260 standards, and algorithm/deep synthesis provisions not covered. Confidence should not exceed medium."
+  ]
+}

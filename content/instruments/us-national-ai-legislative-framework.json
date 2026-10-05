@@ -1,0 +1,21 @@
+{
+  "slug": "us-national-ai-legislative-framework",
+  "name": "White House National AI Legislative Framework (legislative recommendations)",
+  "jurisdiction": "us",
+  "subregion": "Federal",
+  "status": "proposed",
+  "summary": "Legislative recommendations released by the White House on 20 March 2026 for Congress, stressing a uniform national policy to avoid a patchwork of conflicting state laws. These are recommendations pending legislation, not enacted law.",
+  "key_obligations": [
+    "Six stated objectives: child protection and parental controls; community and economic strength (including avoiding ratepayer funding of data centers); intellectual property and creator rights; free speech protections; innovation and competitiveness; workforce development",
+    "No binding obligations on private parties unless Congress enacts legislation"
+  ],
+  "timeline": [
+    {
+      "date": "2026-03-20",
+      "stage": "proposed",
+      "note": "White House unveiled the framework as recommendations to Congress.",
+      "source_url": "https://www.whitehouse.gov/releases/2026/03/president-donald-j-trump-unveils-national-ai-legislative-framework/"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}
