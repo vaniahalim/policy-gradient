@@ -1,0 +1,56 @@
+{
+  "run_id": "2026-10-05-a",
+  "region": "europe",
+  "verdicts": [
+    {
+      "id": "eu-ai-act",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "source_tier_correct", "not_duplicate", "neutral_tone", "status_correct"],
+      "reviewer_notes": "Re-fetched EUR-Lex CELEX:32024R1689. Confirmed: signature 13 June 2024; OJ L publication 12.7.2024; consolidated versions dated 12/07/2024 and 27/07/2026 (current). EUR-Lex full text was truncated before Article 113, so Article 113 was read on the Commission AI Act Service Desk (ai-act-service-desk.ec.europa.eu/en/ai-act/article-113, consolidated text): 'This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal', which gives 1 August 2024 (12 July + 20 days). The researcher's gap note was right to doubt 12 July. The consolidated Article 113 also says: general application 2 August 2026; Chapters I and II from 2 February 2025; Chapter III Section 4, Chapters V, VII and XII and Article 78 from 2 August 2025; Annex III high-risk from 2 December 2027; Annex I high-risk from 2 August 2028; the new Article 5(1)(ba)/(bb), 5(1a) and 5(1b) prohibitions from 2 December 2026; Articles 102-110 from 27 July 2026. Status in_force is correct. No duplicate: content/items/ and content/instruments/ do not exist yet, and the slug appears only once in the file. Tone is neutral. date_correct fails because the timeline has no entry-into-force entry and the 2024-07-12 note leaves an unresolved 'verify before display' instruction in publishable content.",
+      "required_changes": [
+        "Add timeline entry {date: '2024-08-01', stage: 'in_force', note: 'Entered into force on the twentieth day following publication in the OJ (Article 113).', source_url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689'}. The Article 113 wording can also be cited from https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113.",
+        "Replace the 2024-07-12 note with 'Published in the Official Journal of the EU (OJ L, 12.7.2024).' and remove the 'Exact entry-into-force date not confirmed ... verify before display' text.",
+        "Summary: add 'It entered into force on 1 August 2024.' after the publication sentence.",
+        "key_obligations[0]: state the consolidated schedule instead of only the original dates: prohibitions and AI literacy (Chapters I-II) from 2 February 2025; GPAI, governance and penalties provisions from 2 August 2025; general application 2 August 2026; Annex III high-risk from 2 December 2027; Annex I high-risk from 2 August 2028; new Article 5 prohibitions added by Regulation (EU) 2026/1744 from 2 December 2026. Drop the originally enacted 2 August 2027 date or label it clearly as superseded."
+      ]
+    },
+    {
+      "id": "eu-digital-omnibus-ai",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng. Verified: the full title (Regulation (EU) 2026/1744 of 8 July 2026, amending 2024/1689, 2018/1139 and 2023/1230, 'Digital Omnibus on AI'); OJ L 24.7.2026; 'shall enter into force as a matter of urgency on the third day following that of its publication', which gives 27 July 2026 and matches the EUR-Lex consolidated date for 2024/1689; Annex III high-risk from 2 December 2027 and Annex I from 2 August 2028; Article 4 changed to 'take measures to support the development of AI literacy'; new Article 5 prohibitions on non-consensual intimate imagery and CSAM; and new Article 4a, whose paragraph 2 extends special-category data processing to 'providers and deployers of other AI systems and models and deployers of high-risk AI systems', so the bias-detection obligation is supported. EUR-Lex is primary. Status in_force is correct. No duplicate. Tone is neutral. claim_matches_source fails on two points. (1) The Article 5 key_obligation implies the new prohibitions already apply. Consolidated Article 113 (Commission AI Act Service Desk) says Article 5(1)(ba)/(bb), 5(1a) and 5(1b) apply from 2 December 2026. (2) 'Simplified compliance procedures extended to small mid-cap enterprises' is vaguer than the text. The act gives SMEs and SMCs simplified technical documentation and priority sandbox access, and SMCs extended AI literacy support. The Article 63 simplified QMS extension is worded 'to all SMEs, including start-ups', not SMCs.",
+      "required_changes": [
+        "key_obligations[3]: append 'applying from 2 December 2026 (Article 113 as amended)'.",
+        "key_obligations[4]: replace with 'SMEs and small mid-cap enterprises (SMCs) may provide technical documentation in a simplified manner and get priority access to AI regulatory sandboxes'.",
+        "Optionally add timeline entry {date: '2026-12-02', ...} only once that application date has passed. Do not add future-dated stages now."
+      ]
+    },
+    {
+      "id": "eu-gpai-code-of-practice",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "date_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai (Commission, primary). Verified: 'The code was published on July 10, 2025'; the Transparency chapter (Model Documentation Form) and Copyright chapter relate to Article 53; the Safety and Security chapter applies only to providers of GPAI models with systemic risk under Article 55; 21 signatories are listed (Amazon, Anthropic, Google, IBM, Microsoft, Mistral AI, OpenAI and others); xAI signed only the Safety and Security chapter. No duplicate. Tone is neutral. status_correct fails because status 'in_force' contradicts the only timeline entry (stage 'passed'), and the researcher admits in the summary that the label is used 'loosely'. A voluntary code does not enter into force. The meta sentence about the label is internal commentary that should not be published.",
+      "required_changes": [
+        "Set status to 'passed' to match the timeline and the voluntary nature of the code.",
+        "Remove the sentence \"Status 'in_force' is used loosely for a voluntary instrument in operation.\" from the summary. If needed, replace it with 'Signing the code is voluntary.'"
+      ]
+    },
+    {
+      "id": "ch-ai-regulatory-approach",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html (Federal Council, primary). Confirmed: 12 February 2025 decision to ratify the Council of Europe AI Convention and amend Swiss law, with sector-specific work continuing (e.g. healthcare, transport). The cited release does NOT mention the end-2026 consultation bill, transparency/data protection/non-discrimination/supervision, non-binding measures, or the 1 February 2026 contact point. Those claims come from bk.admin.ch, which the instrument never cites. I found and fetched https://www.bk.admin.ch/en/regulation and https://www.bk.admin.ch/en/artificial-intelligence, which confirm them: the FDJP works with DETEC, the FDFA and other offices on a bill to be submitted for consultation by end of 2026, covering transparency, data protection, non-discrimination and supervision; an implementation plan for non-binding measures (industry solutions, voluntary commitment declarations) is due by end of 2026; and 'The Federal Chancellery has also maintained a contact point for the Federal Administration since 1 February 2026.' claim_matches_source fails for three reasons. The bk.admin.ch claims have no cited URL. 'Central AI contact point' overstates the source, which describes an internal contact point for the Federal Administration. 'Texts read in English on admin.ch and bk.admin.ch' is process commentary, not content. Status 'proposed' is acceptable as the closest enum value for a government decision with no bill yet; 'consultation' would be wrong. The gap note correctly left out the 27 March 2025 Swiss signature of CETS 225 as unverified. No duplicate. Tone is neutral.",
+      "required_changes": [
+        "Add a cited source for the bk.admin.ch claims, e.g. a timeline entry {date: '2026-02-01', stage: 'proposed', note: 'Federal Chancellery contact point on AI for the Federal Administration in operation; consultation bill (FDJP with DETEC and FDFA) and non-binding measures plan due by end of 2026.', source_url: 'https://www.bk.admin.ch/en/artificial-intelligence'}, or another mechanism the editor prefers. Without a citation, remove those sentences.",
+        "Summary: change 'a central AI contact point was set up at the Federal Chancellery on 1 February 2026' to 'the Federal Chancellery has maintained an AI contact point for the Federal Administration since 1 February 2026'.",
+        "Summary: change 'a consultation bill from the FDJP' to 'a bill to be prepared by the FDJP with DETEC, the FDFA and other federal offices and submitted for consultation'.",
+        "Summary: remove 'Texts read in English on admin.ch and bk.admin.ch.'",
+        "key_obligations[0]: remove the unsourced parenthetical 'not yet drafted publicly' or replace it with 'consultation draft due by end of 2026 (bk.admin.ch)'."
+      ]
+    }
+  ]
+}

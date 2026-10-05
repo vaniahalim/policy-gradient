@@ -1,0 +1,28 @@
+{
+  "slug": "ch-ai-regulatory-approach",
+  "name": "Switzerland: Federal Council approach to AI regulation (ratification of Council of Europe AI Convention)",
+  "jurisdiction": "europe",
+  "subregion": "Switzerland",
+  "status": "proposed",
+  "summary": "On 12 February 2025 the Federal Council decided that Switzerland intends to ratify the Council of Europe Convention on AI and make the necessary amendments to Swiss law, while continuing sector-specific AI regulation. The Federal Chancellery page states a bill to be prepared by the FDJP with DETEC, the FDFA and other federal offices and submitted for consultation is due by end of 2026, along with a plan for non-binding measures, and that the Federal Chancellery has maintained an AI contact point for the Federal Administration since 1 February 2026. According to the Federal Chancellery, there is not yet any overarching legislation in Switzerland that deals specifically with AI.",
+  "key_obligations": [
+    "Planned implementing bill to cover transparency, data protection, non-discrimination and supervision; consultation draft due by end of 2026 (bk.admin.ch)",
+    "Continued work on AI regulation in specific sectors such as healthcare and transport (Federal Council, 12 February 2025)",
+    "Non-binding measures (industry solutions, voluntary commitments) planned"
+  ],
+  "timeline": [
+    {
+      "date": "2025-02-12",
+      "stage": "proposed",
+      "note": "Federal Council decides to ratify the Council of Europe AI Convention and amend Swiss law.",
+      "source_url": "https://www.admin.ch/gov/en/start/documentation/media-releases.msg-id-104110.html"
+    },
+    {
+      "date": "2026-02-01",
+      "stage": "proposed",
+      "note": "Federal Chancellery contact point on AI for the Federal Administration in operation; consultation bill (FDJP with DETEC and FDFA) and non-binding measures plan due by end of 2026.",
+      "source_url": "https://www.bk.admin.ch/en/artificial-intelligence"
+    }
+  ],
+  "last_verified": "2026-10-05T20:22:19Z"
+}

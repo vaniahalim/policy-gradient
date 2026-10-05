@@ -1,0 +1,37 @@
+{
+  "slug": "eu-digital-omnibus-ai",
+  "name": "Regulation (EU) 2026/1744 (Digital Omnibus on AI)",
+  "jurisdiction": "europe",
+  "subregion": "EU",
+  "status": "in_force",
+  "summary": "Regulation (EU) 2026/1744 of the European Parliament and of the Council of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230 as regards simplification of the implementation of harmonised rules on AI. Published in the Official Journal L series on 24 July 2026 and in force from the third day after publication, 27 July 2026. It defers high-risk application dates and adjusts several AI Act provisions.",
+  "key_obligations": [
+    "High-risk AI systems under Annex III apply from 2 December 2027",
+    "High-risk AI systems under Annex I apply from 2 August 2028",
+    "Article 4 AI literacy changed to an obligation to take measures supporting AI literacy",
+    "Article 5 extended with prohibitions on systems generating non-consensual intimate images and child sexual abuse material, applying from 2 December 2026 (Article 113 as amended)",
+    "SMEs and small mid-cap enterprises (SMCs) may provide technical documentation in a simplified manner and get priority access to AI regulatory sandboxes",
+    "Special-category data processing for bias detection extended beyond high-risk providers under safeguards"
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-08",
+      "stage": "passed",
+      "note": "Regulation dated 8 July 2026 (signature date per EUR-Lex title).",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    },
+    {
+      "date": "2026-07-24",
+      "stage": "passed",
+      "note": "Published in the Official Journal.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    },
+    {
+      "date": "2026-07-27",
+      "stage": "in_force",
+      "note": "Entered into force on the third day following publication.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

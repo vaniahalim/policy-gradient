@@ -1,0 +1,40 @@
+{
+  "slug": "eu-ai-act",
+  "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+  "jurisdiction": "europe",
+  "subregion": "EU",
+  "status": "in_force",
+  "summary": "Regulation (EU) 2024/1689 of the European Parliament and of the Council laying down harmonised rules on artificial intelligence. Signed 13 June 2024 and published in the Official Journal on 12 July 2024. It entered into force on 1 August 2024. Article 113 sets staged application dates. The EUR-Lex page shows a consolidated version dated 27 July 2026, reflecting amendment by Regulation (EU) 2026/1744, which moved the high-risk application dates (see eu-digital-omnibus-ai).",
+  "key_obligations": [
+    "Application schedule per consolidated Article 113: prohibitions and AI literacy (Chapters I and II) from 2 February 2025; GPAI, governance and penalties provisions from 2 August 2025 (except Article 101 fines on GPAI providers, which apply from 2 August 2026); general application 2 August 2026; Annex III high-risk from 2 December 2027; Annex I high-risk from 2 August 2028; new Article 5 prohibitions added by Regulation (EU) 2026/1744 from 2 December 2026",
+    "High-risk AI system requirements for Annex III systems now apply from 2 December 2027 and for Annex I systems from 2 August 2028, per the amending regulation",
+    "AI literacy (Article 4) as amended: providers and deployers must take measures to support AI literacy"
+  ],
+  "timeline": [
+    {
+      "date": "2024-06-13",
+      "stage": "passed",
+      "note": "Regulation signed (date of signature per EUR-Lex).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+    },
+    {
+      "date": "2024-07-12",
+      "stage": "passed",
+      "note": "Published in the Official Journal of the EU (OJ L, 12.7.2024).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+    },
+    {
+      "date": "2024-08-01",
+      "stage": "in_force",
+      "note": "Entered into force on the twentieth day following publication in the OJ (Article 113).",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+    },
+    {
+      "date": "2026-07-27",
+      "stage": "amended",
+      "note": "Amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI), which entered into force on this date; EUR-Lex shows a consolidated version of this date.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+    }
+  ],
+  "last_verified": "2026-10-05T20:22:19Z"
+}
