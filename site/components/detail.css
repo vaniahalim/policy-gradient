@@ -1,0 +1,17 @@
+/* Shared by the globe's detail panel and the standalone instrument and item pages. */
+.detail .meta { margin: 0 0 18px; font: 600 15px / 1.4 var(--serif); color: var(--ink-soft); }
+.detail p.sum { font: 400 17px / 1.65 var(--serif); margin: 0 0 22px; max-width: 62ch; }
+.detail h3 { margin: 26px 0 10px; font: 800 17px / 1.2 var(--display); font-stretch: 115%; }
+.detail ul, .detail ol { margin: 0; padding: 0 0 0 1.1em; font: 400 16px / 1.6 var(--serif); max-width: 62ch; }
+.detail ul { list-style: disc; }
+.detail li { margin-bottom: 8px; }
+.detail .tl { list-style: none; padding: 0; border-left: 3px solid var(--ink); margin-left: 6px; }
+.detail .tl li { position: relative; padding-left: 18px; margin-bottom: 14px; }
+.detail .tl li::before {
+  content: ""; position: absolute; left: -9px; top: 0.45em; width: 13px; height: 13px; border-radius: 50%;
+  background: var(--paper); border: 3px solid var(--ink);
+}
+.detail .tl li.hit::before { background: var(--oxblood); border-color: var(--oxblood); }
+.detail .tl time { display: block; font: 800 14px / 1.2 var(--display); font-stretch: 112%; }
+.detail a { color: var(--pen); font-weight: 600; }
+.detail a:hover { color: var(--oxblood); }

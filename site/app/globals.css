@@ -34,7 +34,7 @@ body {
 
 /* The desk: warm lamp glow, a vignette, plank seams and a faint wood grain over walnut. */
 body {
-  overflow: hidden;
+  min-height: 100svh;
   color: var(--on-desk);
   font-family: var(--serif);
   background:
@@ -43,6 +43,7 @@ body {
     repeating-linear-gradient(90deg, transparent 0 calc(20vw - 2px), rgba(0, 0, 0, 0.38) calc(20vw - 2px) 20vw),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.003 0.22' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.04 0 0 0 0 0.02 0 0 0 0 0.01 0 0 0 0.9 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
     var(--walnut);
+  background-attachment: fixed; /* after the shorthand, which would reset it */
 }
 
 button {
@@ -53,4 +54,9 @@ button {
 :focus-visible {
   outline: 3px solid var(--brass-fill);
   outline-offset: 3px;
+}
+
+/* The home page is a fixed stage. Every other page scrolls. */
+body:has(.stage) {
+  overflow: hidden;
 }

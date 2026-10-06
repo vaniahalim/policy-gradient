@@ -15,11 +15,12 @@ Guidance for Claude Code when working in this repository.
 - Agent pipeline (`.claude/agents/`, `/research-run`) and two bootstrap runs. `content/` holds 15 reviewed instruments and 2 news items, each instrument carrying a verified `kind`.
 - Design tokens and the globe prototypes (`.planning/design/`). Prototype **option A** (instruments, timeline events and items as sheets) was chosen and is now the real home page.
 - Home page: the globe, region spin, detail panel, list view, info pop-ups. Static export builds.
+- The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 26 static pages in all.
 
 **Next, in order**
-1. Pages the nav links to: Files (filterable feed), one page per instrument at its own URL, Methodology, Digest with RSS. Until they exist those links 404.
-2. A normal (non-bootstrap) 30-day news run. Only 2 items exist, so the feed is thin.
-3. Compare matrix, search, then deploy (static host, custom domain), then scheduled automation of the pipeline (Phase 5 in the spec).
+1. A normal (non-bootstrap) 30-day news run. Only 2 items exist, so the archive and digest are thin.
+2. Before publishing: set `SITE_URL` for the build (RSS links must be absolute), measure colour contrast, add a skip link past the 47 sheet tab stops, and make sure the Methodology page's "a person approves every change" is true in practice.
+3. Compare matrix and search, then deploy (static host, custom domain), then scheduled automation of the pipeline (Phase 5 in the spec).
 
 ## Decisions that override the spec
 
@@ -39,7 +40,7 @@ npm run dev             # dev server on :3000
 npm run build           # static export to site/out/
 npm run lint            # eslint
 npm test                # node:test via tsx, over lib/*.test.ts
-npm run validate        # schema, duplicates, instrument links
+npm run validate        # schema, duplicates, instrument links, digest links
 npm run validate:links  # also checks every cited URL is live
 ```
 
@@ -55,8 +56,9 @@ content/runs/<run-id>/              raw agent output and review verdicts. Proven
 docs/                               spec.md, research-protocol.md (the rules every agent follows)
 .claude/agents/ .claude/commands/   researcher-europe/us/asia, reviewer, editor, /research-run
 .planning/design/                   tokens.md (binding) and the home-globe prototypes
-site/lib/                           schema, content loader, globe maths, labels, link helpers (tested)
-site/components/                    GlobeHome, Sheet, DetailPanel, NavInfo, useGlobeMotion, globe.css
+site/lib/                           schema, content loader, globe maths, labels, files filters, digest parser, rss, link helpers (all tested)
+site/components/                    home: GlobeHome, Sheet, DetailPanel, NavInfo, useGlobeMotion, globe.css
+                                    pages: PageShell, FileBrowser, Stamp, detail.tsx (shared by panel and pages), page.css
 site/app/                           routes, layout, globals.css (tokens and the wood background)
 ```
 
@@ -71,7 +73,7 @@ site/app/                           routes, layout, globals.css (tokens and the 
 ## Working on the site
 
 - **Next.js 16, React 19, Tailwind 4.** `site/AGENTS.md` warns this version has breaking changes. Read the matching guide in `site/node_modules/next/dist/docs/` before writing Next code. Route `params` are a `Promise`, and `PageProps<'/route'>` is a global helper.
-- **Static export (`output: 'export'`).** Every dynamic route needs `generateStaticParams`, and route handlers (RSS) need `export const dynamic = 'force-static'`. No server features.
+- **Static export (`output: 'export'`, `trailingSlash: true`).** Every dynamic route needs `generateStaticParams` and `dynamicParams = false`, and route handlers (RSS) need `export const dynamic = 'force-static'`. No server features. Trailing slashes make `/files/` export as `files/index.html`, which any static host serves. Without them a plain static server shows directory listings.
 - **Design tokens are binding** (`.planning/design/system/tokens.md`, mirrored as CSS variables in `app/globals.css`). Use variables, not raw hex. No default fonts or Tailwind colours.
 - **TDD for anything in `site/lib/`.** UI is checked with real screenshots: serve `site/out/` with `python3 -m http.server` and drive headless Google Chrome (`--screenshot`, `--virtual-time-budget`).
 - **Format dates with `lib/labels.ts`, never `Intl`.** The server and the browser disagree on month abbreviations and cause hydration mismatches.
@@ -83,6 +85,7 @@ site/app/                           routes, layout, globals.css (tokens and the 
 - The panel is outside `.stage`, so it can't use the stage's `--u` scale variable.
 - Headless Chrome cannot go below a 500px-wide window, so 390px screenshots only crop a wider layout.
 - Some sites return 403 or 406 to automated fetches (California legislature, NY Senate). `lib/links.ts` lists hosts the link check skips, and the checker sends browser headers.
+- Tailwind's reset strips list bullets and numbers. Any new `ul` or `ol` needs `list-style` set explicitly (see `.detail` and `.prose`).
 - In zsh a variable named `path` overwrites `PATH`. Don't use it in shell loops.
 - A stray `package-lock.json` in the home folder confuses Turbopack, so `next.config.ts` pins `turbopack.root`.
 

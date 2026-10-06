@@ -3,6 +3,7 @@ import { join, resolve } from "node:path";
 import { ItemSchema, InstrumentSchema } from "../lib/schema";
 import { jsonFiles } from "../lib/content";
 import { blocksAutomatedFetches } from "../lib/links";
+import { brokenDigestLinks, loadDigests } from "../lib/digest";
 
 const CONTENT_DIR = resolve(__dirname, "../../content");
 const checkLinks = process.argv.includes("--links");
@@ -48,6 +49,17 @@ for (const file of jsonFiles(join(CONTENT_DIR, "items"))) {
     if (prior && prior !== item.id) fail(file, `primary source ${s.url} already used by ${prior} (possible duplicate)`);
     primaryUrls.set(s.url, item.id);
   }
+}
+
+// Digests link to instruments and items by URL. A link to something that no longer exists would ship as a dead page.
+try {
+  for (const digest of loadDigests(join(CONTENT_DIR, "digests"))) {
+    for (const href of brokenDigestLinks(digest.blocks, { instruments: instrumentSlugs, items: ids })) {
+      errors.push(`digests/${digest.slug}.md: link to ${href} points at nothing`);
+    }
+  }
+} catch (e) {
+  errors.push(`digests: ${e instanceof Error ? e.message : "could not be read"}`);
 }
 
 // Some legislature sites answer 406 to requests that lack ordinary browser headers.

@@ -153,7 +153,6 @@
 }
 .panel.open { transform: none; visibility: visible; }
 .panel h2 { margin: 0 0 8px; font: 800 clamp(24px, 3vw, 36px) / 1.04 var(--display); font-stretch: 120%; padding-right: 48px; }
-.panel .meta { margin: 0 0 18px; font: 600 15px / 1.4 var(--serif); color: var(--ink-soft); }
 .panel .x {
   position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; border-radius: 999px; border: 2px solid var(--ink);
   background: transparent; cursor: pointer; font: 800 18px / 1 var(--display);
@@ -168,21 +167,6 @@
   display: inline-block; vertical-align: middle; margin: 0 0 14px 10px; padding: 5px 10px; background: var(--ink); color: var(--paper);
   border-radius: 2px; font: 800 13px / 1.1 var(--display); font-stretch: 108%;
 }
-.panel p.sum { font: 400 17px / 1.65 var(--serif); margin: 0 0 22px; max-width: 62ch; }
-.panel h3 { margin: 26px 0 10px; font: 800 17px / 1.2 var(--display); font-stretch: 115%; }
-.panel ul, .panel ol { margin: 0; padding: 0 0 0 1.1em; font: 400 16px / 1.6 var(--serif); max-width: 62ch; }
-.panel ul { list-style: disc; }
-.panel li { margin-bottom: 8px; }
-.tl { list-style: none; padding: 0; border-left: 3px solid var(--ink); margin-left: 6px; }
-.tl li { position: relative; padding-left: 18px; margin-bottom: 14px; }
-.tl li::before {
-  content: ""; position: absolute; left: -9px; top: 0.45em; width: 13px; height: 13px; border-radius: 50%;
-  background: var(--paper); border: 3px solid var(--ink);
-}
-.tl li.hit::before { background: var(--oxblood); border-color: var(--oxblood); }
-.tl time { display: block; font: 800 14px / 1.2 var(--display); font-stretch: 112%; }
-.panel a { color: var(--pen); font-weight: 600; }
-.panel a:hover { color: var(--oxblood); }
 
 /* ---------- list view (the same files as plain HTML) ---------- */
 .list { position: fixed; inset: 0; z-index: 4; overflow: auto; padding: clamp(150px, 22vw, 260px) clamp(16px, 6vw, 120px) 90px clamp(120px, 14vw, 200px); }
@@ -216,3 +200,7 @@
 .sheet[data-paper="0"] { --p1: var(--paper-pale); --p2: var(--paper); }
 .sheet[data-paper="1"] { --p1: var(--paper); --p2: var(--paper-aged); }
 .sheet[data-paper="2"] { --p1: var(--paper-pale); --p2: var(--paper-aged); }
+
+.panel .pagelink { margin: 28px 0 0; font: 800 15px / 1.2 var(--display); font-stretch: 112%; }
+.panel .pagelink a { color: var(--pen); }
+.panel .pagelink a:hover { color: var(--oxblood); }
