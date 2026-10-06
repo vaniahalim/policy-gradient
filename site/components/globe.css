@@ -126,6 +126,8 @@
   overflow-wrap: break-word; hyphens: auto; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--tl, 6); overflow: hidden;
 }
 .sheet--event .title { --ts: 15px; --tl: 2; }
+/* Long legal words ('Transparency', 'Responsible') need the narrower cut to fit a small sheet unbroken. */
+.sheet--instrument .title, .sheet--item .title { font-stretch: 96%; }
 .blurb {
   flex: 0 1 auto; min-height: 0; margin: calc(var(--u) * 7px) 0 0; font: 400 calc(var(--u) * 11.5px) / 1.4 var(--serif); color: #2c231b;
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines, 5); overflow: hidden;
