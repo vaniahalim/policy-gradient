@@ -1,20 +1,17 @@
-import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { ItemSchema, InstrumentSchema } from "../lib/schema";
+import { jsonFiles } from "../lib/content";
+import { blocksAutomatedFetches } from "../lib/links";
 
 const CONTENT_DIR = resolve(__dirname, "../../content");
 const checkLinks = process.argv.includes("--links");
 
-function jsonFiles(dir: string): string[] {
-  if (!existsSync(dir)) return [];
-  return readdirSync(dir, { withFileTypes: true, recursive: true })
-    .filter((e) => e.isFile() && e.name.endsWith(".json"))
-    .map((e) => join(e.parentPath, e.name));
-}
-
 const errors: string[] = [];
 const fail = (file: string, msg: string) => errors.push(`${file.replace(CONTENT_DIR + "/", "")}: ${msg}`);
 
+const urlsToCheck = new Set<string>();
+const skipped: string[] = [];
 const instrumentSlugs = new Set<string>();
 for (const file of jsonFiles(join(CONTENT_DIR, "instruments"))) {
   const parsed = InstrumentSchema.safeParse(JSON.parse(readFileSync(file, "utf8")));
@@ -24,11 +21,11 @@ for (const file of jsonFiles(join(CONTENT_DIR, "instruments"))) {
   }
   if (instrumentSlugs.has(parsed.data.slug)) fail(file, `duplicate instrument slug ${parsed.data.slug}`);
   instrumentSlugs.add(parsed.data.slug);
+  for (const entry of parsed.data.timeline) urlsToCheck.add(entry.source_url);
 }
 
 const ids = new Set<string>();
 const primaryUrls = new Map<string, string>();
-const urlsToCheck = new Set<string>();
 for (const file of jsonFiles(join(CONTENT_DIR, "items"))) {
   const parsed = ItemSchema.safeParse(JSON.parse(readFileSync(file, "utf8")));
   if (!parsed.success) {
@@ -53,9 +50,20 @@ for (const file of jsonFiles(join(CONTENT_DIR, "items"))) {
   }
 }
 
+// Some legislature sites answer 406 to requests that lack ordinary browser headers.
+const BROWSER_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36",
+  Accept: "text/html,application/xhtml+xml,application/pdf,*/*;q=0.8",
+};
+
 async function liveness(url: string): Promise<string | null> {
   try {
-    const res = await fetch(url, { method: "GET", redirect: "follow", signal: AbortSignal.timeout(15_000) });
+    const res = await fetch(url, {
+      method: "GET",
+      redirect: "follow",
+      headers: BROWSER_HEADERS,
+      signal: AbortSignal.timeout(15_000),
+    });
     return res.ok ? null : `HTTP ${res.status}`;
   } catch (e) {
     return e instanceof Error ? e.message : "request failed";
@@ -65,6 +73,10 @@ async function liveness(url: string): Promise<string | null> {
 async function main() {
   if (checkLinks) {
     for (const url of urlsToCheck) {
+      if (blocksAutomatedFetches(url)) {
+        skipped.push(url);
+        continue;
+      }
       const problem = await liveness(url);
       if (problem) errors.push(`link ${url}: ${problem}`);
     }
@@ -73,7 +85,7 @@ async function main() {
     console.error(`Validation failed (${errors.length}):\n- ${errors.join("\n- ")}`);
     process.exit(1);
   }
-  console.log(`OK: ${instrumentSlugs.size} instruments, ${ids.size} items${checkLinks ? `, ${urlsToCheck.size} links live` : ""}`);
+  console.log(`OK: ${instrumentSlugs.size} instruments, ${ids.size} items${checkLinks ? `, ${urlsToCheck.size - skipped.length} links live${skipped.length ? `, ${skipped.length} skipped (host blocks automated fetches)` : ""}` : ""}`);
 }
 
 main();
