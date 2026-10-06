@@ -1,0 +1,31 @@
+{
+  "slug": "us-ca-sb-53-frontier-ai-transparency",
+  "name": "California SB 53: Transparency in Frontier Artificial Intelligence Act",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "status": "in_force",
+  "summary": "California law on frontier models (trained above 10^26 operations). All frontier developers must publish transparency reports when deploying new or substantially modified frontier models, report critical safety incidents, and observe whistleblower protections. Large frontier developers (over $500 million annual gross revenue) must also publish a frontier AI framework, send internal-use catastrophic risk summaries to the Office of Emergency Services, and provide an anonymous internal reporting process. Enforced by the Attorney General. Effective 1 January 2026 under the California Constitution's default rule for non-urgency statutes; the CalCompute provisions become operative only upon a budget appropriation.",
+  "key_obligations": [
+    "Large frontier developers: publish a frontier AI framework, review it at least once per year and update as appropriate; publish material modifications with a justification within 30 days",
+    "Frontier developers: publish a transparency report before or concurrently with deploying a new or substantially modified frontier model",
+    "Frontier developers: report critical safety incidents to the Office of Emergency Services within 15 days of discovery; if an incident poses an imminent risk of death or serious physical injury, disclose it within 24 hours to an appropriate authority (e.g. law enforcement or a public safety agency)",
+    "Large frontier developers: send OES summaries of catastrophic risk assessments from internal use every three months or on another reasonable schedule communicated to OES in writing",
+    "Whistleblower protections for covered employees of frontier developers; large frontier developers must also provide an anonymous internal reporting process",
+    "Large frontier developers: civil penalties up to $1 million per violation (e.g. failing to publish or transmit required documents, failing to report an incident, or not complying with their own framework), recoverable only in a civil action by the Attorney General"
+  ],
+  "timeline": [
+    {
+      "date": "2025-09-29",
+      "stage": "passed",
+      "note": "Approved by the Governor; Chapter 138.",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB53"
+    },
+    {
+      "date": "2026-01-01",
+      "stage": "in_force",
+      "note": "Effective 1 January 2026: non-urgency statute enacted 29 September 2025, effective January 1 following a 90-day period from enactment under Cal. Const. art. IV, sec. 8(c)(1). Consistent with secondary reporting (WilmerHale).",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%208.&article=IV"
+    }
+  ],
+  "last_verified": "2026-10-05T12:00:00Z"
+}

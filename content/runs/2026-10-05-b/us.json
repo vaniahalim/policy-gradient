@@ -132,10 +132,10 @@
       "key_obligations": [
         "Large frontier developers: publish a frontier AI framework, review it at least once per year and update as appropriate; publish material modifications with a justification within 30 days",
         "Frontier developers: publish a transparency report before or concurrently with deploying a new or substantially modified frontier model",
-        "Report critical safety incidents to the Office of Emergency Services within 15 days (24 hours if imminent danger)",
+        "Frontier developers: report critical safety incidents to the Office of Emergency Services within 15 days of discovery; if an incident poses an imminent risk of death or serious physical injury, disclose it within 24 hours to an appropriate authority (e.g. law enforcement or a public safety agency)",
         "Large frontier developers: send OES summaries of catastrophic risk assessments from internal use every three months or on another reasonable schedule communicated to OES in writing",
         "Whistleblower protections for covered employees of frontier developers; large frontier developers must also provide an anonymous internal reporting process",
-        "Civil penalties up to $1 million per violation, enforced by the Attorney General"
+        "Large frontier developers: civil penalties up to $1 million per violation (e.g. failing to publish or transmit required documents, failing to report an incident, or not complying with their own framework), recoverable only in a civil action by the Attorney General"
       ],
       "timeline": [
         {

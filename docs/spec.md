@@ -10,8 +10,8 @@ Most trackers are link dumps. This one is a **structured, sourced, reviewed** tr
 
 **Core views**
 1. **Feed**: reviewed items newest-first, filterable by jurisdiction, type, topic, stage and date. Each item has a 2-3 sentence summary, "why it matters", a primary-source link and a reviewer-confidence badge.
-2. **Instrument pages** (the differentiator): one page per law or policy (e.g. EU AI Act, Colorado AI Act, China's Generative AI Measures, Korea AI Basic Act, Japan AI Promotion Act). Each has a status timeline (proposed, passed, in force, amended), key obligations, who is covered, and the news items linked to it.
-3. **Jurisdiction pages**: a regime overview, active instruments and recent items for Europe (EU and Switzerland), US (federal and state) and Asia (China, Japan, South Korea, Singapore, India, others), treated as sub-regions.
+2. **Instrument pages** (the differentiator): one page per law or policy (e.g. EU AI Act, Colorado AI Act, China's Generative AI Measures, Singapore's Model AI Governance Framework). Each has a status timeline (proposed, passed, in force, amended), key obligations, who is covered, and the news items linked to it.
+3. **Jurisdiction pages**: a regime overview, active instruments and recent items for Europe (EU and Switzerland), US (federal and state) and Asia (China and Singapore in v1), treated as sub-regions.
 4. **Compare**: side-by-side matrix of regimes (approach, risk-based or sectoral, enforcement, penalties, GPAI/frontier rules). This is strong portfolio content.
 5. **Weekly digest page and RSS feed**, so others can subscribe.
 6. **Methodology page**: how items are found, how agents and reviewers work, and the confidence rubric. It signals rigor and sets the site apart as research, not an aggregator.
@@ -43,7 +43,7 @@ site/                              Next.js (App Router), static export, Tailwind
 Run as one orchestrated command (e.g. a `/research-run` skill or script prompt):
 
 1. **Plan**: the orchestrator reads the existing content to know what's already tracked and sets the date window.
-2. **Research (parallel, independent)**: 3 researcher subagents run concurrently (Europe / US / Asia, with Asia optionally split into China / Japan+Korea / SEA+India for 5 workers). Each uses web search and fetch, prefers **primary sources** (Official Journal, Federal Register, congress.gov, state legislature sites, CAC, METI and similar), and writes candidate items to `content/runs/<id>/<jurisdiction>.json`. They do not see each other's output, which avoids anchoring.
+2. **Research (parallel, independent)**: 3 researcher subagents run concurrently (Europe / US / Asia, with Asia optionally split into China / Singapore for 4 workers). Each uses web search and fetch, prefers **primary sources** (Official Journal, Federal Register, congress.gov, state legislature sites, CAC, IMDA and similar), and writes candidate items to `content/runs/<id>/<jurisdiction>.json`. They do not see each other's output, which avoids anchoring.
 3. **Review (parallel, independent)**: one reviewer per researcher batch, a **fresh context**, not the author. It re-fetches every cited URL and checks: (a) the claim matches the source, (b) the date and status are correct, (c) the source is primary or at least credible, (d) no duplicates or hallucinated instruments, (e) the summary is neutral. Verdicts are accept, revise or reject. Rejected items never publish, and revise items go back once.
 4. **Edit and merge**: an editor agent dedupes across jurisdictions, links items to instruments, updates instrument timelines and drafts the weekly digest.
 5. **Gate**: `scripts/validate.ts` (schema, URLs resolve, no duplicates). **Human approval of the diff before commit**, since a policy site's credibility depends on accuracy.
@@ -60,11 +60,11 @@ Run as one orchestrated command (e.g. a `/research-run` skill or script prompt):
 - **Europe (EU):** AI Act (GPAI obligations, high-risk timeline, any delay or "digital omnibus" changes), the GPAI Code of Practice, AI Office guidance.
 - **Europe (Switzerland):** Federal Council plan to ratify the Council of Europe AI Convention with sector-specific implementation, and the resulting consultation drafts.
 - **US:** federal executive actions and preemption debate, NIST, state laws (Colorado, California, Texas and others), notable litigation.
-- **Asia:** China (generative AI measures, content-labeling rules, algorithm filing), Japan AI Promotion Act, South Korea AI Basic Act, Singapore model governance, India's approach.
+- **Asia:** China (generative AI measures, content-labeling rules, algorithm filing), Singapore model governance. Japan, South Korea and India are out of v1.
 
 ## Key risks and mitigations
 - **Hallucinated or stale legal facts:** an independent reviewer re-fetches the sources, with a primary-source preference, a human diff approval and a visible "last verified" date.
-- **Paywalled or non-English sources (China, Japan, Korea):** researchers cite the official text and flag machine-translated summaries with lower confidence.
+- **Paywalled or non-English sources (China):** researchers cite the official text and flag machine-translated summaries with lower confidence.
 - **Not legal advice:** a clear disclaimer on every page and in the footer.
 - **Scope creep:** v1 is the feed, instruments, jurisdictions and methodology pages. Compare and search come after.
 
@@ -76,5 +76,5 @@ Run as one orchestrated command (e.g. a `/research-run` skill or script prompt):
 
 ## Open questions to confirm before building
 - Visual identity: editorial and scholarly (serif-forward, restrained), or dashboard-style? Recommendation is editorial and scholarly, which suits the policy-student positioning.
-- Which "Asia" sub-regions to cover in v1? Recommendation is China, Japan, South Korea, Singapore and India.
+- Decided: Asia in v1 covers China and Singapore only. Japan, South Korea and India were dropped on 2026-10-06 and their bootstrap instruments deleted.
 - Whether to include human-written analysis posts in v1 or leave them for later.

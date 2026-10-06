@@ -10,7 +10,7 @@ Read this fully before doing any work. Schemas are defined in `site/lib/schema.t
 5. **Be honest about uncertainty.** Use `confidence: low` and say why in the summary when sources conflict or only machine-translated text was available.
 
 ## Source tiers
-- `primary`: the issuing body itself (e.g. EUR-Lex, Federal Register, congress.gov, a state legislature, CAC, METI, Swiss Federal Council / admin.ch, a court).
+- `primary`: the issuing body itself (e.g. EUR-Lex, Federal Register, congress.gov, a state legislature, CAC, IMDA, Swiss Federal Council / admin.ch, a court).
 - `secondary`: everything else (news, law firms, think tanks).
 
 ## Confidence rubric
