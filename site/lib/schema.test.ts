@@ -58,6 +58,7 @@ test("accepts a valid instrument and requires a timeline", () => {
     name: "EU Artificial Intelligence Act",
     jurisdiction: "europe",
     subregion: "EU",
+    kind: "regulation",
     status: "in_force",
     summary: "Risk-based regulation of AI systems in the EU.",
     key_obligations: ["Prohibited practices", "GPAI transparency"],
@@ -81,4 +82,23 @@ test("accepts a Switzerland item under the europe jurisdiction", () => {
 
 test("rejects the retired eu jurisdiction value", () => {
   assert.equal(ItemSchema.safeParse({ ...validItem, jurisdiction: "eu" }).success, false);
+});
+
+test("requires an instrument kind", () => {
+  const instrument = {
+    slug: "x", name: "X", jurisdiction: "us", subregion: "Federal", status: "in_force", summary: "S.",
+    key_obligations: ["a"], timeline: [{ date: "2025-01-01", stage: "in_force", note: "n", source_url: "https://example.org/t" }],
+    last_verified: "2026-10-05T09:00:00Z",
+  };
+  assert.equal(InstrumentSchema.safeParse(instrument).success, false);
+  assert.equal(InstrumentSchema.safeParse({ ...instrument, kind: "executive_order" }).success, true);
+});
+
+test("rejects an unknown instrument kind", () => {
+  const instrument = {
+    slug: "x", name: "X", kind: "law-ish", jurisdiction: "us", subregion: "Federal", status: "in_force", summary: "S.",
+    key_obligations: ["a"], timeline: [{ date: "2025-01-01", stage: "in_force", note: "n", source_url: "https://example.org/t" }],
+    last_verified: "2026-10-05T09:00:00Z",
+  };
+  assert.equal(InstrumentSchema.safeParse(instrument).success, false);
 });

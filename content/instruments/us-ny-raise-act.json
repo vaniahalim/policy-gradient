@@ -1,6 +1,7 @@
 {
   "slug": "us-ny-raise-act",
   "name": "New York Responsible AI Safety and Education (RAISE) Act",
+  "kind": "statute",
   "jurisdiction": "us",
   "subregion": "New York",
   "status": "amended",

@@ -1,0 +1,38 @@
+{
+  "run_id": "2026-10-06-a",
+  "region": "europe",
+  "verdicts": [
+    {
+      "id": "eu-ai-act",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source"],
+      "reviewer_notes": "SCOPE: narrow review of the `kind` field only, per orchestrator instruction for run 2026-10-06-a. No other field was reviewed, and the other five standard checks were not performed, so they are not listed. This accept covers `kind` only. Assigned kind: statute. Verification: the cited EUR-Lex URL (CELEX:32024R1689), the ELI URL (eli/reg/2024/1689/oj/eng) and the OJ HTML URL all returned empty content to the fetcher on 2026-10-06, so I could not read the primary page directly. An alternative official copy confirms the title: EU-OSHA (an EU agency) lists it as 'Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence'. The protocol says `statute` 'includes EU Regulations adopted by Parliament and Council'. The document describes itself as exactly that, so `statute` is correct. Caveat: the EUR-Lex fetch failure is a tooling problem, not evidence against the item. The title is well established and corroborated by an EU institutional source.",
+      "required_changes": []
+    },
+    {
+      "id": "eu-digital-omnibus-ai",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source"],
+      "reviewer_notes": "SCOPE: `kind` field only. The other checks were not performed. Assigned kind: statute. Verification: the cited EUR-Lex ELI URL (eli/reg/2026/1744/oj/eng) returned empty content to the fetcher. The Northern Ireland Assembly EU-law scrutiny tracker (an official legislature page) gives the full title: 'Regulation (EU) 2026/1744 of the European Parliament and of the Council of 8 July 2026 amending Regulations (EU) 2024/1689, (EU) 2018/1139 and (EU) 2023/1230 as regards the simplification of the implementation of harmonised rules on artificial intelligence (Digital Omnibus on AI)'. Search results for the EUR-Lex ELI and other sources agree. It is an EU Regulation adopted by Parliament and Council, and the protocol puts these under `statute`. An amending regulation is still a legislative act, so `statute` is correct, not `regulation` (which the protocol keeps for agency or ministry rules under delegated authority).",
+      "required_changes": []
+    },
+    {
+      "id": "eu-gpai-code-of-practice",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source"],
+      "reviewer_notes": "SCOPE: `kind` field only. The other checks were not performed. Assigned kind: voluntary_code. Verification: I re-fetched https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai on 2026-10-06. The page calls the code 'a voluntary tool', says it was 'prepared by independent experts in a multi-stakeholder process' and 'published on July 10, 2025', and says 'AI model providers who voluntarily sign it can show they comply with the AI Act by adhering to the code'. It also says the Commission and the AI Board confirmed it as 'an adequate voluntary tool'. This matches the protocol definition exactly ('a code of practice that parties may choose to sign up to'). The Commission/AI Board adequacy confirmation does not make it `regulation` or `guidance`: the document still calls itself voluntary and opt-in. `voluntary_code` is correct.",
+      "required_changes": []
+    },
+    {
+      "id": "ch-ai-regulatory-approach",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source"],
+      "reviewer_notes": "SCOPE: `kind` field only. The other checks were not performed. Assigned kind: policy_framework. Verification: I re-fetched both cited sources on 2026-10-06. (1) admin.ch media release msg-id-104110 (12 Feb 2025): the Federal Council decided that 'Switzerland intends to ratify the Council of Europe Convention on Artificial Intelligence (AI) and to make the necessary amendments to Swiss law', and that sector-specific regulation would continue. That is a direction and a mandate, with no legislative text. (2) bk.admin.ch/en/artificial-intelligence: 'In Switzerland, there is not yet any overarching legislation that deals specifically with AI'. The FDJP is to draw up a bill 'to be submitted for consultation by the end of 2026'. Neither page shows a published consultation draft. The protocol says to use `policy_framework` 'only when there is no draft law, just a stated approach or recommendations'. That is the situation here, so `policy_framework` is correct. The other kinds do not fit. `executive_order` does not apply: the Federal Council is the collective government, but this is a policy decision, not an order. `statute` would need a draft law to exist. Forward-looking flag, not a required change: once the FDJP consultation bill is published (due by end of 2026), the implementing law should be tracked as a `statute` with status proposed, either as a new instrument or by re-kinding this one. The editor should decide which, because this instrument's name is tied to the Federal Council approach and not to a specific bill.",
+      "required_changes": []
+    }
+  ]
+}

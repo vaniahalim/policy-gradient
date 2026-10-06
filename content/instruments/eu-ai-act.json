@@ -1,6 +1,7 @@
 {
   "slug": "eu-ai-act",
   "name": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+  "kind": "statute",
   "jurisdiction": "europe",
   "subregion": "EU",
   "status": "in_force",

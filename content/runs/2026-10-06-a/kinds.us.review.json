@@ -1,0 +1,63 @@
+{
+  "run_id": "2026-10-06-a",
+  "region": "us",
+  "scope_note": "Narrow review of the `kind` field only, against the 'Instrument kind' definitions in docs/research-protocol.md. No other field was reviewed, so the standard six checks are not asserted here; `checks` lists only `kind_correct` when it passed.",
+  "verdicts": [
+    {
+      "id": "us-ca-sb-53-frontier-ai-transparency",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: statute. The primary timeline source (leginfo.legislature.ca.gov billNavClient SB53) returned HTTP 403 to the automated fetch, so I could not read it directly. As an alternative official source I used the Governor's office release (gov.ca.gov, 29 Sep 2025, 'Governor Newsom signs SB 53'), which identifies it as Senate Bill 53 by Senator Wiener, signed into law by the Governor. A bill passed by the California Legislature and signed by the Governor is 'an act adopted by a legislature', so statute fits. Certainty is slightly lower because the legislature's own page was unreachable, but this is unambiguous.",
+      "required_changes": []
+    },
+    {
+      "id": "us-co-ai-act-sb24-205-sb26-189",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: statute. I fetched leg.colorado.gov/bills/sb26-189. It shows SB26-189 'Automated Decision-Making Technology' signed into law on 14 May 2026 (Chapter 131), and the summary says 'The act repeals and reenacts those provisions'. SB 24-205 and SB25B-004 are also General Assembly bills, per the instrument's own timeline (I did not re-fetch them). Every instrument in the chain is an act of the Colorado legislature, so statute fits.",
+      "required_changes": []
+    },
+    {
+      "id": "us-eo-14365-national-ai-policy-framework",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: executive_order. I fetched the whitehouse.gov presidential-actions page. It is titled 'Ensuring a National Policy Framework for Artificial Intelligence', numbered Executive Order 14365, opens with 'By the authority vested in me as President by the Constitution and the laws of the United States of America, it is hereby ordered', and was signed by Donald J. Trump on 11 December 2025. That is an order issued by a head of state, so executive_order fits. Incidental: the URL slug ('eliminating-state-law-obstruction-...') differs from the title, but the page resolves to EO 14365, so this has no effect on kind.",
+      "required_changes": []
+    },
+    {
+      "id": "us-ftc-ai-accuracy-policy-statement",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: guidance. I fetched the FTC press release (July 2026). The FTC calls the document a 'proposed policy statement' that it is putting out for public comment to help 'formulate a final policy'. The release does not mention rulemaking or describe the statement as a binding rule. The protocol defines guidance as including 'an agency policy statement', so guidance fits, and regulation does not. The fact that it is still only proposed is covered by status, not kind.",
+      "required_changes": []
+    },
+    {
+      "id": "us-national-ai-legislative-framework",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: policy_framework. I fetched the whitehouse.gov release of 20 March 2026. It describes 'a comprehensive national legislative framework', links a PDF titled 'National-Policy-Framework-for-Artificial-Intelligence-Legislative-Recommendations', and says the Administration 'looks forward to working with Congress ... to turn this framework into legislation'. That makes these legislative recommendations, not law. The protocol says to use policy_framework only when there is no draft law, and the release text sets out policy objectives rather than statutory language. I could not read the linked PDF (it could not be text-extracted locally), so I have not ruled out bill text inside it, but nothing on the release page suggests any. policy_framework fits.",
+      "required_changes": []
+    },
+    {
+      "id": "us-ny-raise-act",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: statute. I fetched nysenate.gov/legislation/bills/2025/S8828. It shows S8828 passed the Senate 58-1 and the Assembly, was signed by the Governor on 27 March 2026 (Chapter 96), takes effect 1 January 2027, and repeals and replaces Article 44-B of the General Business Law. I did not re-fetch the original S6953 page, but the instrument file describes it as a Senate bill signed as Chapter 699. Both are acts of the New York Legislature, so statute fits.",
+      "required_changes": []
+    },
+    {
+      "id": "us-tx-traiga-hb-149",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["kind_correct"],
+      "reviewer_notes": "Assigned kind: statute. I fetched the capitol.texas.gov bill history for HB 149 (89R). The caption is 'Relating to regulation of the use of artificial intelligence systems in this state; providing civil penalties'. It was signed by the Governor on 22 June 2025, and the last action is 'Effective on 1/1/26'. A House bill enacted by the Texas Legislature is an act of a legislature, so statute fits.",
+      "required_changes": []
+    }
+  ]
+}

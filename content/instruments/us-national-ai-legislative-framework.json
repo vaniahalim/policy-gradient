@@ -1,6 +1,7 @@
 {
   "slug": "us-national-ai-legislative-framework",
   "name": "White House National AI Legislative Framework (legislative recommendations)",
+  "kind": "policy_framework",
   "jurisdiction": "us",
   "subregion": "Federal",
   "status": "proposed",

@@ -26,6 +26,7 @@ const item = (id: string, event_date: string, extra: object = {}) => ({
 const instrument = (slug: string, jurisdiction: string) => ({
   slug,
   name: `Name ${slug}`,
+  kind: "statute",
   jurisdiction,
   subregion: "X",
   status: "in_force",

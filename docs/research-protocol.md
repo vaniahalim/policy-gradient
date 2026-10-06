@@ -21,6 +21,16 @@ Read this fully before doing any work. Schemas are defined in `site/lib/schema.t
 ## What counts as an item
 A dated, discrete development: a law passed or entering into force, a regulation or guidance published, an enforcement action, a court ruling, a public consultation opening or closing, or a significant official statement. Not opinion pieces, product launches or funding news.
 
+## Instrument kind
+Every instrument has a `kind`: what it IS, separate from how far along it is (`status`). Choose from the definitions below, based on what the issuing document says about itself, not on how binding you think it is in practice.
+- `statute`: an act adopted by a legislature. This includes EU Regulations adopted by Parliament and Council, and decisions of a legislature's standing committee that amend a law.
+- `regulation`: binding rules issued by an agency or ministry under delegated authority (e.g. CAC measures, a US agency rule).
+- `executive_order`: an order issued by a head of state or government.
+- `guidance`: non-binding official guidance or an agency policy statement.
+- `voluntary_code`: a code of practice that parties may choose to sign up to.
+- `policy_framework`: a government's stated approach, strategy or legislative recommendations that are not themselves law.
+A proposed statute is still `statute` with `status: proposed`. Use `policy_framework` only when there is no draft law, just a stated approach or recommendations.
+
 ## Output: candidate file
 Write one JSON file to `content/runs/<run-id>/<region>.json`:
 

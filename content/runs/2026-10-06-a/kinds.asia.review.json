@@ -1,0 +1,38 @@
+{
+  "run_id": "2026-10-06-a",
+  "region": "asia",
+  "verdicts": [
+    {
+      "id": "cn-ai-content-labeling-measures",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "NARROW REVIEW: only the `kind` field was checked. The checks list applies to `kind` alone, and no other field was re-verified. I re-fetched https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm and read the Chinese text through a machine-translating fetch tool. The page is the joint notice 国信办通字〔2025〕2号, '关于印发《人工智能生成合成内容标识办法》的通知', issued by the Cyberspace Administration (国家互联网信息办公室), MIIT, the Ministry of Public Security and NRTA. The document calls itself a 办法 (measures). Article 1 grounds it in the Cybersecurity Law and existing CAC rules: the algorithm recommendation provisions, the deep synthesis provisions and the generative AI interim measures. It sets mandatory obligations with an effective date of 2025-09-01. These are binding rules issued by agencies and ministries under delegated authority, which matches the protocol's `regulation` definition, and 'CAC measures' is the protocol's own example. Minor caveat: it was promulgated by notice (通字) rather than as a numbered departmental order (令). That does not change the kind.",
+      "required_changes": []
+    },
+    {
+      "id": "cn-cybersecurity-law-amendment-ai",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "NARROW REVIEW: only the `kind` field was checked. The checks list applies to `kind` alone. I re-fetched https://www.cac.gov.cn/2025-10/29/c_1763461514768457.htm and read the Chinese text through a machine-translating fetch tool. The title is '全国人民代表大会常务委员会关于修改《中华人民共和国网络安全法》的决定', and the adoption line reads '（2025年10月28日第十四届全国人民代表大会常务委员会第十八次会议通过）'. The source page is CAC's republication, but the document itself is a decision of the NPC Standing Committee amending a law. The protocol's `statute` definition explicitly covers this ('decisions of a legislature's standing committee that amend a law'), so `statute` is correct.",
+      "required_changes": []
+    },
+    {
+      "id": "cn-generative-ai-interim-measures",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "NARROW REVIEW: only the `kind` field was checked. The checks list applies to `kind` alone. I re-fetched https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm and read the Chinese text through a machine-translating fetch tool. The title is 生成式人工智能服务管理暂行办法, issued as 国家互联网信息办公室 令 第15号 (a CAC departmental order). It was adopted at the CAC's 12th office meeting of 2023 on 2023-05-23, co-issued by NDRC, the Ministry of Education, MOST, MIIT, the Ministry of Public Security and NRTA, and is effective 2023-08-15. Article 1 cites the Cybersecurity Law, the Data Security Law, the Personal Information Protection Law and the Law on Progress of Science and Technology as its legal basis. These are binding ministerial rules issued under delegated statutory authority, so `regulation` is correct. The 'interim' (暂行) label does not affect the kind.",
+      "required_changes": []
+    },
+    {
+      "id": "sg-model-ai-governance-framework-agentic-ai",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "NARROW REVIEW: only the `kind` field was checked. The checks list applies to `kind` alone. I re-fetched the MDDI newsroom page (English, no translation needed). It says the framework 'provides guidance to organisations on how to deploy agents responsibly', 'recommends technical and non-technical measures', and is 'a living document'. It does not impose obligations. The issuer appears to be IMDA under MDDI (only the `kind` field is in scope here). I considered `voluntary_code`: the protocol limits that kind to a code of practice that parties sign up to, and nothing on the page describes signatories or a sign-up mechanism. `policy_framework` also does not fit, because this is operational guidance to organisations, not a statement of government legislative approach. `guidance` (non-binding official guidance) is the best fit despite 'Framework' in the name.",
+      "required_changes": []
+    }
+  ]
+}

@@ -5,6 +5,18 @@ export const ITEM_TYPES = ["law", "regulation", "guidance", "enforcement", "cour
 export const STAGES = ["proposed", "consultation", "passed", "in_force", "amended", "repealed", "withdrawn"] as const;
 export const CONFIDENCE = ["high", "medium", "low"] as const;
 
+// What an instrument is, as opposed to how far along it is (STAGES). A reader needs both:
+// a proposed statute and an in-force voluntary code are very different things.
+export const INSTRUMENT_KINDS = ["statute", "regulation", "executive_order", "guidance", "voluntary_code", "policy_framework"] as const;
+export const INSTRUMENT_KIND_LABELS: Record<(typeof INSTRUMENT_KINDS)[number], string> = {
+  statute: "Statute",
+  regulation: "Regulation",
+  executive_order: "Executive order",
+  guidance: "Guidance",
+  voluntary_code: "Voluntary code",
+  policy_framework: "Policy framework",
+};
+
 const httpUrl = z.url({ protocol: /^https?$/ });
 // Calendar date of a legal event (YYYY-MM-DD). Not a timestamp.
 const calendarDate = z.iso.date();
@@ -54,6 +66,7 @@ export const TimelineEntrySchema = z.object({
 export const InstrumentSchema = z.object({
   slug: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/),
   name: z.string().min(1),
+  kind: z.enum(INSTRUMENT_KINDS),
   jurisdiction: z.enum(JURISDICTIONS),
   subregion: z.string().min(1),
   status: z.enum(STAGES),
