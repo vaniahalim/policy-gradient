@@ -30,7 +30,7 @@ export const toLonLat = (v: Vec3): LonLat => ({
 const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
 
 /** The point `distance` degrees from `centre`, in the direction `theta` (radians, 0 = east). */
-export function offsetFrom(centre: LonLat, distance: number, theta: number): LonLat {
+function offsetFrom(centre: LonLat, distance: number, theta: number): LonLat {
   const c = vec(centre.lon, centre.lat);
   const east: Vec3 = [Math.cos(centre.lon * RAD), 0, -Math.sin(centre.lon * RAD)];
   const north: Vec3 = [
@@ -45,7 +45,7 @@ export function offsetFrom(centre: LonLat, distance: number, theta: number): Lon
 }
 
 /** Small seeded generator so every build and every browser lays the globe out identically. */
-export function seeded(seed: string): () => number {
+function seeded(seed: string): () => number {
   let h = 1779033703 ^ seed.length;
   for (let i = 0; i < seed.length; i++) {
     h = Math.imul(h ^ seed.charCodeAt(i), 3432918353);

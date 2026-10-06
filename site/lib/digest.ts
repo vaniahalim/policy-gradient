@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
-export const DEFAULT_DIGEST_DIR = resolve(process.cwd(), "../content/digests");
+const DEFAULT_DIGEST_DIR = resolve(process.cwd(), "../content/digests");
 
 export type Inline = { type: "text"; text: string } | { type: "link"; text: string; href: string };
 export type Block =

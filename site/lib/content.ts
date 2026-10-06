@@ -3,7 +3,7 @@ import { join, resolve, relative } from "node:path";
 import { ItemSchema, InstrumentSchema, type Item, type Instrument } from "./schema";
 
 // `next build` and the scripts both run with cwd = site/, and content/ is a sibling.
-export const DEFAULT_CONTENT_DIR = resolve(process.cwd(), "../content");
+const DEFAULT_CONTENT_DIR = resolve(process.cwd(), "../content");
 
 export function jsonFiles(dir: string): string[] {
   if (!existsSync(dir)) return [];
@@ -31,6 +31,3 @@ export function loadContent(contentDir: string = DEFAULT_CONTENT_DIR): { items: 
 
 export const itemsForInstrument = (items: Item[], slug: string): Item[] =>
   items.filter((i) => i.instrument_slug === slug);
-
-export const instrumentsForJurisdiction = (instruments: Instrument[], jurisdiction: Instrument["jurisdiction"]): Instrument[] =>
-  instruments.filter((i) => i.jurisdiction === jurisdiction);

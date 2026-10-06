@@ -6,14 +6,14 @@ Guidance for Claude Code when working in this repository.
 
 **Policy Gradient** is a public AI-regulation tracker for a technology-policy student's portfolio, publishable for others later. It follows laws and policies on AI in **Europe (EU and Switzerland), the US (federal and state), China and Singapore**. Content is researched by parallel subagents, checked by independent reviewer agents, and shown on a static site whose home page is a rotating globe of paper sheets.
 
-`docs/spec.md` is the product spec and phase plan. Read it before building anything. Some of it is superseded by the decisions below.
+`docs/spec.md` is the product spec and phase plan, and is kept in step with the code. Read it before building anything.
 
 ## Where things stand
 
 **Done**
 - Schema, validator, content loader and link checker (`site/lib`, `site/scripts`), all tested.
 - Agent pipeline (`.claude/agents/`, `/research-run`) and two bootstrap runs. `content/` holds 15 reviewed instruments and 2 news items, each instrument carrying a verified `kind`.
-- Design tokens and the globe prototypes (`.planning/design/`). Prototype **option A** (instruments, timeline events and items as sheets) was chosen and is now the real home page.
+- Design tokens (`.planning/design/system/tokens.md`) and the home page built from them: the globe of paper sheets (instruments, timeline events and items). The design prototypes were removed once the real site superseded them. They are in git history at `7472fe1`.
 - Home page: the globe, region spin, detail panel, list view, info pop-ups. Static export builds.
 - The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 26 static pages in all.
 
@@ -22,7 +22,7 @@ Guidance for Claude Code when working in this repository.
 2. Before publishing: set `SITE_URL` for the build (RSS links must be absolute), measure colour contrast, add a skip link past the 47 sheet tab stops, and make sure the Methodology page's "a person approves every change" is true in practice.
 3. Compare matrix and search, then deploy (static host, custom domain), then scheduled automation of the pipeline (Phase 5 in the spec).
 
-## Decisions that override the spec
+## Key decisions
 
 - **Name and look:** Policy Gradient. A globe of paper sheets on a walnut desk, bold extended type (Archivo) with a readable serif (Source Serif 4), parchment, ink, oxblood, pen-blue and brass. The earlier "editorial serif" default was rejected by the user.
 - **Asia in v1 is China and Singapore only.** Japan, South Korea and India were dropped on 2026-10-06 and their instruments deleted. The raw findings remain in `content/runs/2026-10-05-b/`.
@@ -55,7 +55,7 @@ content/digests/                    weekly digests
 content/runs/<run-id>/              raw agent output and review verdicts. Provenance. Never loaded by the site.
 docs/                               spec.md, research-protocol.md (the rules every agent follows)
 .claude/agents/ .claude/commands/   researcher-europe/us/asia, reviewer, editor, /research-run
-.planning/design/                   tokens.md (binding) and the home-globe prototypes
+.planning/design/system/            tokens.md (binding design tokens)
 site/lib/                           schema, content loader, globe maths, labels, files filters, digest parser, rss, link helpers (all tested)
 site/components/                    home: GlobeHome, Sheet, DetailPanel, NavInfo, useGlobeMotion, globe.css
                                     pages: PageShell, FileBrowser, Stamp, detail.tsx (shared by panel and pages), page.css
@@ -65,7 +65,7 @@ site/app/                           routes, layout, globals.css (tokens and the 
 ## Rules for content and the pipeline
 
 - Primary sources first. Every item has a confidence rating, and every instrument a "last verified" date.
-- Agents verify current legal status from fetched pages. Their training data and the spec's seed list are not sources.
+- Agents verify current legal status from fetched pages. Their training data is not a source.
 - Facts are never published on one agent's say-so: a fresh reviewer re-fetches the sources, and a human approves the diff before commit. Do not edit facts to make validation pass.
 - Revision rounds are capped at 3 in `/research-run`. An entry still at "revise" stays unpromoted.
 - Every page needs the "not legal advice" disclaimer.

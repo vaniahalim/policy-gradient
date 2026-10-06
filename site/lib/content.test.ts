@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { loadContent, itemsForInstrument, instrumentsForJurisdiction } from "./content";
+import { loadContent, itemsForInstrument } from "./content";
 
 const item = (id: string, event_date: string, extra: object = {}) => ({
   id,
@@ -76,9 +76,4 @@ test("itemsForInstrument filters by slug", () => {
   const { items } = loadContent(fixture());
   assert.deepEqual(itemsForInstrument(items, "eu-act").map((i) => i.id), ["new"]);
   assert.deepEqual(itemsForInstrument(items, "nope"), []);
-});
-
-test("instrumentsForJurisdiction filters by jurisdiction", () => {
-  const { instruments } = loadContent(fixture());
-  assert.deepEqual(instrumentsForJurisdiction(instruments, "us").map((i) => i.slug), ["us-act"]);
 });

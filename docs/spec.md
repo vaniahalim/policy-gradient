@@ -1,80 +1,88 @@
-# AI Regulation Tracker: Spec and Plan
+# Policy Gradient: Spec and Plan
+
+Last updated 2026-10-06. This is the product source of truth. `CLAUDE.md` covers how to work in the repo.
 
 ## Context
-The user is a technology-policy student with an AI background and wants a public portfolio piece: a tracker of AI regulation news and developments in Europe, the US and Asia. It should be publishable later for other people. Content is produced by parallel, independent research subagents (one per jurisdiction) and checked by separate reviewer agents. Decision from the user: **run the agents on demand from Claude Code first, automate on a schedule later (Phase 2).**
+A public AI-regulation tracker for a technology-policy student with an AI background, built as a portfolio piece and publishable for other people. Content is researched by parallel, independent subagents (one per region) and checked by separate reviewer agents. The pipeline runs on demand from Claude Code first, and scheduled automation comes later.
 
-The project directory `/Users/vania/projects/ai regulation tracker` is empty (greenfield, not a git repo yet).
+Most trackers are link dumps. This one is **structured, sourced and independently reviewed**, and it says plainly what each item is and how far along it is.
 
-## Product: what makes it useful (not just a news feed)
-Most trackers are link dumps. This one is a **structured, sourced, reviewed** tracker.
+## Scope
+- **Regions:** Europe (the EU and Switzerland), the US (federal and state), and Asia limited to **China and Singapore** in v1. Japan, South Korea and India were dropped on 2026-10-06. Other regions come later.
+- **Out of scope (v1):** accounts, comments, email alerts, full-text legal-document hosting, non-English UIs, an LLM chat interface.
+- **Not legal advice.** Every page says so.
 
-**Core views**
-1. **Feed**: reviewed items newest-first, filterable by jurisdiction, type, topic, stage and date. Each item has a 2-3 sentence summary, "why it matters", a primary-source link and a reviewer-confidence badge.
-2. **Instrument pages** (the differentiator): one page per law or policy (e.g. EU AI Act, Colorado AI Act, China's Generative AI Measures, Singapore's Model AI Governance Framework). Each has a status timeline (proposed, passed, in force, amended), key obligations, who is covered, and the news items linked to it.
-3. **Jurisdiction pages**: a regime overview, active instruments and recent items for Europe (EU and Switzerland), US (federal and state) and Asia (China and Singapore in v1), treated as sub-regions.
-4. **Compare**: side-by-side matrix of regimes (approach, risk-based or sectoral, enforcement, penalties, GPAI/frontier rules). This is strong portfolio content.
-5. **Weekly digest page and RSS feed**, so others can subscribe.
-6. **Methodology page**: how items are found, how agents and reviewers work, and the confidence rubric. It signals rigor and sets the site apart as research, not an aggregator.
-7. **Analysis posts (optional, human-written)**: short essays by the user. These are the portfolio's personal voice. The agents supply facts and the user supplies judgment.
+## Look and feel
+**Policy Gradient.** A globe of paper sheets on a walnut desk, bold extended type (Archivo) with a readable serif (Source Serif 4), and a palette of parchment, ink, oxblood, pen-blue and brass. Tokens are in `.planning/design/system/tokens.md` and are binding. The earlier "editorial serif" direction was rejected.
 
-**Out of scope (v1):** accounts, comments, email alerts, full-text legal-document hosting, non-English UIs, an LLM chat interface.
+## Views
+| View | Status | Notes |
+|---|---|---|
+| **Globe home** | Built | Every instrument, timeline event and news item is a sheet. Hover steers the globe, drag spins it, region buttons spin to a region, and a click opens a detail panel. A list view gives the same content as plain HTML. |
+| **Files** | Built | Filterable archive (region, type, status), newest first. |
+| **Instrument pages** | Built | One per law or policy: status, type, obligations, timeline with sources, related news. This is the differentiator. |
+| **News item pages** | Built | Summary, why it matters, sources, confidence. |
+| **Methodology** | Built | How a file is made, what the labels mean, the limits. Counts come from the content. |
+| **Digest and RSS** | Built | Weekly digests and `/digest/feed.xml`. |
+| **Jurisdiction pages** | Not built | The globe's region buttons and the Files filters cover this for now. |
+| **Compare matrix** | Not built | Side-by-side regimes (approach, enforcement, penalties, frontier-model rules). |
+| **Search** | Not built | Static search (Pagefind). |
+| **Analysis posts** | Not built | Optional short essays by the author. Agents supply facts and the author supplies judgment. |
 
 ## Architecture
 ```
-.claude/agents/            researcher-europe, researcher-us, researcher-asia, reviewer, editor
+.claude/agents/ .claude/commands/   researcher-europe/us/asia, reviewer, editor, /research-run
 content/
-  items/<yyyy-mm>/<id>.json        reviewed news items
-  instruments/<slug>.json          laws/policies + status timeline
-  digests/<yyyy-ww>.md
-  runs/<run-id>/                   raw findings, review verdicts, logs (provenance, committed)
-schema/                            zod schemas = single source of truth for item/instrument shape
-scripts/
-  validate.ts                      schema + link check + dedupe
-  build-digest.ts
-site/                              Next.js (App Router), static export, Tailwind
+  items/<yyyy-mm>/<id>.json         reviewed news items
+  instruments/<slug>.json           laws and policies with status timelines
+  digests/<yyyy>-w<ww>.md           weekly digests
+  runs/<run-id>/                    raw agent output and review verdicts (provenance, committed, never published)
+docs/                               this spec, research-protocol.md
+.planning/design/                   design tokens
+site/                               Next.js (App Router), Tailwind, static export
+  lib/                              zod schema, content loader, globe maths, filters, digest, RSS (tested)
+  scripts/                          validate.ts, preview.ts
 ```
-- **Static site, content-as-files**: no database needed. Git history is the audit trail, hosting is free (Vercel or Cloudflare Pages), and it fits a portfolio.
-- **Schema-first**: every agent output must validate against the zod schema before it can enter `content/`. This makes the later automated pipeline a drop-in.
+- **Static site, content as files.** No database. Git history is the audit trail, and hosting is free.
+- **Schema first.** Every agent output must validate before it can enter `content/`. The pipeline can later move to a scheduled job without changing the data.
 
-### Item schema (key fields)
-`id, title, jurisdiction (europe|us|asia), subregion, instrument_slug?, type (law|regulation|guidance|enforcement|court|consultation|news), stage, topics[], summary, why_it_matters, sources[{url, publisher, tier: primary|secondary, accessed_at}], event_date, confidence (high|medium|low), review{verdict, reviewer_notes, checks[]}, run_id`
+### Data model
+- **Instrument:** `slug, name, kind, jurisdiction, subregion, status, summary, key_obligations[], timeline[{date, stage, note, source_url}], last_verified`.
+  - `kind` is what it is: statute, regulation, executive order, guidance, voluntary code or policy framework. `status` is how far along it is.
+- **Item:** `id, title, jurisdiction, subregion, instrument_slug?, type, stage, topics[], summary, why_it_matters, sources[{url, publisher, tier, accessed_at}], event_date, confidence, review{verdict, reviewer_notes, checks[]}, run_id`.
+- `jurisdiction` is `europe | us | asia`. Timestamps are ISO 8601 UTC. Event and timeline dates are plain calendar dates.
 
-## Multi-agent workflow (the "parallelized" part)
-Run as one orchestrated command (e.g. a `/research-run` skill or script prompt):
+## Pipeline
+`/research-run [regions] [days] [bootstrap]`
 
-1. **Plan**: the orchestrator reads the existing content to know what's already tracked and sets the date window.
-2. **Research (parallel, independent)**: 3 researcher subagents run concurrently (Europe / US / Asia, with Asia optionally split into China / Singapore for 4 workers). Each uses web search and fetch, prefers **primary sources** (Official Journal, Federal Register, congress.gov, state legislature sites, CAC, IMDA and similar), and writes candidate items to `content/runs/<id>/<jurisdiction>.json`. They do not see each other's output, which avoids anchoring.
-3. **Review (parallel, independent)**: one reviewer per researcher batch, a **fresh context**, not the author. It re-fetches every cited URL and checks: (a) the claim matches the source, (b) the date and status are correct, (c) the source is primary or at least credible, (d) no duplicates or hallucinated instruments, (e) the summary is neutral. Verdicts are accept, revise or reject. Rejected items never publish, and revise items go back once.
-4. **Edit and merge**: an editor agent dedupes across jurisdictions, links items to instruments, updates instrument timelines and drafts the weekly digest.
-5. **Gate**: `scripts/validate.ts` (schema, URLs resolve, no duplicates). **Human approval of the diff before commit**, since a policy site's credibility depends on accuracy.
+1. **Plan:** read existing content, set the date window.
+2. **Research (parallel, independent):** one researcher per region reads primary sources and writes candidates to `content/runs/<id>/`. They never see each other's output.
+3. **Review (parallel, independent):** a fresh-context reviewer per candidate file re-fetches every cited source and returns accept, revise or reject. Revisions go back up to three rounds. Anything not accepted is never published.
+4. **Edit:** the editor promotes accepted items, merges instrument timelines, links news to instruments and drafts the digest.
+5. **Gate:** `npm run validate:links` (schema, duplicates, instrument and digest links, every cited URL live). A person approves the diff before it is committed.
+
+**Bootstrap mode** builds the instrument list first, because news items link to instruments. The rules every agent follows are in `docs/research-protocol.md`.
 
 ## Phases
-- **Phase 0, Foundation:** init repo, Next.js and Tailwind scaffold, zod schemas, validation script, 5-10 hand-seeded instruments as fixtures, and the design tokens.
-- **Phase 1, Agents:** write the 3 researcher, reviewer and editor agent definitions, the orchestration command and the confidence rubric. First dry run on a single jurisdiction, then all in parallel. Measure review rejection rate and fix the prompts.
-- **Phase 2, Site:** feed with filters, item pages, instrument pages with timelines, jurisdiction pages, methodology page and digest/RSS.
-- **Phase 3, Differentiators:** compare matrix, search (Pagefind, static), "last verified" stamps and an OG-image/sharing polish pass.
-- **Phase 4, Publish:** deploy, custom domain, a README with an architecture diagram, and a short case-study write-up.
-- **Phase 5 (later), Automation:** move the same agent definitions into a scheduled GitHub Action using the Claude API with web search. It opens a PR each week for human review, and keeps the same validation gate.
+| Phase | Status |
+|---|---|
+| 0. Foundation: repo, Next.js scaffold, schema, validator, tokens | Done |
+| 1. Agents: researchers, reviewer, editor, `/research-run`, bootstrap runs | Done. One bootstrap run per region set. No normal news run yet. |
+| 2. Site: globe, Files, instrument and item pages, Methodology, Digest and RSS | Done |
+| 3. Differentiators: compare matrix, search, jurisdiction pages, sharing images | Not started |
+| 4. Publish: deploy, custom domain, README with an architecture diagram, case-study write-up | Not started |
+| 5. Automation: a scheduled job runs the same agents through the Claude API and opens a weekly PR | Later |
 
-## Seed coverage for the first run (agents must verify current status; do not trust this list)
-- **Europe (EU):** AI Act (GPAI obligations, high-risk timeline, any delay or "digital omnibus" changes), the GPAI Code of Practice, AI Office guidance.
-- **Europe (Switzerland):** Federal Council plan to ratify the Council of Europe AI Convention with sector-specific implementation, and the resulting consultation drafts.
-- **US:** federal executive actions and preemption debate, NIST, state laws (Colorado, California, Texas and others), notable litigation.
-- **Asia:** China (generative AI measures, content-labeling rules, algorithm filing), Singapore model governance. Japan, South Korea and India are out of v1.
+## Risks and mitigations
+- **Hallucinated or stale legal facts:** independent re-fetching reviewers, a primary-source preference, a human diff approval and a visible "last verified" date.
+- **Sites that block automated fetches** (some legislature sites): the link checker skips a short list of hosts and reports them as skipped, not as passed. Reviewers read the content another way and say so in their notes.
+- **Non-English sources (China):** researchers cite the official text and flag machine translation with lower confidence.
+- **Binding vs soft law looking the same:** the instrument `kind` is shown on every file.
+- **Claims about process:** the Methodology page describes human approval as the design. Make sure it is true in practice before publishing.
 
-## Key risks and mitigations
-- **Hallucinated or stale legal facts:** an independent reviewer re-fetches the sources, with a primary-source preference, a human diff approval and a visible "last verified" date.
-- **Paywalled or non-English sources (China):** researchers cite the official text and flag machine-translated summaries with lower confidence.
-- **Not legal advice:** a clear disclaimer on every page and in the footer.
-- **Scope creep:** v1 is the feed, instruments, jurisdictions and methodology pages. Compare and search come after.
-
-## Verification (end to end)
-1. `npm run validate` passes on all content, with the schema, URL liveness and dedupe checks.
-2. Dry run: the orchestrated command produces `content/runs/<id>/` with findings and verdicts for all jurisdictions. Spot-check at least 10 accepted items by hand against their sources, and confirm at least some items are rejected or revised (a reviewer that accepts everything isn't working).
-3. `npm run build` produces a static export, and `npm run dev` is checked in the browser at mobile, tablet and desktop widths. Check filters, instrument timelines and the RSS feed.
-4. Accessibility pass (contrast, keyboard navigation, focus states), then Lighthouse.
-
-## Open questions to confirm before building
-- Visual identity: editorial and scholarly (serif-forward, restrained), or dashboard-style? Recommendation is editorial and scholarly, which suits the policy-student positioning.
-- Decided: Asia in v1 covers China and Singapore only. Japan, South Korea and India were dropped on 2026-10-06 and their bootstrap instruments deleted.
-- Whether to include human-written analysis posts in v1 or leave them for later.
+## Open items
+- A normal 30-day news run, since only 2 news items exist.
+- Before publishing: set `SITE_URL` for the RSS build, measure colour contrast, add a skip link past the sheet tab stops.
+- Whether to add human-written analysis posts in v1.
+- Which regions come after China and Singapore.
+- When Switzerland publishes its consultation bill (due by end of 2026), track it as a proposed statute.
