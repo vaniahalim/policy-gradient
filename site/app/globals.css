@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
+/* Design tokens: .planning/design/system/tokens.md is the source of truth. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --walnut: #2a1c13;
+  --walnut-deep: #1a110b;
+  --paper: #eadfc4;
+  --paper-aged: #dfcfab;
+  --paper-pale: #f0e8d3;
+  --ink: #1d1712;
+  --ink-soft: #5a4a3a;
+  --oxblood: #8a2a1d;
+  --pen: #274a73;
+  --brass: #7a5a14;
+  --brass-fill: #b58a2e;
+  --on-desk: #eadfc4;
+
+  --display: var(--font-display), "Arial Black", Impact, sans-serif;
+  --serif: var(--font-serif), Georgia, serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* The desk: warm lamp glow, a vignette, plank seams and a faint wood grain over walnut. */
+body {
+  overflow: hidden;
+  color: var(--on-desk);
+  font-family: var(--serif);
+  background:
+    radial-gradient(70% 60% at 50% 46%, rgba(255, 205, 140, 0.13), transparent 70%),
+    radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55)),
+    repeating-linear-gradient(90deg, transparent 0 calc(20vw - 2px), rgba(0, 0, 0, 0.38) calc(20vw - 2px) 20vw),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.003 0.22' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.04 0 0 0 0 0.02 0 0 0 0 0.01 0 0 0 0.9 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    var(--walnut);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brass-fill);
+  outline-offset: 3px;
 }

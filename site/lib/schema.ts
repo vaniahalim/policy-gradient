@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const JURISDICTIONS = ["europe", "us", "asia"] as const;
+export type Jurisdiction = (typeof JURISDICTIONS)[number];
 export const ITEM_TYPES = ["law", "regulation", "guidance", "enforcement", "court", "consultation", "news"] as const;
 export const STAGES = ["proposed", "consultation", "passed", "in_force", "amended", "repealed", "withdrawn"] as const;
 export const CONFIDENCE = ["high", "medium", "low"] as const;

@@ -1,0 +1,218 @@
+/* Home page: the globe of paper sheets. Tokens come from app/globals.css. */
+
+/* ---------- chrome ---------- */
+.wordmark {
+  position: fixed; left: clamp(16px, 2.4vw, 36px); top: clamp(14px, 2.4vw, 30px); z-index: 5; margin: 0;
+  font: 800 clamp(30px, 4.4vw, 60px) / 0.9 var(--display); font-stretch: 125%; letter-spacing: -0.01em;
+  color: var(--on-desk); text-decoration: none;
+}
+.tagline {
+  position: fixed; left: clamp(16px, 2.4vw, 36px); top: calc(clamp(14px, 2.4vw, 30px) + clamp(64px, 8.6vw, 118px)); z-index: 5;
+  max-width: 25ch; margin: 0; font: 400 15px / 1.5 var(--serif); color: rgba(234, 223, 196, 0.82);
+}
+.regions {
+  position: fixed; left: clamp(10px, 1.6vw, 24px); top: 50%; transform: translateY(-50%); z-index: 5;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.pill {
+  border: 2px solid var(--on-desk); background: transparent; border-radius: 999px; padding: 10px 18px; cursor: pointer;
+  font: 800 14px / 1 var(--display); font-stretch: 112%; transition: background 0.25s, color 0.25s;
+}
+.pill:hover { background: rgba(234, 223, 196, 0.16); }
+.pill[aria-pressed="true"] { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.verified {
+  position: fixed; right: clamp(10px, 1.6vw, 22px); top: 50%; z-index: 5; writing-mode: vertical-rl; transform: translateY(-50%);
+  font: 800 15px / 1 var(--display); font-stretch: 112%; color: var(--on-desk);
+}
+.bottom {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px;
+  padding: 0 clamp(16px, 2.4vw, 36px) clamp(12px, 2vw, 24px);
+}
+.bottom a, .bottom button.view {
+  font: 800 clamp(18px, 2.6vw, 34px) / 1 var(--display); font-stretch: 125%; color: var(--on-desk); text-decoration: none;
+  background: none; border: 0; cursor: pointer; padding: 0;
+}
+.bottom a:hover, .bottom button.view:hover { color: var(--brass-fill); }
+.legal {
+  position: fixed; right: clamp(16px, 2.4vw, 36px); bottom: calc(clamp(12px, 2vw, 24px) + clamp(30px, 3.4vw, 46px)); z-index: 5;
+  margin: 0; font: 400 13px / 1.4 var(--serif); color: rgba(234, 223, 196, 0.7); text-align: right;
+}
+
+/* ---------- info pop-ups on the three sections ---------- */
+.navitem { position: relative; display: flex; align-items: flex-start; gap: 8px; }
+.info {
+  position: relative; flex: none; width: 22px; height: 22px; margin-top: 4px; padding: 0; border-radius: 50%;
+  border: 2px solid var(--on-desk); background: transparent; color: var(--on-desk); font: 800 12px / 1 var(--display); cursor: pointer;
+}
+.info::after { content: ""; position: absolute; inset: -11px; }
+.info:hover, .info[aria-expanded="true"] { background: var(--paper); color: var(--ink); }
+.infopop {
+  position: absolute; left: 0; bottom: calc(100% + 12px); z-index: 7; width: min(290px, calc(100vw - 24px)); padding: 14px 16px;
+  background: linear-gradient(165deg, var(--paper-pale), var(--paper)); color: var(--ink); border-radius: 3px;
+  box-shadow: 0 22px 34px -10px rgba(0, 0, 0, 0.75); transform: rotate(-1deg);
+}
+.infopop[hidden] { display: none; }
+.infopop b { display: block; margin-bottom: 4px; font: 800 16px / 1.2 var(--display); font-stretch: 118%; }
+.infopop p { margin: 0; font: 400 15px / 1.5 var(--serif); }
+
+/* ---------- globe ---------- */
+.stage {
+  position: fixed; inset: 0; perspective: 1200px; perspective-origin: 50% 50%; touch-action: none; cursor: grab;
+  transition: transform 0.6s var(--ease); --R: 300px; --u: 0.9;
+}
+.stage.dragging { cursor: grabbing; }
+.stage.has-panel { transform: translateX(-13vw); }
+.stage::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: calc(var(--R) * 2.1); height: calc(var(--R) * 2.1);
+  transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(12, 7, 4, 0.55), rgba(12, 7, 4, 0.28) 55%, transparent 71%);
+}
+.globe { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; }
+
+.sheet {
+  position: absolute; left: calc(var(--w) / -2); top: calc(var(--h) / -2); width: var(--w); height: var(--h);
+  transform-style: preserve-3d; --lift: 0px;
+  transform: rotateY(calc(var(--lon) * 1deg)) rotateX(calc(var(--lat) * 1deg)) translateZ(calc(var(--R) + var(--lift)));
+  transition: transform 0.4s var(--ease); outline: none; cursor: pointer;
+}
+.sheet:hover, .sheet:focus-visible, .sheet.sel { --lift: calc(var(--u) * 34px); --s: 1.14; z-index: 2; }
+
+/* Dim by fading the faces, not the sheet: opacity on the sheet flattens it and un-hides mirrored backs. */
+.sheet[data-dim] .face { opacity: 0.3; }
+.face {
+  position: absolute; inset: 0; border-radius: 2px; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s, opacity 0.5s;
+  box-shadow: 0 calc(var(--u) * 12px) calc(var(--u) * 20px) calc(var(--u) * -8px) rgba(0, 0, 0, 0.6);
+  background: linear-gradient(162deg, var(--p1), var(--p2)); color: var(--ink);
+}
+/* Only the front scales on hover. The back keeps its own 180-degree flip or it would show through the front. */
+.face.front {
+  transform: rotateZ(calc(var(--tz) * 1deg)) rotateX(calc(var(--tx) * 1deg)) rotateY(calc(var(--ty) * 1deg)) scale(var(--s, 1));
+  padding: calc(var(--u) * 11px); display: flex; flex-direction: column; overflow: hidden;
+}
+.sheet:hover .face.front, .sheet:focus-visible .face.front, .sheet.sel .face.front {
+  box-shadow: 0 calc(var(--u) * 26px) calc(var(--u) * 36px) calc(var(--u) * -10px) rgba(0, 0, 0, 0.72);
+}
+.sheet:focus-visible .face.front { outline: 3px solid var(--brass-fill); outline-offset: 2px; }
+.face.front::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: 2px;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.22), transparent 38%, rgba(70, 45, 20, 0.12) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+}
+.face.back {
+  transform: rotateY(180deg) rotateZ(calc(var(--tz) * -1deg)); pointer-events: none; box-shadow: none;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 calc(var(--u) * 17px), rgba(60, 40, 20, 0.1) calc(var(--u) * 17px) calc(var(--u) * 18px)),
+    linear-gradient(200deg, #6a5b41, #544632);
+}
+/* Sheets turning away fall into shadow. The shade level is set per frame by the motion hook. */
+.shade { position: absolute; inset: 0; border-radius: 2px; background: #150d08; opacity: var(--dark, 0); pointer-events: none; z-index: 3; }
+
+.head { display: flex; justify-content: space-between; align-items: flex-start; gap: calc(var(--u) * 4px); margin-bottom: calc(var(--u) * 8px); }
+.tab { font: 800 calc(var(--u) * 10px) / 1.1 var(--display); font-stretch: 112%; color: var(--ink-soft); white-space: nowrap; }
+.stamp {
+  display: inline-block; border: calc(var(--u) * 2px) solid currentColor; border-radius: calc(var(--u) * 3px);
+  padding: calc(var(--u) * 2px) calc(var(--u) * 5px); font: 800 calc(var(--u) * 8.5px) / 1.1 var(--display); font-stretch: 108%;
+  letter-spacing: 0.06em; text-transform: uppercase; transform: rotate(5deg); mix-blend-mode: multiply; opacity: 0.9; white-space: nowrap;
+}
+.stamp.oxblood { color: var(--oxblood); }
+.stamp.pen { color: var(--pen); }
+.stamp.brass { color: var(--brass); }
+.stamp.grey { color: var(--ink-soft); }
+.head, .title, .foot { flex: none; }
+.title {
+  margin: 0; font: 800 calc(var(--u) * var(--ts, 13px)) / 1.06 var(--display); font-stretch: 110%; letter-spacing: -0.005em;
+  overflow-wrap: break-word; hyphens: auto; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--tl, 6); overflow: hidden;
+}
+.sheet--event .title { --ts: 15px; --tl: 2; }
+.blurb {
+  flex: 0 1 auto; min-height: 0; margin: calc(var(--u) * 7px) 0 0; font: 400 calc(var(--u) * 11.5px) / 1.4 var(--serif); color: #2c231b;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines, 5); overflow: hidden;
+}
+.foot { margin-top: auto; padding-top: calc(var(--u) * 6px); font: 800 calc(var(--u) * 10px) / 1.2 var(--display); font-stretch: 105%; color: var(--ink-soft); }
+.foot b { color: var(--ink); font-weight: 800; }
+.kindline { display: block; margin-top: calc(var(--u) * 2px); font-weight: 600; font-stretch: 100%; }
+
+/* ---------- hover tag ---------- */
+.tag {
+  position: fixed; z-index: 9; pointer-events: none; max-width: 260px; padding: 9px 12px; background: var(--ink); color: var(--paper);
+  border-radius: 3px; font: 600 14px / 1.3 var(--serif); opacity: 0; transform: translate(14px, 14px); transition: opacity 0.15s;
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.7);
+}
+.tag.on { opacity: 1; }
+.tag b { display: block; font: 800 14px / 1.2 var(--display); font-stretch: 112%; }
+
+/* ---------- detail panel ---------- */
+.panel {
+  position: fixed; top: clamp(10px, 2vw, 24px); right: clamp(10px, 2vw, 24px); bottom: clamp(10px, 2vw, 24px); z-index: 8;
+  width: min(560px, calc(100vw - 20px)); background: linear-gradient(165deg, var(--paper-pale), var(--paper)); color: var(--ink);
+  border-radius: 3px; overflow: auto; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.85);
+  transform: translateX(calc(100% + 40px)) rotate(2deg); transition: transform 0.6s var(--ease); padding: clamp(20px, 3vw, 36px);
+  visibility: hidden;
+}
+.panel.open { transform: none; visibility: visible; }
+.panel h2 { margin: 0 0 8px; font: 800 clamp(24px, 3vw, 36px) / 1.04 var(--display); font-stretch: 120%; padding-right: 48px; }
+.panel .meta { margin: 0 0 18px; font: 600 15px / 1.4 var(--serif); color: var(--ink-soft); }
+.panel .x {
+  position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; border-radius: 999px; border: 2px solid var(--ink);
+  background: transparent; cursor: pointer; font: 800 18px / 1 var(--display);
+}
+.panel .x:hover { background: var(--ink); color: var(--paper); }
+/* The panel sits outside the stage, so it cannot use the stage's --u scale: size the stamp in plain pixels. */
+.panel .stamp {
+  border: 2.5px solid currentColor; border-radius: 3px; padding: 5px 9px; margin-bottom: 14px;
+  font: 800 13px / 1.1 var(--display); font-stretch: 108%; transform: rotate(-3deg);
+}
+.kindtag {
+  display: inline-block; vertical-align: middle; margin: 0 0 14px 10px; padding: 5px 10px; background: var(--ink); color: var(--paper);
+  border-radius: 2px; font: 800 13px / 1.1 var(--display); font-stretch: 108%;
+}
+.panel p.sum { font: 400 17px / 1.65 var(--serif); margin: 0 0 22px; max-width: 62ch; }
+.panel h3 { margin: 26px 0 10px; font: 800 17px / 1.2 var(--display); font-stretch: 115%; }
+.panel ul, .panel ol { margin: 0; padding: 0 0 0 1.1em; font: 400 16px / 1.6 var(--serif); max-width: 62ch; }
+.panel ul { list-style: disc; }
+.panel li { margin-bottom: 8px; }
+.tl { list-style: none; padding: 0; border-left: 3px solid var(--ink); margin-left: 6px; }
+.tl li { position: relative; padding-left: 18px; margin-bottom: 14px; }
+.tl li::before {
+  content: ""; position: absolute; left: -9px; top: 0.45em; width: 13px; height: 13px; border-radius: 50%;
+  background: var(--paper); border: 3px solid var(--ink);
+}
+.tl li.hit::before { background: var(--oxblood); border-color: var(--oxblood); }
+.tl time { display: block; font: 800 14px / 1.2 var(--display); font-stretch: 112%; }
+.panel a { color: var(--pen); font-weight: 600; }
+.panel a:hover { color: var(--oxblood); }
+
+/* ---------- list view (the same files as plain HTML) ---------- */
+.list { position: fixed; inset: 0; z-index: 4; overflow: auto; padding: clamp(150px, 22vw, 260px) clamp(16px, 6vw, 120px) 90px clamp(120px, 14vw, 200px); }
+.list[hidden] { display: none; }
+.list h2 { margin: 28px 0 10px; font: 800 22px / 1.1 var(--display); font-stretch: 120%; }
+.list ul { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+.list button {
+  display: block; width: 100%; text-align: left; background: linear-gradient(165deg, var(--paper-pale), var(--paper)); color: var(--ink);
+  border: 0; border-radius: 2px; padding: 12px 16px; margin-bottom: 8px; cursor: pointer; box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.6);
+}
+.list button:hover { background: var(--paper-pale); }
+.list button b { font: 800 16px / 1.2 var(--display); font-stretch: 115%; }
+.list button span { display: block; font: 400 15px / 1.4 var(--serif); color: var(--ink-soft); }
+
+@media (max-width: 720px) {
+  .regions { top: auto; bottom: 84px; left: 50%; transform: translateX(-50%); flex-direction: row; gap: 6px; }
+  .pill { padding: 0 14px; min-height: 44px; font-size: 13px; }
+  .verified, .tagline { display: none; }
+  .legal { bottom: auto; top: calc(clamp(14px, 2.4vw, 30px) + 62px); left: 16px; right: auto; text-align: left; }
+  .bottom { flex-wrap: wrap; justify-content: flex-start; column-gap: 16px; row-gap: 4px; }
+  .bottom a, .bottom button.view { font-size: 15px; min-height: 32px; }
+  .stage.has-panel { transform: none; }
+  .list { padding: 130px 16px 120px; }
+  .panel { top: auto; height: 78vh; width: calc(100vw - 20px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sheet, .face, .panel, .stage { transition: none; }
+}
+
+/* Paper tints come from the design tokens. */
+.sheet[data-paper="0"] { --p1: var(--paper-pale); --p2: var(--paper); }
+.sheet[data-paper="1"] { --p1: var(--paper); --p2: var(--paper-aged); }
+.sheet[data-paper="2"] { --p1: var(--paper-pale); --p2: var(--paper-aged); }
