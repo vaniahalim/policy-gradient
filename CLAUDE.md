@@ -62,6 +62,17 @@ site/components/                    home: GlobeHome, Sheet, DetailPanel, NavInfo
 site/app/                           routes, layout, globals.css (tokens and the wood background)
 ```
 
+## Hosting and portability
+
+The site is a plain static export, so any host that runs `npm run build` in `site/` and serves `site/out/` can host it (Vercel, Cloudflare Pages, Netlify, GitHub Pages). Keep it host-neutral so switching stays a 30-minute job:
+
+- Host settings: root directory `site`, build command `npm run build`, output directory `out`, env vars `SITE_URL` (the custom domain) and `NODE_VERSION` (Next 16 needs Node 20.9+).
+- **No host-specific code or config.** No `vercel.json`, `@vercel/*` packages, Vercel Analytics, Speed Insights, KV or Blob, `next/image` optimisation (static export needs `images.unoptimized`), or Next features that need a server. Same for Cloudflare- or Netlify-only files unless the user has chosen that host.
+- **Use the custom domain everywhere permanent.** `SITE_URL`, the RSS feed and any links must never point at a `*.vercel.app` or `*.pages.dev` URL, or they break on a move. Register the domain with a registrar the user controls, not through the host.
+- Preview URLs are public. Do not put anything unpublished in a branch that a host auto-deploys.
+- Content stays in git (about 340 KB). No database or object storage until it outgrows that.
+- Delete `site/node_modules`, `site/.next` and `site/out` to free disk space. `npm install` and `npm run build` restore them.
+
 ## Rules for content and the pipeline
 
 - Primary sources first. Every item has a confidence rating, and every instrument a "last verified" date.

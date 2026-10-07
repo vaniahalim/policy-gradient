@@ -43,7 +43,7 @@ site/                               Next.js (App Router), Tailwind, static expor
   lib/                              zod schema, content loader, globe maths, filters, digest, RSS (tested)
   scripts/                          validate.ts, preview.ts
 ```
-- **Static site, content as files.** No database. Git history is the audit trail, and hosting is free.
+- **Static site, content as files.** No database. Git history is the audit trail, and hosting is free. Hosting stays host-neutral (any static host, no vendor-specific features), so the site can move between Vercel, Cloudflare Pages and others. See CLAUDE.md, "Hosting and portability".
 - **Schema first.** Every agent output must validate before it can enter `content/`. The pipeline can later move to a scheduled job without changing the data.
 
 ### Data model
