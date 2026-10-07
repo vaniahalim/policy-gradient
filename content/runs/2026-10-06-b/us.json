@@ -1,0 +1,177 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "us",
+  "window": { "from": "2026-09-06", "to": "2026-10-06" },
+  "candidates": [
+    {
+      "id": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "title": "California Executive Order N-9-26 directs work on independent verification, a frontier-model kill switch and loss-of-control incident reporting",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "instrument_slug": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "type": "regulation",
+      "stage": "in_force",
+      "topics": ["frontier model safety", "third-party audit", "incident reporting", "kill switch"],
+      "summary": "Governor Newsom signed Executive Order N-9-26 on 18 September 2026, effective immediately. It sets deadlines for the Government Operations Agency to complete the independent verification organization requirements of Government Code section 8898.1 (by 1 May 2027) and to complete section 11549.82(a) and begin the actions required by 11549.82(b) (by 1 December 2027). It also directs the agency, with the Governor's Office of Emergency Services, to submit recommendations to the Governor by 16 November 2026 on amendments to state AI safety law, covering at least: embedding independent verification organizations onsite at large frontier developers; independent verification of required safety frameworks, transparency reports and risk assessments; a 'kill switch' for frontier models verified by an independent verification organization; and widening the definition of critical safety incidents to include loss-of-control incidents. The order states that it does not create any rights or benefits enforceable at law or in equity; its directives are addressed to state agencies.",
+      "why_it_matters": "The order does not change obligations for frontier developers today. It signals the content of possible amendments to California's frontier AI law and sets the timetable for the state's independent verification regime. The recommendations are due to the Governor by 16 November 2026.",
+      "sources": [
+        {
+          "url": "https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf",
+          "publisher": "Office of the Governor of California",
+          "tier": "primary",
+          "accessed_at": "2026-10-06T12:00:00Z"
+        },
+        {
+          "url": "https://www.gov.ca.gov/2026/09/23/governor-newsom-announces-world-leading-experts-to-deliver-on-his-ai-executive-order-including-advancing-creation-of-a-kill-switch/",
+          "publisher": "Office of the Governor of California",
+          "tier": "primary",
+          "accessed_at": "2026-10-06T12:00:00Z"
+        }
+      ],
+      "event_date": "2026-09-18",
+      "confidence": "high",
+      "run_id": "2026-10-06-b"
+    },
+    {
+      "id": "us-fed-eo-14434-super-intelligence-terminology",
+      "title": "Executive Order 14434 directs federal agencies to use 'Super Intelligence' in place of 'Artificial Intelligence'",
+      "jurisdiction": "us",
+      "subregion": "Federal",
+      "instrument_slug": "us-eo-14434-inaugurating-era-of-super-intelligence",
+      "type": "regulation",
+      "stage": "in_force",
+      "topics": ["federal AI policy", "terminology", "statutory definition"],
+      "summary": "The White House page for Executive Order 14434, 'Inaugurating the Era of Super Intelligence', is dated 29 September 2026. It directs executive departments and agencies to use 'Super Intelligence' and 'SI' instead of 'Artificial Intelligence' and 'AI' in official correspondence, public communications, websites, reports, policy documents and other non-statutory documents, to the maximum extent permitted by law. Previously issued regulations, presidential actions, contracts, grants and historical documents need not be altered. The order defines the terms as the technologies and systems encompassed by the term 'artificial intelligence' as defined in 15 U.S.C. 9401(3). Within 60 days the Assistant to the President for Science and Technology is to submit to the President proposed legislative language for a federal definition of 'Super Intelligence' and 'SI', including an assessment of whether it should modify or supersede the existing statutory definition of 'artificial intelligence' and any conforming amendments to existing statutory references, as appropriate. The order does not address preemption of state law.",
+      "why_it_matters": "The order changes federal agency terminology and starts a 60 day process toward a statutory definition. It sets no obligations for private parties on its face. Existing statutes and rules keep their current wording unless Congress or later action amends them.",
+      "sources": [
+        {
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/",
+          "publisher": "The White House",
+          "tier": "primary",
+          "accessed_at": "2026-10-07T12:00:00Z"
+        }
+      ],
+      "event_date": "2026-09-29",
+      "confidence": "high",
+      "run_id": "2026-10-06-b"
+    },
+    {
+      "id": "us-ca-sb-1119-adams-law-companion-chatbots",
+      "title": "California governor signs SB 1119 (Adam's Law) on companion chatbot child safety, as part of a 13-bill child online safety package",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "instrument_slug": "us-ca-sb-1119-adams-law",
+      "type": "law",
+      "stage": "passed",
+      "topics": ["chatbots", "child safety", "audit", "social media"],
+      "summary": "On 10 September 2026 the governor's office announced the signing of 13 child online safety bills. Per the release, SB 1119 (Padilla, Wicks, Bauer-Kahan), 'Companion chatbots: children's safety', requires protections around companion chatbots for children, including crisis protocols in the case of suicidal ideation, parental controls and notifications should a child disable safety settings, plus independent child safety audits and annual risk assessments. Sen. Padilla's office, in a release stating the bill passed on 31 August 2026 (Senate 39-0, Assembly 64-4), calls the bill Adam's Law. Other bills in the package, by their official short titles, include AB 1709 ('Covered platforms: age restriction: e-Safety Advisory Commission'), SB 1276 ('Crimes: sexual exploitation of a child') and AB 1159 ('Student personal information'). The governor's release describes the package's provisions in unnumbered bullets; bill-by-bill attribution beyond SB 1119 was not verified. Chaptered texts, chapter numbers and operative dates were not checked.",
+      "why_it_matters": "Companion chatbot operators serving California users should check the chaptered text for who is covered, audit timing and operative dates, which this item does not establish.",
+      "sources": [
+        {
+          "url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/",
+          "publisher": "Office of the Governor of California",
+          "tier": "primary",
+          "accessed_at": "2026-10-07T12:00:00Z"
+        },
+        {
+          "url": "https://sd18.senate.ca.gov/node/419",
+          "publisher": "Office of Senator Steve Padilla (California Senate District 18)",
+          "tier": "primary",
+          "accessed_at": "2026-10-07T12:00:00Z"
+        }
+      ],
+      "event_date": "2026-09-10",
+      "confidence": "medium",
+      "run_id": "2026-10-06-b"
+    }
+  ],
+  "instrument_candidates": [
+    {
+      "slug": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "name": "California Executive Order N-9-26 (frontier AI independent oversight and kill switch recommendations)",
+      "kind": "executive_order",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "status": "in_force",
+      "summary": "Gubernatorial order of 18 September 2026 that directs the Government Operations Agency to complete the requirements of Gov. Code 8898.1, including posting application requirements and criteria for independent verification organizations, by 1 May 2027, and to complete subdivision (a) of Gov. Code 11549.82 and begin the actions required by subdivision (b) by 1 December 2027, and commissions recommendations, due 16 November 2026, on the technical feasibility and potential efficacy of amendments to state AI safety and security law. It states that it creates no enforceable rights; its directives are addressed to state agencies.",
+      "key_obligations": [
+        "Government Operations Agency to complete Gov. Code 8898.1 requirements (verification organization application criteria) by 1 May 2027",
+        "Government Operations Agency to complete Gov. Code 11549.82(a) and begin 11549.82(b) actions by 1 December 2027",
+        "Recommendations to the Governor by 16 November 2026 on onsite independent verifiers, independent verification of safety frameworks, a verified kill switch, and updating the definition of critical safety incidents to include a range of loss-of-control incidents"
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-18",
+          "stage": "in_force",
+          "note": "Order signed and effective immediately.",
+          "source_url": "https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf"
+        }
+      ],
+      "last_verified": "2026-10-06T12:00:00Z"
+    },
+    {
+      "slug": "us-eo-14434-inaugurating-era-of-super-intelligence",
+      "name": "Executive Order 14434: Inaugurating the Era of Super Intelligence",
+      "kind": "executive_order",
+      "jurisdiction": "us",
+      "subregion": "Federal",
+      "status": "in_force",
+      "summary": "Presidential order of 29 September 2026 replacing 'Artificial Intelligence' terminology with 'Super Intelligence' in federal agency communications and starting a 60 day process for a proposed statutory definition.",
+      "key_obligations": [
+        "Executive departments use 'Super Intelligence'/'SI' in official correspondence, communications, websites, reports and policy documents, to the maximum extent permitted by law",
+        "Assistant to the President for Science and Technology to submit proposed legislative language for a federal definition within 60 days"
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-29",
+          "stage": "in_force",
+          "note": "Order signed (per the White House page).",
+          "source_url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/"
+        }
+      ],
+      "last_verified": "2026-10-06T12:00:00Z"
+    },
+    {
+      "slug": "us-ca-sb-1119-adams-law",
+      "name": "California SB 1119 (Adam's Law): companion chatbot child safety",
+      "kind": "statute",
+      "jurisdiction": "us",
+      "subregion": "California",
+      "status": "passed",
+      "summary": "California statute signed 10 September 2026 setting child safety requirements for companion chatbot operators, including crisis protocols, parental controls and independent audits. Described from the governor's release and Sen. Padilla's release only; operative dates not verified.",
+      "key_obligations": [
+        "Safety protocols including crisis protocols in the case of suicidal ideation",
+        "Parental controls and notifications when children disable safety features",
+        "Annual risk assessments and independent child safety audits (Padilla release: audit findings submitted to the Attorney General)",
+        "Incident reporting mechanism overseen by the Attorney General (per Padilla release)",
+        "Private right of action for families harmed by violations (per Padilla release)"
+      ],
+      "timeline": [
+        {
+          "date": "2026-08-31",
+          "stage": "passed",
+          "note": "Passed Senate 39-0 and Assembly 64-4 and sent to the Governor, per the author's office.",
+          "source_url": "https://sd18.senate.ca.gov/node/419"
+        },
+        {
+          "date": "2026-09-10",
+          "stage": "passed",
+          "note": "Governor announced signing of SB 1119 as part of a 13 bill child online safety package.",
+          "source_url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/"
+        }
+      ],
+      "last_verified": "2026-10-07T12:00:00Z"
+    }
+  ],
+  "gaps": [
+    "FTC industry-wide probe of AI labs (reported 30 Sept 2026): only secondary reporting (The Next Web citing CBS/CNBC); no FTC release found, FTC press page showed no AI release for September. Not included. No clean stage value fits an investigation.",
+    "Doe v. GitHub (9th Cir. No. 24-7700, 16 Sept 2026, DMCA 1202(b) dismissal affirmed): read only Gibson Dunn summary; opinion PDF unreadable in this environment. Not included.",
+    "D.C. Circuit 2-1 ruling (25 Sept 2026) allowing Pentagon supply chain risk designation of Anthropic: secondary news only; opinion not fetched.",
+    "White House Accord on Super Intelligence (29 Sept 2026, voluntary industry commitments): only secondary coverage; no primary accord text found.",
+    "Florida AG motion (28 Sept 2026) for temporary injunction against OpenAI: secondary only; myfloridalegal.com returned 403.",
+    "Congress: Senate Commerce 18-10 on JAWBONE Act (S. 4749), House E&C 26-21 on Open-Source AI Leadership Act (H.R. 10152) and new superintelligence bills come from a Tech Policy Press roundup only; congress.gov not checked. Federal preemption (Great American AI Act draft) remains a discussion draft per secondary sources.",
+    "California SB 1119 and the 30 Sept package: leginfo.legislature.ca.gov returned 403, so chapter numbers and operative dates are unverified. 21 Sept data center bills and Sept 30 vetoes not examined.",
+    "Minnesota AG page (24 Sept 2026, multistate AG letter against preemption) was unreachable; not included.",
+    "Not searched: other states (CO, TX, NY, IL, UT) September actions, DOJ AI Litigation Task Force case updates, SEC/CFPB/EEOC/FDA guidance."
+  ]
+}

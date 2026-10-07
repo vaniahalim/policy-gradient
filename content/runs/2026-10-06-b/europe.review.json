@@ -1,0 +1,20 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "europe",
+  "verdicts": [
+    {
+      "id": "eu-copyright-ai-consultation-2026-09",
+      "kind": "item",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-challenges-and-way-forward-area-effect-technology-copyright on 2026-10-06. VERIFIED: the dateline reads 'Publication 29 September 2026', so event_date 2026-09-29 is correct. The page states 'The consultation remains open until 3 November 2026', which matches. The first of four areas is 'The use of copyright-protected content in artificial intelligence'. The list of invited respondents includes 'generative AI providers and other relevant actors in the AI value chain'. stage 'consultation' and type 'consultation' are correct because the consultation is open. The source is the Commission's own site, so tier primary is correct. Confidence medium fits the rubric because only the news page was read and the survey itself (ec.europa.eu/eusurvey/runner/targetedconsultationcopyright) was not. why_it_matters is hedged ('may inform whether') and is supported by the page's line that challenges 'raise the question of whether the framework should be reinforced through potential additional measures'. No proposal is stated as fact. Not a duplicate: Grep of content/items and content/instruments finds no copyright consultation item. The only copyright hits are the Copyright chapter of eu-gpai-code-of-practice, which is a different instrument. WRONG: (1) The summary says 'equitable remuneration for music creators'. The page says 'the single equitable remuneration right of music performers and producers'. 'Creators' is a different group (composers and songwriters) and misstates the scope, so claim_matches_source fails. (2) The summary calls it only 'a notice seeking stakeholder feedback'. The page says it is a 'targeted consultation' (online survey) that 'builds on feedback received in the context of the Call for evidence conducted earlier this year'. This is not false, but it is imprecise, and the title's 'opens feedback' blurs the difference from a Have Your Say feedback window. (3) The fourth area on the page is 'Copyright of scientific research', not just 'scientific research'. This is minor.",
+      "required_changes": [
+        "In summary, replace 'equitable remuneration for music creators' with 'the single equitable remuneration right of music performers and producers'.",
+        "In summary, replace 'published a notice seeking stakeholder feedback on' with 'announced a targeted consultation (online survey) on', and add that it builds on a call for evidence held earlier in 2026.",
+        "In summary, replace 'and scientific research' with 'and copyright of scientific research'.",
+        "Change title to 'Commission opens targeted consultation on copyright challenges, including use of protected content in AI'.",
+        "Optionally add the survey URL https://ec.europa.eu/eusurvey/runner/targetedconsultationcopyright as a second primary source only if it is fetched and read. If it is not, keep confidence medium."
+      ]
+    }
+  ]
+}

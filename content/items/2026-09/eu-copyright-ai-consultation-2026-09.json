@@ -1,0 +1,43 @@
+{
+  "id": "eu-copyright-ai-consultation-2026-09",
+  "title": "Commission opens targeted consultation on copyright challenges, including use of protected content in AI",
+  "jurisdiction": "europe",
+  "subregion": "EU",
+  "type": "consultation",
+  "stage": "consultation",
+  "topics": [
+    "copyright",
+    "generative AI"
+  ],
+  "summary": "On 29 September 2026 the European Commission's digital-strategy site announced a targeted consultation (online survey) on challenges and the way forward in the area of the effect of technology on copyright. It builds on a call for evidence held earlier in 2026. The page lists four areas, the first being the use of copyright-protected content in artificial intelligence; the others are the fight against online piracy of content like live events, the application of the single equitable remuneration right of music performers and producers, and copyright of scientific research. It names generative AI providers and other actors in the AI value chain among those invited to respond. The page states the consultation remains open until 3 November 2026. The EUSurvey questionnaire was opened and its title and topics (including generative AI and copyright) were read, but its questions were not reviewed in full.",
+  "why_it_matters": "Responses may inform whether the Commission proposes changes to the EU copyright framework as it applies to the use of copyright-protected content in AI. Developers of generative AI models and rightholders can submit views until the stated deadline.",
+  "sources": [
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-challenges-and-way-forward-area-effect-technology-copyright",
+      "publisher": "European Commission, Digital Strategy",
+      "tier": "primary",
+      "accessed_at": "2026-10-06T13:00:00Z"
+    },
+    {
+      "url": "https://ec.europa.eu/eusurvey/runner/targetedconsultationcopyright",
+      "publisher": "European Commission, EUSurvey",
+      "tier": "primary",
+      "accessed_at": "2026-10-06T13:00:00Z"
+    }
+  ],
+  "event_date": "2026-09-29",
+  "confidence": "medium",
+  "run_id": "2026-10-06-b",
+  "review": {
+    "verdict": "accept",
+    "reviewer_notes": "Third-round review 2026-10-07. I fetched both cited sources again myself. NEWS PAGE (digital-strategy.ec.europa.eu/.../commission-seeks-feedback-challenges-and-way-forward-area-effect-technology-copyright): the dateline reads 'Publication 29 September 2026', so event_date 2026-09-29 is correct. The heading is 'Commission seeks feedback on challenges and way forward in the area of effect of technology on copyright', which matches the summary's wording. 'The targeted consultation focuses specifically on:' is followed by four areas, quoted verbatim and in order: 'The use of copyright-protected content in artificial intelligence', 'The fight against online piracy of content like live events', 'The application of the single equitable remuneration right of music performers and producers' and 'Copyright of scientific research'. The respondent sentence includes 'generative AI providers and other relevant actors in the AI value chain'. The page says 'The consultation remains open until 3 November 2026', which matches the summary's wording exactly. 'builds on feedback received in the context of the Call for evidence conducted earlier this year' supports 'a call for evidence held earlier in 2026', because the page is dated 2026. The word 'training' does not appear, and it is no longer in the item: the topics are now ['copyright', 'generative AI'] and why_it_matters says 'use of copyright-protected content in AI'. EUSURVEY PAGE (ec.europa.eu/eusurvey/runner/targetedconsultationcopyright): it loads. The title is 'Targeted consultation on a potential initiative for a better copyright environment for European creativity and innovation'. Section headings include 'Copyright and generative AI', '...licensing and enforcement...', '...AI generated imitations of performers', online piracy, sound recordings of non-EU nationals, and copyright and research. The question text does not render, only placeholders. This confirms the summary's caveat that the questions were not reviewed in full. The '(online survey)' label is supported because the consultation link resolves to an EUSurvey questionnaire. why_it_matters is hedged ('may inform whether'). The page supports it with 'potential future measures' and 'whether the framework should be reinforced through potential additional measures', and the survey title supports it with 'potential initiative'. Nothing is stated as a prediction. STATUS: open consultation, so type and stage 'consultation' are correct. TIER: both sources are Commission-operated, so primary is correct. CONFIDENCE: medium is within the rubric and conservative. The key claims were read in full on the news page, so high would also be defensible, but the unrendered questionnaire and the unfetched Have Your Say page justify medium. All required changes from rounds 1 and 2 are applied, and gaps[0] now describes the fetch state accurately. DUPLICATE: Grep of content/items and content/instruments for 'copyright' returns only eu-gpai-code-of-practice.json, a different instrument. Grep for the news URL slug, the survey slug and 'equitable remuneration' across content/ finds only this run's files. There is one candidate in the file, so there are no duplicates within it. MINOR, NOT BLOCKING: neither source states the date the survey opened. The title's 'opens' is a reasonable reading of the 29 September announcement, and the summary itself correctly says 'announced'. The item has no instrument_slug, which is valid because the field is optional. SEPARATE PROCESS NOTE, NOT ABOUT THIS ITEM: europe.review2.json was recorded by the orchestrator rather than written by the reviewer, according to its provenance_note. I did not rely on it. This verdict rests on my own fetches.",
+    "checks": [
+      "claim_matches_source",
+      "date_correct",
+      "status_correct",
+      "source_tier_correct",
+      "not_duplicate",
+      "neutral_tone"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "us",
+  "verdicts": [
+    {
+      "id": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "kind": "item",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Read the signed EO PDF in full (3 pages). Verified: signed 18 Sept 2026 ('this 18th day of September 2026'), 'effective immediately'; para 1 GovOps to complete Gov. Code 8898.1 by 1 May 2027; para 2 complete 11549.82(a) and begin 11549.82(b) by 1 Dec 2027; para 3 GovOps with Cal OES to submit recommendations by 16 Nov 2026 covering (a) onsite IVOs at large frontier developers, (b) independent verification of safety frameworks, transparency reports and risk assessments, (c) kill switch verified by an IVO, (d) critical safety incident definition widened to loss-of-control incidents. All match. Problem: the summary says 'The order states it creates no enforceable rights and itself imposes no new requirement on companies.' The order states only the first part (no rights or benefits enforceable at law or in equity). It says nothing about requirements on companies; that is the researcher's inference from the fact that every directive is addressed to state agencies. Minor omission: the recommendations are to be 'developed in consultation with national experts' and address 'technical feasibility and potential efficacy' of amendments. The 23 Sept press release is primary and supports the kill switch and IVO framing, but it gives no deadline. Its line that companies 'must embed' IVOs overstates the order, and the item correctly does not repeat it. The type 'regulation' is the closest ITEM_TYPES value for an executive order; noted, not blocking. Grep found no duplicate in content/items or content/instruments.",
+      "required_changes": [
+        "Replace 'The order states it creates no enforceable rights and itself imposes no new requirement on companies.' with 'The order states that it does not create any rights or benefits enforceable at law or in equity; its directives are addressed to state agencies.'"
+      ]
+    },
+    {
+      "id": "us-fed-eo-14434-super-intelligence-terminology",
+      "kind": "item",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the whitehouse.gov page twice. Verified: header shows 'Executive Order 14434', title 'Inaugurating the Era of Super Intelligence', dated 29 Sept 2026, with the signature block 'THE WHITE HOUSE, September 29, 2026'. Sec. 2(a): agencies use 'Super Intelligence'/'SI' in place of 'Artificial Intelligence'/'AI' in official correspondence, public communications, websites, reports, policy documents and other non-statutory documents, to the maximum extent permitted by law. Previously issued regulations, Presidential actions, contracts, grants and historical documents need not be altered. Terms map to 15 U.S.C. 9401(3). The Assistant to the President for Science and Technology submits proposed legislative language within 60 days. General provisions say it creates no enforceable rights. No preemption language and no FR citation on the page. Every factual claim passes. The problem is that the summary includes researcher process notes that conflict with the high confidence rating: 'The page excerpt read does not mention preemption of state law' implies a partial read, and the rubric requires a full read for high. I read the full page and confirmed there is no preemption language, so high is justified once the hedge is removed. The order applies to 'executive departments and agencies'; the summary says only 'executive departments', which is a minor narrowing. Grep found no duplicate.",
+      "required_changes": [
+        "Remove the sentence 'The page excerpt read does not mention preemption of state law.' If preemption is worth noting, write 'The order does not address preemption of state law.'",
+        "Change 'directs executive departments' to 'directs executive departments and agencies'.",
+        "Optional: change 'Federal Register citation was not found on the page.' to 'No Federal Register citation was available at time of verification.'"
+      ]
+    },
+    {
+      "id": "us-ca-sb-1119-adams-law-companion-chatbots",
+      "kind": "item",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched the 10 Sept 2026 gov.ca.gov release. Verified: 'Today, Governor Gavin Newsom ... signed', so the signing date is 10 Sept 2026. 13 bills. SB 1119 is by Padilla, Wicks and Bauer-Kahan, is named 'Adam's Law' after Adam Raine, and is listed as 'Companion chatbots: children's safety'. It requires 'robust protections around companion chatbots for children, including crisis protocols in the case of suicidal ideation, parental controls, and notifications should a child disable safety settings', plus independent child safety audits and annual risk assessments. Also verified: AB 1709 (Lowenthal, under 16, autoplay and algorithmic feeds, e-Safety Advisory Commission), SB 1276 (Rubio, digitally altered or AI-generated matter depicting a person under 18) and AB 1159 (Addis, K-12 pupil data in AI systems). No chapter numbers or operative dates appear on the page, as the item discloses. Stage 'passed' and confidence medium fit: primary release only, bill text not read. The problem: the summary says SB 1119 'requires robust safety protocols for companion chatbots including crisis intervention'. The source says protections around companion chatbots for children, with crisis protocols. Dropping 'for children' widens the apparent scope of the obligation, and 'crisis intervention' is not the source's term. Grep found no duplicate.",
+      "required_changes": [
+        "Change 'requires robust safety protocols for companion chatbots including crisis intervention for suicidal ideation' to 'requires protections around companion chatbots for children, including crisis protocols in the case of suicidal ideation'.",
+        "Optional: drop 'via a page summary' from 'Only the governor's release (via a page summary) was read'."
+      ]
+    },
+    {
+      "id": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Checked against the full signed EO PDF. Kind executive_order is correct. Status in_force ('effective immediately') is correct. The three key_obligations match paras 1-3 exactly, including the dates and code sections. The 'accelerates implementation timelines' wording in the summary is supported by the 23 Sept primary release. Problems: (1) the timeline has a 2026-11-16 entry with stage 'in_force' for a deadline that has not yet occurred. A timeline records events that happened; a future deadline belongs in key_obligations, which already holds it, and tagging it in_force misstates the record. (2) The summary says it 'imposes no direct obligations on companies'. The order does not say that; it disclaims enforceable rights. Every directive is addressed to state agencies, so reword to say that instead of attributing a claim to the order.",
+      "required_changes": [
+        "Remove the timeline entry dated 2026-11-16 (the deadline stays in key_obligations).",
+        "Replace 'It creates no enforceable rights and imposes no direct obligations on companies.' with 'It states that it creates no enforceable rights; its directives are addressed to state agencies.'"
+      ]
+    },
+    {
+      "id": "us-eo-14434-inaugurating-era-of-super-intelligence",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Checked against the whitehouse.gov page. The name and number 'Executive Order 14434' appear on the page. Kind executive_order is correct. Signed 29 Sept 2026 per the signature block. Status in_force is consistent with a signed presidential order whose page sets no later effective date. The summary and both key_obligations match sec. 2 (terminology, 'to the maximum extent permitted by law') and the 60-day legislative language directive to the Assistant to the President for Science and Technology. The single timeline entry is correctly dated and sourced to the primary page. Grep found no duplicate in content/instruments. Note for the editor: no Federal Register citation yet; add it to the timeline when published."
+    },
+    {
+      "id": "us-ca-sb-1119-adams-law",
+      "kind": "instrument",
+      "verdict": "accept",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Checked against the 10 Sept 2026 gov.ca.gov release. The release says 'Today ... signed', so the date is 10 Sept. SB 1119 is 'Companion chatbots: children's safety' and is named Adam's Law. Kind statute is correct for a signed legislative bill. Status 'passed' fits, since the operative date is unverified and the summary says so. The key_obligations paraphrase the release: crisis protocols for suicidal ideation, parental controls and notifications when safety settings are disabled, independent child safety audits and annual risk assessments. Obligation 1 says 'crisis intervention' where the source says 'crisis protocols', which is acceptable paraphrase, though the editor may align it with the item fix. The timeline entry is dated and sourced correctly. Grep found no duplicate. Limitation: leginfo was not checked (the researcher reports a 403), so the chapter number is still missing. Add it in a later run."
+    }
+  ]
+}

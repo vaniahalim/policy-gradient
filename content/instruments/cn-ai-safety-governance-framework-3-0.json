@@ -1,0 +1,22 @@
+{
+  "slug": "cn-ai-safety-governance-framework-3-0",
+  "name": "AI Safety Governance Framework 3.0 (人工智能安全治理框架3.0)",
+  "kind": "guidance",
+  "jurisdiction": "asia",
+  "subregion": "China",
+  "status": "in_force",
+  "summary": "Framework released on 14 September 2026 by the National Cybersecurity Standardisation Technical Committee (TC260) under the guidance of the Cyberspace Administration of China, succeeding versions 1.0 (2024) and 2.0 (2025). It keeps the structure of risk classification, technical response measures and comprehensive governance, with an updated risk classification and adjusted measures. The release notice does not state whether the framework is binding. This entry is based on the CAC release notice, read in machine translation; the full framework text has not been reviewed.",
+  "key_obligations": [
+    "Classifies AI safety risks (updated from version 2.0)",
+    "Sets out technical response measures and comprehensive governance measures for those risks"
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-14",
+      "stage": "in_force",
+      "note": "Version 3.0 released at the opening of the 2026 National Cybersecurity Publicity Week, per the CAC notice.",
+      "source_url": "https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm"
+    }
+  ],
+  "last_verified": "2026-10-07T00:00:00Z"
+}

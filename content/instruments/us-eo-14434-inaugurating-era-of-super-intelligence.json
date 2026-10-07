@@ -1,0 +1,22 @@
+{
+  "slug": "us-eo-14434-inaugurating-era-of-super-intelligence",
+  "name": "Executive Order 14434: Inaugurating the Era of Super Intelligence",
+  "kind": "executive_order",
+  "jurisdiction": "us",
+  "subregion": "Federal",
+  "status": "in_force",
+  "summary": "Presidential order of 29 September 2026 replacing 'Artificial Intelligence' terminology with 'Super Intelligence' in federal agency communications and starting a 60 day process for a proposed statutory definition.",
+  "key_obligations": [
+    "Executive departments use 'Super Intelligence'/'SI' in official correspondence, communications, websites, reports and policy documents, to the maximum extent permitted by law",
+    "Assistant to the President for Science and Technology to submit proposed legislative language for a federal definition within 60 days"
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-29",
+      "stage": "in_force",
+      "note": "Order signed (per the White House page).",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/"
+    }
+  ],
+  "last_verified": "2026-10-06T12:00:00Z"
+}

@@ -1,0 +1,61 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "us",
+  "provenance_note": "A first, separate US reviewer produced these verdicts. It could not save them (the disk was full) and could not later be resumed with its context, so a second reviewer wrote us.review.json from scratch. The two reviews disagree on two entries. This file records the first reviewer's findings from its written report to the orchestrator, as a summary of required changes, not a verbatim file. Revisions apply the stricter union of both reviews.",
+  "verdicts": [
+    {
+      "id": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "kind": "item",
+      "verdict": "revise",
+      "required_changes": [
+        "Replace the summary sentence saying the order 'itself imposes no new requirement on companies' with: 'The order states it creates no rights or benefits enforceable at law or in equity; its operative paragraphs direct state agencies only.' The order does not say it imposes no requirement; that was the researcher's inference.",
+        "Replace the advice sentence 'Developers should watch the 16 November 2026 recommendations' with: 'The recommendations are due to the Governor by 16 November 2026.'"
+      ]
+    },
+    {
+      "id": "us-ca-eo-n-9-26-frontier-ai-oversight",
+      "kind": "instrument",
+      "verdict": "revise",
+      "required_changes": [
+        "Remove the 2026-11-16 timeline entry (a future deadline tagged in_force); the deadline is already in key_obligations.",
+        "Change the summary's 'imposes no direct obligations on companies' to: 'It states that it creates no enforceable rights, and its directives are addressed to state agencies.'"
+      ]
+    },
+    {
+      "id": "us-fed-eo-14434-super-intelligence-terminology",
+      "kind": "item",
+      "verdict": "revise",
+      "required_changes": [
+        "Delete the process notes from the summary ('The page excerpt read does not mention preemption... Federal Register citation was not found on the page.'). 'Page excerpt' suggests a partial read; the reviewer confirmed the claims against the full page, so high confidence can stay.",
+        "Change 'For implementation the terms mean...' to: 'The order defines the terms as the technologies and systems encompassed by ... 15 U.S.C. 9401(3).'",
+        "Add 'and other non-statutory documents' to the list of document types."
+      ]
+    },
+    {
+      "id": "us-eo-14434-inaugurating-era-of-super-intelligence",
+      "kind": "instrument",
+      "verdict": "accept",
+      "notes": "Name, EO number, date and status match the page; both key obligations match Sec. 2 and Sec. 3(b). Add the Federal Register citation in a later run once published."
+    },
+    {
+      "id": "us-ca-sb-1119-adams-law-companion-chatbots",
+      "kind": "item",
+      "verdict": "revise",
+      "required_changes": [
+        "Add https://sd18.senate.ca.gov/node/419 (Sen. Padilla's office, 31 Aug 2026) as a primary source; it names SB 1119 as Adam's Law. The Governor's release never does, and the package also contains SB 867 (companion chatbots in toys).",
+        "Reduce the claims about AB 1709 (autoplay and algorithmic feeds for under-16s), SB 1276 (persons under 18) and AB 1159 (K-12 pupil data in AI systems) to their official short titles, or drop them. The release describes provisions in unnumbered bullets, so bill-by-bill attribution was inferred. AB 302 and AB 2246 (feeds) and SB 1128 (pupils) are also in the package.",
+        "Add the sentence: 'The governor's release describes the package's provisions in unnumbered bullets; bill-by-bill attribution beyond SB 1119 was not verified.' Medium confidence is right."
+      ]
+    },
+    {
+      "id": "us-ca-sb-1119-adams-law",
+      "kind": "instrument",
+      "verdict": "revise",
+      "required_changes": [
+        "Cite the Padilla release (https://sd18.senate.ca.gov/node/419): the only cited source does not name SB 1119 as Adam's Law, so the link between the key_obligations and this bill rested on inference.",
+        "Optional: add a 2026-08-31 'passed' timeline entry ('Passed Senate 39-0 and Assembly 64-4, sent to the Governor', per the author's office).",
+        "Optional: add the private right of action and Attorney General-overseen incident reporting to key_obligations, only if the researcher re-reads that page."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "us-ca-sb-1119-adams-law",
+  "name": "California SB 1119 (Adam's Law): companion chatbot child safety",
+  "kind": "statute",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "status": "passed",
+  "summary": "California statute signed 10 September 2026 setting child safety requirements for companion chatbot operators, including crisis protocols, parental controls and independent audits. Described from the governor's release and Sen. Padilla's release only; operative dates not verified.",
+  "key_obligations": [
+    "Safety protocols including crisis protocols in the case of suicidal ideation",
+    "Parental controls and notifications when children disable safety features",
+    "Annual risk assessments and independent child safety audits (Padilla release: audit findings submitted to the Attorney General)",
+    "Incident reporting mechanism overseen by the Attorney General (per Padilla release)",
+    "Private right of action for families harmed by violations (per Padilla release)"
+  ],
+  "timeline": [
+    {
+      "date": "2026-08-31",
+      "stage": "passed",
+      "note": "Passed Senate 39-0 and Assembly 64-4 and sent to the Governor, per the author's office.",
+      "source_url": "https://sd18.senate.ca.gov/node/419"
+    },
+    {
+      "date": "2026-09-10",
+      "stage": "passed",
+      "note": "Governor announced signing of SB 1119 as part of a 13 bill child online safety package.",
+      "source_url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/"
+    }
+  ],
+  "last_verified": "2026-10-07T12:00:00Z"
+}

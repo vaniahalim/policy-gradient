@@ -1,0 +1,46 @@
+{
+  "id": "us-ca-sb-1119-adams-law-companion-chatbots",
+  "title": "California governor signs SB 1119 (Adam's Law) on companion chatbot child safety, as part of a 13-bill child online safety package",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "instrument_slug": "us-ca-sb-1119-adams-law",
+  "type": "law",
+  "stage": "passed",
+  "topics": [
+    "chatbots",
+    "child safety",
+    "audit",
+    "social media"
+  ],
+  "summary": "On 10 September 2026 the governor's office announced the signing of 13 child online safety bills. Per the release, SB 1119 (Padilla, Wicks, Bauer-Kahan), 'Companion chatbots: children's safety', requires protections around companion chatbots for children, including crisis protocols in the case of suicidal ideation, parental controls and notifications should a child disable safety settings, plus independent child safety audits and annual risk assessments. Sen. Padilla's office, in a release stating the bill passed on 31 August 2026 (Senate 39-0, Assembly 64-4), calls the bill Adam's Law. Other bills in the package, by their official short titles, include AB 1709 ('Covered platforms: age restriction: e-Safety Advisory Commission'), SB 1276 ('Crimes: sexual exploitation of a child') and AB 1159 ('Student personal information'). The governor's release describes the package's provisions in unnumbered bullets; bill-by-bill attribution beyond SB 1119 was not verified. Chaptered texts, chapter numbers and operative dates were not checked.",
+  "why_it_matters": "Companion chatbot operators serving California users should check the chaptered text for who is covered, audit timing and operative dates, which this item does not establish.",
+  "sources": [
+    {
+      "url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/",
+      "publisher": "Office of the Governor of California",
+      "tier": "primary",
+      "accessed_at": "2026-10-07T12:00:00Z"
+    },
+    {
+      "url": "https://sd18.senate.ca.gov/node/419",
+      "publisher": "Office of Senator Steve Padilla (California Senate District 18)",
+      "tier": "primary",
+      "accessed_at": "2026-10-07T12:00:00Z"
+    }
+  ],
+  "event_date": "2026-09-10",
+  "confidence": "medium",
+  "run_id": "2026-10-06-b",
+  "review": {
+    "verdict": "accept",
+    "reviewer_notes": "Second-round review. Re-fetched the gov.ca.gov release (dated Sep 10, 2026). It says 'Today, Governor Gavin Newsom ... signed', so event_date 2026-09-10 is correct. The release lists 13 bills, including SB 1119 (Padilla, Wicks, Bauer-Kahan) 'Companion chatbots: children's safety', AB 1709 'Covered platforms: age restriction: e-Safety Advisory Commission', SB 1276 'Crimes: sexual exploitation of a child' and AB 1159 'Student personal information'. All four titles and authors match the item. The provision bullets are unattributed checkmark bullets, as the item says. The chatbot bullet reads 'Named after Adam Raine, \"Adam's Law\" requires robust protections around companion chatbots for children, including crisis protocols in the case of suicidal ideation, parental controls, and notifications should a child disable safety settings', plus 'independent child safety audits and annual risk assessments'. That bullet names Adam's Law rather than SB 1119 by number. The Padilla release (sd18.senate.ca.gov/node/419, dated August 31, 2026, 'Today, California lawmakers passed Adam's Law (SB 1119)', Senate 39-0, Assembly 64-4, heading to the Governor) supplies the link to SB 1119, so the item's attribution holds across its two cited sources. Minor wording point: the governor's release also uses the name 'Adam's Law', not only Padilla's office. This is not an error. Stage 'passed' fits a signed bill whose operative date is unverified. Medium confidence is appropriate given only press releases were read, and the item states that limitation honestly. Tone is neutral, and why_it_matters makes no unsupported claims. Grep for SB 1119, Adam's Law and companion chatbot in content/items and content/instruments found nothing. The existing 30 Sept package item (us-ca-sept-2026-ai-bill-package-signed) is a different signing and does not list SB 1119.",
+    "checks": [
+      "claim_matches_source",
+      "date_correct",
+      "status_correct",
+      "source_tier_correct",
+      "not_duplicate",
+      "neutral_tone"
+    ]
+  }
+}

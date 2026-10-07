@@ -1,0 +1,20 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "europe",
+  "provenance_note": "Second-round review. The reviewer returned this verdict in full but could not save it because the disk was full (ENOSPC). The orchestrator recorded it verbatim from the reviewer's report once space was available. The verdict, checks, notes and required changes are the reviewer's, unedited.",
+  "verdicts": [
+    {
+      "id": "eu-copyright-ai-consultation-2026-09",
+      "kind": "item",
+      "verdict": "revise",
+      "checks": ["date_correct", "status_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Second-round review 2026-10-06. Re-fetched both sources. News page: 'Publication 29 September 2026' (event_date correct); 'The consultation remains open until 3 November 2026'; four areas quoted correctly and in order; stakeholder sentence includes 'generative AI providers and other relevant actors in the AI value chain'; builds on a call for evidence held earlier this year. All first-round fixes applied. EUSurvey page loads: title 'Targeted consultation on a potential initiative for a better copyright environment for European creativity and innovation'; sections include three on copyright and generative AI (including licensing/enforcement and AI-generated imitations of performers), piracy, sound recordings of non-EU nationals, and research; question text did not render, so the summary's caveat is accurate. Primary tier and medium confidence are appropriate. Not a duplicate: the only copyright hit is eu-gpai-code-of-practice.json, a different instrument. Tone is neutral. WRONG: (1) why_it_matters says 'as it applies to AI training'; 'training' appears in neither source, which say 'use of copyright-protected content in artificial intelligence' and 'generative AI'. This is an inferred narrowing, so claim_matches_source fails; the 'training data' topic has the same weaker problem. (2) gaps[0] still says the consultation document was not fetched, which contradicts the item. (3) Minor: 'feedback deadline' vs the page's 'remains open until'.",
+      "required_changes": [
+        "In why_it_matters, replace 'as it applies to AI training' with 'as it applies to the use of copyright-protected content in AI'.",
+        "Replace or drop the 'training data' topic unless source text mentioning training is cited.",
+        "Update gaps[0]: the EUSurvey page was fetched (title and section headings read, questions not rendered) and the Have Your Say page was not fetched.",
+        "Optional: change 'The page gives a feedback deadline of 3 November 2026' to 'The page states the consultation remains open until 3 November 2026'."
+      ]
+    }
+  ]
+}

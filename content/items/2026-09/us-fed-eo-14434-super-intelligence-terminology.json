@@ -1,0 +1,39 @@
+{
+  "id": "us-fed-eo-14434-super-intelligence-terminology",
+  "title": "Executive Order 14434 directs federal agencies to use 'Super Intelligence' in place of 'Artificial Intelligence'",
+  "jurisdiction": "us",
+  "subregion": "Federal",
+  "instrument_slug": "us-eo-14434-inaugurating-era-of-super-intelligence",
+  "type": "regulation",
+  "stage": "in_force",
+  "topics": [
+    "federal AI policy",
+    "terminology",
+    "statutory definition"
+  ],
+  "summary": "The White House page for Executive Order 14434, 'Inaugurating the Era of Super Intelligence', is dated 29 September 2026. It directs executive departments and agencies to use 'Super Intelligence' and 'SI' instead of 'Artificial Intelligence' and 'AI' in official correspondence, public communications, websites, reports, policy documents and other non-statutory documents, to the maximum extent permitted by law. Previously issued regulations, presidential actions, contracts, grants and historical documents need not be altered. The order defines the terms as the technologies and systems encompassed by the term 'artificial intelligence' as defined in 15 U.S.C. 9401(3). Within 60 days the Assistant to the President for Science and Technology is to submit to the President proposed legislative language for a federal definition of 'Super Intelligence' and 'SI', including an assessment of whether it should modify or supersede the existing statutory definition of 'artificial intelligence' and any conforming amendments to existing statutory references, as appropriate. The order does not address preemption of state law.",
+  "why_it_matters": "The order changes federal agency terminology and starts a 60 day process toward a statutory definition. It sets no obligations for private parties on its face. Existing statutes and rules keep their current wording unless Congress or later action amends them.",
+  "sources": [
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/",
+      "publisher": "The White House",
+      "tier": "primary",
+      "accessed_at": "2026-10-07T12:00:00Z"
+    }
+  ],
+  "event_date": "2026-09-29",
+  "confidence": "high",
+  "run_id": "2026-10-06-b",
+  "review": {
+    "verdict": "accept",
+    "reviewer_notes": "Re-fetched https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/ (several times, 2026-10-07). The page is headed 'Executive Order 14434' and its date line reads 'September 29, 2026', which matches event_date 2026-09-29. Sec. 2(a) reads: 'To the maximum extent permitted by law, executive departments and agencies (agencies) shall use \"Super Intelligence\" and \"SI\" in place of \"Artificial Intelligence\" and \"AI\" in official correspondence, public communications, websites, reports, policy documents, and other non-statutory documents within the executive branch.' The summary's list matches this. Sec. 2(b) (no required alteration of previously issued regulations, Presidential actions, contracts, grants or other historical documents) matches. Sec. 3(a) defines the terms by reference to 15 U.S.C. 9401(3), which matches. Sec. 3(b): within 60 days the APST, 'in consultation with the heads of other agencies as the APST deems appropriate, shall submit to the President proposed legislative language to establish a Federal definition'. The proposal shall include (i) an assessment of whether, and to what extent, the definition should 'modify, expand upon, or otherwise supersede' the existing statutory definition; (ii) 'any proposed conforming amendments, as appropriate, to existing statutory references to \"artificial intelligence\" and \"AI\"'; and (iii) recommendations for additional Presidential or executive action. The summary says the language goes 'to the President', which is correct. Its trailing 'as appropriate' directly follows the conforming-amendments clause, which is where the order puts it. The summary does not move the APST's 'deems appropriate' consultation qualifier. Minor non-misleading abbreviations: 'modify or supersede' omits 'expand upon' and 'to what extent', and clause (iii) is not mentioned. Because the summary uses 'including', these omissions are not misstatements. A second fetch found neither 'preemption' nor 'State law' on the page, so 'does not address preemption of state law' is supported by the text's silence. Sec. 4 contains the standard no-enforceable-rights clause, which supports 'no obligations for private parties on its face'. The stage in_force fits a signed EO with no delayed effective date. The White House is the issuing body, so the source is primary, and high confidence is justified because the full text was read. Grep of content/items and content/instruments found no 14434 or Super Intelligence entry. The tone is neutral.",
+    "checks": [
+      "claim_matches_source",
+      "date_correct",
+      "status_correct",
+      "source_tier_correct",
+      "not_duplicate",
+      "neutral_tone"
+    ]
+  }
+}

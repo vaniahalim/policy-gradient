@@ -1,0 +1,62 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "asia",
+  "window": { "from": "2026-09-06", "to": "2026-10-06" },
+  "candidates": [
+    {
+      "id": "cn-ai-safety-governance-framework-3-0-released",
+      "title": "China releases AI Safety Governance Framework 3.0",
+      "jurisdiction": "asia",
+      "subregion": "China",
+      "instrument_slug": "cn-ai-safety-governance-framework-3-0",
+      "type": "guidance",
+      "stage": "in_force",
+      "topics": ["ai safety", "risk classification", "governance framework"],
+      "summary": "The CAC website carries a notice dated 14 September 2026 that the AI Safety Governance Framework 3.0 was released at the opening of the 2026 National Cybersecurity Publicity Week. The page attributes the document to the National Cybersecurity Standardisation Technical Committee (TC260) under guidance from the CAC. It is organised around risk classification, technical response measures and comprehensive governance, and updates the risk classification and the response and governance measures relative to versions 1.0 and 2.0. The page does not state that the framework is legally binding. The Chinese page was read through a machine-translating fetch tool, so wording is paraphrased and the full framework text was not read.",
+      "why_it_matters": "The framework, drafted by China's national cybersecurity standards committee under CAC guidance, sets out a classification of AI safety risks and corresponding technical and governance measures. It is not stated to create legal obligations, so its practical effect depends on how later standards and enforcement draw on it.",
+      "sources": [
+        {
+          "url": "https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm",
+          "publisher": "Cyberspace Administration of China",
+          "tier": "primary",
+          "accessed_at": "2026-10-07T00:00:00Z"
+        }
+      ],
+      "event_date": "2026-09-14",
+      "confidence": "low",
+      "run_id": "2026-10-06-b"
+    }
+  ],
+  "instrument_candidates": [
+    {
+      "slug": "cn-ai-safety-governance-framework-3-0",
+      "name": "AI Safety Governance Framework 3.0 (人工智能安全治理框架3.0)",
+      "kind": "guidance",
+      "jurisdiction": "asia",
+      "subregion": "China",
+      "status": "in_force",
+      "summary": "Framework released on 14 September 2026 by the National Cybersecurity Standardisation Technical Committee (TC260) under the guidance of the Cyberspace Administration of China, succeeding versions 1.0 (2024) and 2.0 (2025). It keeps the structure of risk classification, technical response measures and comprehensive governance, with an updated risk classification and adjusted measures. The release notice does not state whether the framework is binding. This entry is based on the CAC release notice, read in machine translation; the full framework text has not been reviewed.",
+      "key_obligations": [
+        "Classifies AI safety risks (updated from version 2.0)",
+        "Sets out technical response measures and comprehensive governance measures for those risks"
+      ],
+      "timeline": [
+        {
+          "date": "2026-09-14",
+          "stage": "in_force",
+          "note": "Version 3.0 released at the opening of the 2026 National Cybersecurity Publicity Week, per the CAC notice.",
+          "source_url": "https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm"
+        }
+      ],
+      "last_verified": "2026-10-07T00:00:00Z"
+    }
+  ],
+  "gaps": [
+    "China: only the CAC notice for Framework 3.0 was read, via machine translation; the framework text and its changes versus 2.0 were not read. Item confidence set to low because the source was machine-translated.",
+    "China: CAC also posted generative AI service filing announcements on 2026-09-14 (July-August 2026) and 2026-09-23 (three on-device services); judged routine registry updates and not proposed as items. Not opened.",
+    "China: the Interim Measures for AI Anthropomorphic Interactive Services (published 2026-04-10, effective 2026-07-15) and the TC260 AI Agent Interaction Security practice guide consultation (2026-07-29 to 2026-08-12) fall outside the window and were seen only in search results or a secondary tracker; not verified from primary pages.",
+    "China: no check of the NPC, State Council or MIIT sites for the window beyond the CAC listing; draft AI law status not examined.",
+    "Singapore: nothing new found in the window. The IMDA press listing showed no AI items for September or early October 2026 (latest 2026-08-20, training programmes). MAS final AI Risk Management Guidelines not found as issued (only secondary results saying still pending); not verified from MAS. PDPC generative AI guidelines consultation (2026-06-02 to 2026-07-14) and IMDA chatbot transparency guidelines (2026-07-20) are outside the window and unverified from primary pages.",
+    "Singapore: the PDPC and AI Verify Foundation pages were not checked directly for the window."
+  ]
+}

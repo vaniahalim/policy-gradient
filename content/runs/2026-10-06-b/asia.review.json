@@ -1,0 +1,29 @@
+{
+  "run_id": "2026-10-06-b",
+  "region": "asia",
+  "verdicts": [
+    {
+      "id": "cn-ai-safety-governance-framework-3-0-released",
+      "kind": "item",
+      "verdict": "revise",
+      "checks": ["claim_matches_source", "date_correct", "status_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Re-fetched https://www.cac.gov.cn/2026-09/14/c_1791137092283345.htm (loads). Verified: title 《人工智能安全治理框架3.0》; dated 2026-09-14; released at the opening ceremony of the 2026 National Cybersecurity Publicity Week; drafted by TC260 (全国网络安全标准化技术委员会) under guidance of the Office of the Central Cyberspace Affairs Commission (CAC), with CAC's Data and Technology Protection Center also involved; keeps the core logic of risk classification, technical response and comprehensive governance, with updated risk classification and adjusted technical/governance measures; versions 1.0 (2024) and 2.0 (2025) preceded it. The page states no binding force, so the summary's 'does not state that it is legally binding' is accurate. event_date 2026-09-14 matches. Stage 'in_force' is the closest STAGES value for a published non-binding document; acceptable. Not a duplicate: grep of content/items, content/instruments and digests found no framework 1.0/2.0/3.0 entry; existing China instruments are the labeling measures, cybersecurity law amendment and generative AI interim measures. Tone is neutral. PROBLEM (source_tier/confidence): the source is primary, but the researcher states it was read only through machine translation, and the protocol's rubric puts any machine-translated source at 'low', not 'medium'. My own check was also via a translating fetch tool, so this cannot be raised to medium on my verification either. Minor: why_it_matters calls it 'a reference document for how Chinese regulators and standards bodies categorise AI risks', which the page does not say in those terms; this is a mild inference.",
+      "required_changes": [
+        "Change confidence from 'medium' to 'low' (protocol rubric: machine-translated source = low). Keep the existing sentence in the summary explaining the machine translation.",
+        "In why_it_matters, replace 'The framework is a reference document for how Chinese regulators and standards bodies categorise AI risks and expected technical and governance responses.' with 'The framework, drafted by China's national cybersecurity standards committee under CAC guidance, sets out a classification of AI safety risks and corresponding technical and governance measures.'"
+      ]
+    },
+    {
+      "id": "cn-ai-safety-governance-framework-3-0",
+      "kind": "instrument",
+      "verdict": "revise",
+      "checks": ["date_correct", "source_tier_correct", "not_duplicate", "neutral_tone"],
+      "reviewer_notes": "Timeline entry (2026-09-14, released at opening of 2026 National Cybersecurity Publicity Week, source CAC notice) verified against the re-fetched page. Name with Chinese title matches. kind 'guidance' is defensible: TC260 document under CAC guidance, no binding force stated. Not a duplicate of any existing instrument. PROBLEMS: (1) The public-facing summary contains internal process notes ('Read only via the CAC notice, through machine translation; the framework text itself was not read. Status in_force is used loosely...') and the awkward phrase 'Non-binding-as-presented'. These belong in gaps, not the published summary, or should be rephrased as a reader-facing caveat. (2) key_obligations entries say '(details not read)'; they are not obligations and describe content the researcher admits not reading. The source page supports only the high-level structure. (3) The page says versions 1.0 and 2.0 were released in 2024 and 2025; it is fine to mention, but the summary should not imply more about those versions than that. Status 'in_force' is the least-bad STAGES value for a published guidance document; keep it, but it does not need a meta-comment.",
+      "required_changes": [
+        "Rewrite summary to: 'Non-binding framework released on 14 September 2026 by the National Cybersecurity Standardisation Technical Committee (TC260) under the guidance of the Cyberspace Administration of China, succeeding versions 1.0 (2024) and 2.0 (2025). It keeps the structure of risk classification, technical response measures and comprehensive governance, with an updated risk classification and adjusted measures. This entry is based on the CAC release notice, read in machine translation; the full framework text has not been reviewed.'",
+        "Replace key_obligations with source-supported content only, e.g. ['Classifies AI safety risks (updated from version 2.0)', 'Sets out technical response measures and comprehensive governance measures for those risks'], removing the '(details not read)' wording.",
+        "Remove the sentence 'Status in_force is used loosely for a published guidance document.' from the summary."
+      ]
+    }
+  ]
+}
