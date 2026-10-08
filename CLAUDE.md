@@ -14,13 +14,13 @@ Guidance for Claude Code when working in this repository.
 - Schema, validator, content loader and link checker (`site/lib`, `site/scripts`), all tested.
 - Agent pipeline (`.claude/agents/`, `/research-run`) and two bootstrap runs. `content/` holds 15 reviewed instruments and 2 news items, each instrument carrying a verified `kind`.
 - Design tokens (`.planning/design/system/tokens.md`) and the home page built from them: the globe of paper sheets (instruments, timeline events and items). The design prototypes were removed once the real site superseded them. They are in git history at `7472fe1`.
-- Home page: the globe, region spin, detail panel, list view, info pop-ups. Static export builds.
+- Home page: the globe, region spin, detail panel, info pop-ups. (There is no list view: the Files page is the plain-HTML alternative to the globe.) Static export builds.
 - Accessibility basics: `lib/contrast.ts` and its test check every text/background pair in the tokens against WCAG AA (4.5:1). A skip link on every page. `SITE_URL` is validated by `lib/site-url.ts` and the build warns when it is unset.
-- A normal 30-day news run (`content/runs/2026-10-06-b/`): 6 news items and 19 instruments in all.
-- The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 34 static pages in all.
+- A normal 30-day news run (`content/runs/2026-10-06-b/`): 7 news items and 19 instruments in all.
+- The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 35 static pages in all.
 
 **Next, in order**
-1. Make sure the Methodology page's "a person approves every change" is true in practice. California EO N-9-26: its instrument is promoted, but its news item (in `content/runs/2026-10-06-b/us.json`) is not until a fresh reviewer accepts it.
+1. Make sure the Methodology page's "a person approves every change" is true in practice. The 2026-w41 digest lists the California EO N-9-26 instrument but not its news item; add a line for the item if you want it in the digest.
 2. Check the skip link and focus order by hand in a real browser (only the built HTML has been checked so far).
 3. Compare matrix and search, then deploy (static host, custom domain, `SITE_URL` set), then scheduled automation of the pipeline (Phase 5 in the spec).
 

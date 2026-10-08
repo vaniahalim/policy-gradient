@@ -4,12 +4,12 @@ import "./globe.css";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { regionCentres, REGION_ORDER } from "@/lib/globe";
-import { formatDate, stageLabel } from "@/lib/labels";
-import { INSTRUMENT_KIND_LABELS, type Instrument, type Item, type Jurisdiction } from "@/lib/schema";
+import { formatDate } from "@/lib/labels";
+import type { Instrument, Item, Jurisdiction } from "@/lib/schema";
 import { DetailPanel } from "./DetailPanel";
 import { NavInfo } from "./NavInfo";
 import { Sheet } from "./Sheet";
-import { buildSheetViews, viewStage, viewSubregion, viewTitle, type SheetView } from "./sheet-view";
+import { buildSheetViews, viewSubregion, viewTitle, type SheetView } from "./sheet-view";
 import { useGlobeMotion } from "./useGlobeMotion";
 
 const REGION_LABELS: Record<Jurisdiction, string> = { europe: "Europe", us: "US", asia: "Asia" };
@@ -25,7 +25,6 @@ export function GlobeHome({ instruments, items }: { instruments: Instrument[]; i
 
   const [region, setRegion] = useState<Region>("all");
   const [selected, setSelected] = useState<SheetView | null>(null);
-  const [listMode, setListMode] = useState(false);
 
   const opener = useRef<HTMLElement | null>(null);
   const hashApplied = useRef(false);
@@ -40,9 +39,9 @@ export function GlobeHome({ instruments, items }: { instruments: Instrument[]; i
     (view: SheetView, from: HTMLElement | null) => {
       opener.current = from;
       setSelected(view);
-      if (!listMode) spinTo(view.lon, view.lat, 900);
+      spinTo(view.lon, view.lat, 900);
     },
-    [listMode, spinTo],
+    [spinTo],
   );
 
   const close = useCallback(() => {
@@ -127,8 +126,7 @@ export function GlobeHome({ instruments, items }: { instruments: Instrument[]; i
           ref={stageRef}
           className={`stage${selected ? " has-panel" : ""}`}
           role="group"
-          aria-label="Globe of AI regulation files. Hover to turn it, drag to spin it, or use the list view."
-          style={{ visibility: listMode ? "hidden" : "visible" }}
+          aria-label="Globe of AI regulation files. Hover to turn it, drag to spin it, or open Files for the full archive."
           onPointerMove={onPointerMove}
           onPointerLeave={() => {
             handlers.onPointerLeave();
@@ -165,43 +163,10 @@ export function GlobeHome({ instruments, items }: { instruments: Instrument[]; i
           </div>
         </div>
 
-        <section className="list" hidden={!listMode} aria-label="All files">
-          {REGION_ORDER.map((r) => (
-            <div key={r}>
-              <h2>{REGION_LABELS[r]}</h2>
-              <ul>
-                {views
-                  .filter((v) => v.region === r && v.kind !== "event")
-                  .map((v) => (
-                    <li key={v.id}>
-                      <button type="button" onClick={(e) => open(v, e.currentTarget)}>
-                        <b>{viewTitle(v)}</b>
-                        <span>
-                          {viewSubregion(v)}. {v.kind === "instrument" ? `${INSTRUMENT_KIND_LABELS[v.instrument.kind]}. ` : ""}
-                          {stageLabel(viewStage(v))}.
-                        </span>
-                      </button>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          ))}
-        </section>
       </main>
 
       <p className="legal">A research tracker, not legal advice.</p>
-      <NavInfo>
-        <button
-          className="view"
-          type="button"
-          onClick={() => {
-            setListMode((m) => !m);
-            if (selected) close();
-          }}
-        >
-          {listMode ? "Globe view" : "List view"}
-        </button>
-      </NavInfo>
+      <NavInfo />
 
       <div ref={tagRef} className="tag" role="presentation">
         <b ref={tagTitle} />

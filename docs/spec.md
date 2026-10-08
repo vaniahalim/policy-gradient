@@ -18,7 +18,7 @@ Most trackers are link dumps. This one is **structured, sourced and independentl
 ## Views
 | View | Status | Notes |
 |---|---|---|
-| **Globe home** | Built | Every instrument, timeline event and news item is a sheet. Hover steers the globe, drag spins it, region buttons spin to a region, and a click opens a detail panel. A list view gives the same content as plain HTML. |
+| **Globe home** | Built | Every instrument, timeline event and news item is a sheet. Hover steers the globe, drag spins it, region buttons spin to a region, and a click opens a detail panel. The Files page gives the same content as plain, filterable HTML. |
 | **Files** | Built | Filterable archive (region, type, status), newest first. |
 | **Instrument pages** | Built | One per law or policy: status, type, obligations, timeline with sources, related news. This is the differentiator. |
 | **News item pages** | Built | Summary, why it matters, sources, confidence. |

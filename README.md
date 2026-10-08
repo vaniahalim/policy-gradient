@@ -36,7 +36,7 @@ The agent definitions are in [.claude/agents/](.claude/agents/), the orchestrati
 - **Next.js 16** (App Router), React 19, TypeScript and Tailwind CSS 4, exported as a fully static site
 - **Content as files in git**, with no database. Git history is the audit trail.
 - **Zod** schemas, so agent output must validate before it can enter the content
-- The globe is **plain CSS 3D**, so every sheet is real, accessible text. A list view shows the same content as ordinary HTML.
+- The globe is **plain CSS 3D**, so every sheet is real, accessible text. The Files page lists the same content as ordinary, filterable HTML.
 - **Node's built-in test runner** for the logic in `site/lib/`, written test-first
 
 ## Run it locally

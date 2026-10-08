@@ -13,7 +13,7 @@ const SECTIONS = [
  * The bottom navigation. Each section has an (i) button: hover or focus previews its explanation,
  * click or Enter pins it open, Escape or a click elsewhere closes it.
  */
-export function NavInfo({ children }: { children?: React.ReactNode }) {
+export function NavInfo() {
   const [pinned, setPinned] = useState<number | null>(null);
   const [preview, setPreview] = useState<number | null>(null);
   const shown = pinned ?? preview;
@@ -78,7 +78,6 @@ export function NavInfo({ children }: { children?: React.ReactNode }) {
           </div>
         </div>
       ))}
-      {children}
     </div>
   );
 }
