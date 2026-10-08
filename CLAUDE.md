@@ -20,9 +20,10 @@ Guidance for Claude Code when working in this repository.
 - The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 35 static pages in all.
 
 **Next, in order**
-1. Make sure the Methodology page's "a person approves every change" is true in practice. The 2026-w41 digest lists the California EO N-9-26 instrument but not its news item; add a line for the item if you want it in the digest.
-2. Check the skip link and focus order by hand in a real browser (only the built HTML has been checked so far).
-3. Compare matrix and search, then deploy (static host, custom domain, `SITE_URL` set), then scheduled automation of the pipeline (Phase 5 in the spec).
+1. Live at https://policy-gradient.vercel.app (Vercel, production branch `main`). Make sure `SITE_URL` is set there to that address and the site redeployed, so the RSS feed does not link to localhost. Check `/digest/feed.xml`.
+2. The 2026-w41 digest lists the California EO N-9-26 instrument but not its news item; add a line for the item if you want it in the digest.
+3. Before scheduled automation (Phase 5): protect `main` on GitHub (require a pull request), so "a person approves every change" stays true when the pipeline runs without you.
+4. Compare matrix and search. Later, a real domain (see "Hosting and portability").
 
 ## Key decisions
 
@@ -70,7 +71,7 @@ The site is a plain static export, so any host that runs `npm run build` in `sit
 
 - Host settings: root directory `site`, build command `npm run build`, output directory `out`, env vars `SITE_URL` (the custom domain) and `NODE_VERSION` (Next 16 needs Node 20.9+).
 - **No host-specific code or config.** No `vercel.json`, `@vercel/*` packages, Vercel Analytics, Speed Insights, KV or Blob, `next/image` optimisation (static export needs `images.unoptimized`), or Next features that need a server. Same for Cloudflare- or Netlify-only files unless the user has chosen that host.
-- **Use the custom domain everywhere permanent.** `SITE_URL`, the RSS feed and any links must never point at a `*.vercel.app` or `*.pages.dev` URL, or they break on a move. Register the domain with a registrar the user controls, not through the host.
+- **Start on the host's free address, plan for a real domain.** The site launches at a free `*.vercel.app` address (project name `policy-gradient` if free). Set `SITE_URL` to exactly that address, and use it for the RSS feed and every absolute link, never a per-deployment preview URL. Moving to your own domain later is the expected change: update `SITE_URL`, add the domain in the host, and expect RSS subscribers and bookmarks on the old address to be lost, so keep that period short. Register any future domain with a registrar you control, not through the host.
 - Preview URLs are public. Do not put anything unpublished in a branch that a host auto-deploys.
 - Content stays in git (about 340 KB). No database or object storage until it outgrows that.
 - Delete `site/node_modules`, `site/.next` and `site/out` to free disk space. `npm install` and `npm run build` restore them.

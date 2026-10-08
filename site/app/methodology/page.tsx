@@ -39,7 +39,7 @@ export default function MethodologyPage() {
         <ol>
           <li>A research agent for each region searches for developments and reads the primary sources: official journals, legislature pages and regulator publications. The regions are researched independently, so one cannot anchor on another&rsquo;s findings.</li>
           <li>A separate reviewer agent, starting fresh, re-fetches every source the researcher cited. It checks that the claim matches the source, that dates and status are right, that the source is what it is labelled as, that nothing is a duplicate and that the tone is neutral. It answers accept, revise or reject.</li>
-          <li>Anything marked revise goes back to the researcher and is reviewed again, up to three more times. Anything not accepted by then is not published.</li>
+          <li>Anything marked revise goes back to the researcher and is reviewed again by a fresh reviewer, normally up to three more times. The site owner can allow further rounds. Anything not accepted is not published.</li>
           <li>An editor agent merges the accepted material, links news to the laws it concerns and drafts the weekly digest.</li>
           <li>Automated checks run. The data has to match its schema, nothing can be duplicated, and every cited link is checked to be live.</li>
           <li>The pipeline is designed so that a person reads the changes and approves them before they are published.</li>
