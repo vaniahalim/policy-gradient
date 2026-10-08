@@ -1,0 +1,46 @@
+{
+  "id": "us-ca-eo-n-9-26-frontier-ai-oversight",
+  "title": "California Executive Order N-9-26 sets deadlines for independent verification rules and seeks recommendations on a frontier-model kill switch and loss-of-control incident reporting",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "instrument_slug": "us-ca-eo-n-9-26-frontier-ai-oversight",
+  "type": "regulation",
+  "stage": "in_force",
+  "topics": [
+    "frontier model safety",
+    "third-party audit",
+    "incident reporting",
+    "kill switch"
+  ],
+  "summary": "Governor Newsom signed Executive Order N-9-26 on 18 September 2026, effective immediately. It sets deadlines for the Government Operations Agency to complete the requirements of Government Code section 8898.1 and to develop and publicly post application requirements, procedures and criteria for independent verification organizations (by 1 May 2027), and to complete section 11549.82(a) and begin the actions required by 11549.82(b) (by 1 December 2027). It also directs the Government Operations Agency, in consultation with the Governor's Office of Emergency Services, to submit recommendations to the Governor's office by 16 November 2026, developed in consultation with national experts, on the technical feasibility and potential efficacy of amendments to existing state AI safety and security laws, covering at least: embedding independent verification organizations onsite at large frontier developers; independent verification of required safety frameworks, transparency reports and risk assessments; a 'kill switch' for frontier models whose efficacy is verified on an ongoing basis by an independent verification organization; and updating the definition of critical safety incidents to include a range of loss-of-control incidents. The order states that it does not create any rights or benefits enforceable at law or in equity; its directives are addressed to state agencies.",
+  "why_it_matters": "The order does not change obligations for frontier developers today. It signals the content of possible amendments to California's existing AI safety and security laws and sets deadlines for the Government Operations Agency to implement Gov. Code 8898.1 and to complete and begin actions under Gov. Code 11549.82. The recommendations are due to the Governor by 16 November 2026.",
+  "sources": [
+    {
+      "url": "https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf",
+      "publisher": "Office of the Governor of California",
+      "tier": "primary",
+      "accessed_at": "2026-10-06T12:00:00Z"
+    },
+    {
+      "url": "https://www.gov.ca.gov/2026/09/23/governor-newsom-announces-world-leading-experts-to-deliver-on-his-ai-executive-order-including-advancing-creation-of-a-kill-switch/",
+      "publisher": "Office of the Governor of California",
+      "tier": "primary",
+      "accessed_at": "2026-10-06T12:00:00Z"
+    }
+  ],
+  "event_date": "2026-09-18",
+  "confidence": "high",
+  "run_id": "2026-10-06-b",
+  "review": {
+    "verdict": "accept",
+    "reviewer_notes": "Seventh review, done fresh: I did not rely on earlier review files and checked the item as it now stands in us.json. On 2026-10-08 I re-fetched both cited URLs. SOURCE 1, the signed order PDF (gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf). I read all 3 pages in full: 12 WHEREAS clauses, the operative paragraphs 1 to 3 (with 3a to 3d), the filing direction, the no-rights clause and the attestation. DATE AND STATUS: the order says 'do hereby issue the following Order to become effective immediately' and is sealed 'this 18th day of September 2026'. So event_date 2026-09-18, 'effective immediately' and stage in_force are correct. GOV. CODE 8898.1, para 1: 'No later than May 1, 2027, the Government Operations Agency shall complete the requirements of Section 8898.1 of the Government Code and develop application requirements, procedures, and criteria for independent verification organizations and publicly post them, as required by law.' The summary matches this, with the right agency and the right date. GOV. CODE 11549.82, para 2: 'No later than December 1, 2027, the Government Operations Agency shall complete the requirements of subdivision (a) of Section 11549.82 of the Government Code and begin taking the actions required by subdivision (b) of that Section.' The summary's 'complete section 11549.82(a) and begin the actions required by 11549.82(b) (by 1 December 2027)' keeps the key distinction: complete (a), only begin (b). why_it_matters' 'to complete and begin actions under Gov. Code 11549.82' is shorthand for the same thing and does not overstate it. WHO SUBMITS WHAT TO WHOM, para 3: 'The Government Operations Agency, in consultation with the Governor's Office of Emergency Services, shall, no later than November 16, 2026, submit to my office recommendations, developed in consultation with national experts, addressing the technical feasibility and potential efficacy of amendments to existing state laws regarding AI safety and security, including at least the following'. The summary gets all of this right: GovOps is the submitter, Cal OES is consulted rather than co-submitting, the recipient is the Governor's office, the deadline is 16 Nov 2026, national experts are consulted, and the framing is feasibility and efficacy. RECOMMENDATION TOPICS 3a to 3d: (a) embed designated IVOs onsite at all large frontier developers; (b) independent verification of the safety frameworks, transparency reports and risk assessments that companies must file; (c) 'Requiring the creation of a \"kill switch\" for frontier models, with the efficacy of the switch verified on an ongoing basis by an independent verification organization'; (d) update the definition of the critical safety incidents companies must report, to include a range of loss-of-control incidents. The summary lists all four, and only as topics the recommendations must cover ('covering at least'). It never presents them as requirements the order imposes. The title ('seeks recommendations on a frontier-model kill switch and loss-of-control incident reporting') also treats them only as recommendation topics, and 'sets deadlines for independent verification rules' is supported by para 1. The closing no-rights sentence matches the order. 'Its directives are addressed to state agencies' is a fair description: the only commands go to GovOps, plus a direction that the order be filed with the Secretary of State. WHY_IT_MATTERS: 'does not change obligations for frontier developers today' is supported. No operative paragraph addresses private parties, and the amendments are only being assessed for feasibility. 'Signals the content of possible amendments' is hedged and is consistent with the order's final WHEREAS ('develop a roadmap for further strengthening our nation-leading laws'). SOURCE 2, the gov.ca.gov release of 23 Sept 2026: it refers to the governor's recent AI executive order without giving its date. It says the order directs GovOps to accelerate SB 813 / AB 1405 implementation and to develop recommendations on the same four topics, sent to the Governor with Cal OES consultation. It names experts (Goldman, Hadfield, Nelson, Reich). The release says the order would 'advance the creation of a kill switch'. That wording is stronger than the order's, and the item correctly does not adopt it. No claim in the item depends only on the release. TIER AND CONFIDENCE: both URLs are the Governor's office, the issuing body, so primary is correct. Confidence high fits the rubric, since the primary text was read in full and its date and status match. TYPE: 'regulation' is the nearest ITEM_TYPES value, since there is no executive-order item type. DUPLICATES: I searched content/ outside runs/ for N-9-26 and 'kill switch' (case-insensitive). Only content/instruments/us-ca-eo-n-9-26-frontier-ai-oversight.json (the matching instrument, which instrument_slug resolves to) and a digest link turned up. No item in content/items/ covers this order, and the candidate file has no other entry for it. TONE: neutral. The order's partisan WHEREAS language ('failure of leadership by the President and Congressional leaders') and its unverified incident claims (bioweapon attempts, AI agents defeating security protocols) are not repeated. OPTIONAL POLISH, NOT BLOCKING: (1) 'complete section 11549.82(a)' could read 'complete the requirements of subdivision (a) of section 11549.82' to mirror the order exactly. (2) Topic (d) in the order adds 'covering recently reported incidents from large frontier developers'; the summary omits this, which is acceptable. I did not fetch the text of Gov. Code 8898.1 or 11549.82 themselves. The item correctly describes them only by reference, as the order does, and asserts nothing about what they contain.",
+    "checks": [
+      "claim_matches_source",
+      "date_correct",
+      "status_correct",
+      "source_tier_correct",
+      "not_duplicate",
+      "neutral_tone"
+    ]
+  }
+}

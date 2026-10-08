@@ -1,0 +1,23 @@
+{
+  "slug": "us-ca-eo-n-9-26-frontier-ai-oversight",
+  "name": "California Executive Order N-9-26 (frontier AI independent oversight and kill switch recommendations)",
+  "kind": "executive_order",
+  "jurisdiction": "us",
+  "subregion": "California",
+  "status": "in_force",
+  "summary": "Gubernatorial order of 18 September 2026 that directs the Government Operations Agency to complete the requirements of Gov. Code 8898.1 and to develop and publicly post application requirements, procedures and criteria for independent verification organizations, as required by law, by 1 May 2027, and to complete subdivision (a) of Gov. Code 11549.82 and begin the actions required by subdivision (b) by 1 December 2027, and directs the Government Operations Agency, in consultation with the Governor's Office of Emergency Services, to submit recommendations to the Governor's office by 16 November 2026 on the technical feasibility and potential efficacy of amendments to state AI safety and security law. It states that it creates no enforceable rights; its directives are addressed to state agencies.",
+  "key_obligations": [
+    "Government Operations Agency to complete the requirements of Gov. Code 8898.1 and develop and publicly post application requirements, procedures and criteria for independent verification organizations, by 1 May 2027",
+    "Government Operations Agency to complete Gov. Code 11549.82(a) and begin 11549.82(b) actions by 1 December 2027",
+    "Government Operations Agency, in consultation with Cal OES, to submit recommendations to the Governor's office by 16 November 2026 covering at least: onsite independent verification organizations at large frontier developers; independent verification of required safety frameworks, transparency reports and risk assessments; a kill switch for frontier models verified by an independent verification organization; and updating the definition of critical safety incidents to include a range of loss-of-control incidents"
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-18",
+      "stage": "in_force",
+      "note": "Order signed and effective immediately.",
+      "source_url": "https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf"
+    }
+  ],
+  "last_verified": "2026-10-06T12:00:00Z"
+}
