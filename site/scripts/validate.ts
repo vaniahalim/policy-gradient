@@ -2,7 +2,9 @@ import { readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { ItemSchema, InstrumentSchema } from "../lib/schema";
 import { jsonFiles } from "../lib/content";
-import { blocksAutomatedFetches } from "../lib/links";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import { blocksAutomatedFetches, curlArgs, curlStatus, isCertificateError } from "../lib/links";
 import { brokenDigestLinks, loadDigests } from "../lib/digest";
 
 const CONTENT_DIR = resolve(__dirname, "../../content");
@@ -78,7 +80,21 @@ async function liveness(url: string): Promise<string | null> {
     });
     return res.ok ? null : `HTTP ${res.status}`;
   } catch (e) {
+    // Node could not verify the certificate chain, but a browser or curl may be able to. Retry with curl,
+    // which keeps certificate checking on, so a page that is up is not reported as dead.
+    if (isCertificateError(e)) return viaCurl(url);
     return e instanceof Error ? e.message : "request failed";
+  }
+}
+
+const run = promisify(execFile);
+
+async function viaCurl(url: string): Promise<string | null> {
+  try {
+    const { stdout } = await run("curl", curlArgs(url), { timeout: 30_000 });
+    return curlStatus(stdout);
+  } catch (e) {
+    return `certificate chain could not be verified, and the curl retry failed (${e instanceof Error ? e.message.split("\n")[0] : "error"})`;
   }
 }
 
