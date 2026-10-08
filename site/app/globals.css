@@ -11,7 +11,7 @@
   --ink-soft: #5a4a3a;
   --oxblood: #8a2a1d;
   --pen: #274a73;
-  --brass: #7a5a14;
+  --brass: #70520f;
   --brass-fill: #b58a2e;
   --on-desk: #eadfc4;
 
@@ -55,6 +55,15 @@ button {
   outline: 3px solid var(--brass-fill);
   outline-offset: 3px;
 }
+
+/* Skip link: off-screen until a keyboard user tabs to it. */
+.skip-link {
+  position: fixed; left: 16px; top: -120px; z-index: 20; padding: 12px 18px; border-radius: 999px;
+  background: var(--paper); color: var(--ink); font: 800 15px / 1 var(--display); font-stretch: 112%; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+/* Skip targets take focus only from a skip link, so they need no ring of their own. */
+#site-nav:focus, #main:focus { outline: none; }
 
 /* The home page is a fixed stage. Every other page scrolls. */
 body:has(.stage) {

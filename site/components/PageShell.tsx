@@ -12,6 +12,11 @@ const NAV = [
 export function PageShell({ current, children }: { current?: (typeof NAV)[number]["key"]; children: React.ReactNode }) {
   return (
     <div className="pg">
+      {/* Clicking the bare desk around the sheet goes back to the globe. Keyboard and screen-reader users have the × and the nav. */}
+      <Link className="pg-backdrop" href="/" aria-hidden="true" tabIndex={-1} />
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <header className="pg-head">
         <Link className="pg-mark" href="/">
           Policy Gradient
@@ -24,7 +29,14 @@ export function PageShell({ current, children }: { current?: (typeof NAV)[number
           ))}
         </nav>
       </header>
-      <main className="pg-sheet">{children}</main>
+      <main className="pg-sheet">
+        <Link className="pg-close" href="/" aria-label="Close and return to the globe">
+          ×
+        </Link>
+        <div id="main" tabIndex={-1}>
+          {children}
+        </div>
+      </main>
       <p className="pg-foot">A research tracker, not legal advice. Each file records what its sources said on the date it was last verified.</p>
     </div>
   );

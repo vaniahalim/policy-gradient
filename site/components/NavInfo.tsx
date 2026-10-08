@@ -43,7 +43,7 @@ export function NavInfo({ children }: { children?: React.ReactNode }) {
   }, [pinned]);
 
   return (
-    <div className="bottom">
+    <div className="bottom" id="site-nav" tabIndex={-1}>
       {SECTIONS.map((s, i) => (
         <div className="navitem" key={s.href}>
           <Link href={s.href}>{s.label}</Link>

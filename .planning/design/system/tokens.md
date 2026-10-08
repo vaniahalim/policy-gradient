@@ -14,11 +14,11 @@ Direction (user-set, 2026-10-06): a globe made of paper documents; bold type; wa
 | Ink, soft | --color-ink-soft | #5a4a3a | Secondary text on paper |
 | Oxblood | --color-oxblood | #8a2a1d | "In force" stamp, seal, focus ring on paper |
 | Legal-pen blue | --color-pen | #274a73 | "Proposed" and "Consultation" stamps |
-| Brass (text) | --color-brass | #7a5a14 | "Passed" and "Amended" stamps (text on paper) |
+| Brass (text) | --color-brass | #70520f | "Passed" and "Amended" stamps (text on paper) |
 | Brass (fill) | --color-brass-fill | #b58a2e | Fills only, with ink text on top |
 | Text on desk | --color-on-desk | #eadfc4 | Text over walnut |
 
-Contrast checks (approx.): ink on paper 12:1; oxblood on paper 6:1; pen blue on paper 7:1; brass text on paper 4.9:1; paper on walnut 10:1. Re-verify with a tool before launch.
+Contrast checks (approx.): ink on paper 12:1; oxblood on paper 6:1; pen blue on paper 7:1; brass text on paper 5.5:1 (4.7:1 on aged paper); paper on walnut 10:1. Re-verify with a tool before launch.
 
 ## Typography
 - Display: Archivo, width axis 125 (extended), weight 800. Wordmark, sheet titles, nav, stamps.

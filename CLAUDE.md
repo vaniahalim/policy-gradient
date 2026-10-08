@@ -15,12 +15,14 @@ Guidance for Claude Code when working in this repository.
 - Agent pipeline (`.claude/agents/`, `/research-run`) and two bootstrap runs. `content/` holds 15 reviewed instruments and 2 news items, each instrument carrying a verified `kind`.
 - Design tokens (`.planning/design/system/tokens.md`) and the home page built from them: the globe of paper sheets (instruments, timeline events and items). The design prototypes were removed once the real site superseded them. They are in git history at `7472fe1`.
 - Home page: the globe, region spin, detail panel, list view, info pop-ups. Static export builds.
-- The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 26 static pages in all.
+- Accessibility basics: `lib/contrast.ts` and its test check every text/background pair in the tokens against WCAG AA (4.5:1). A skip link on every page. `SITE_URL` is validated by `lib/site-url.ts` and the build warns when it is unset.
+- A normal 30-day news run (`content/runs/2026-10-06-b/`): 6 news items and 19 instruments in all.
+- The pages the nav links to: Files (filterable archive), one page per instrument (`/instruments/<slug>/`) and per news item (`/items/<id>/`), Methodology, and the Digest with an RSS feed (`/digest/feed.xml`). 34 static pages in all.
 
 **Next, in order**
-1. A normal (non-bootstrap) 30-day news run. Only 2 items exist, so the archive and digest are thin.
-2. Before publishing: set `SITE_URL` for the build (RSS links must be absolute), measure colour contrast, add a skip link past the 47 sheet tab stops, and make sure the Methodology page's "a person approves every change" is true in practice.
-3. Compare matrix and search, then deploy (static host, custom domain), then scheduled automation of the pipeline (Phase 5 in the spec).
+1. Make sure the Methodology page's "a person approves every change" is true in practice. California EO N-9-26: its instrument is promoted, but its news item (in `content/runs/2026-10-06-b/us.json`) is not until a fresh reviewer accepts it.
+2. Check the skip link and focus order by hand in a real browser (only the built HTML has been checked so far).
+3. Compare matrix and search, then deploy (static host, custom domain, `SITE_URL` set), then scheduled automation of the pipeline (Phase 5 in the spec).
 
 ## Key decisions
 
@@ -88,6 +90,7 @@ The site is a plain static export, so any host that runs `npm run build` in `sit
 - **Design tokens are binding** (`.planning/design/system/tokens.md`, mirrored as CSS variables in `app/globals.css`). Use variables, not raw hex. No default fonts or Tailwind colours.
 - **TDD for anything in `site/lib/`.** UI is checked with real screenshots: serve `site/out/` with `python3 -m http.server` and drive headless Google Chrome (`--screenshot`, `--virtual-time-budget`).
 - **Format dates with `lib/labels.ts`, never `Intl`.** The server and the browser disagree on month abbreviations and cause hydration mismatches.
+- **Document pages close back to the globe two ways** (`PageShell`): the × in the sheet corner, and a fixed `.pg-backdrop` link behind the page, so a click on the bare desk goes home. That is why `.pg` and `.pg-head` are `pointer-events: none`. Any new element placed directly in `.pg` needs `pointer-events: auto` to be clickable.
 - **The globe turns via DOM refs, not React state** (`useGlobeMotion`), so nothing re-renders per frame. Keep it that way.
 
 ## Gotchas that cost time

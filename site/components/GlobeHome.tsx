@@ -102,6 +102,9 @@ export function GlobeHome({ instruments, items }: { instruments: Instrument[]; i
 
   return (
     <>
+      <a className="skip-link" href="#site-nav">
+        Skip the sheets, go to the site menu
+      </a>
       <Link className="wordmark" href="/" aria-label="Policy Gradient, home">
         Policy
         <br />
