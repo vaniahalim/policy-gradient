@@ -4,8 +4,9 @@ import { resolveSiteUrl } from "@/lib/site-url";
 
 export const dynamic = "force-static";
 
-// Set SITE_URL when deploying (for example https://policygradient.example). RSS links must be absolute.
-const { url: SITE_URL, isDefault } = resolveSiteUrl(process.env.SITE_URL);
+// RSS links must be absolute. SITE_URL (for example https://policygradient.example) wins. If it is unset, Vercel's own
+// production address is the safety net. Other hosts need SITE_URL.
+const { url: SITE_URL, isDefault } = resolveSiteUrl(process.env.SITE_URL, process.env.VERCEL_PROJECT_PRODUCTION_URL);
 if (isDefault) console.warn("SITE_URL is not set: the RSS feed links to http://localhost:3000. Set it for a deployed build.");
 
 export function GET() {

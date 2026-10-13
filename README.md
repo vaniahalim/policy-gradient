@@ -57,7 +57,7 @@ npm run build           # static export to site/out/
 npm run preview         # serve the export on http://localhost:4173
 ```
 
-For a deployed build, set `SITE_URL` (for example `SITE_URL=https://example.org npm run build`) so the RSS feed has absolute links.
+For a deployed build, set `SITE_URL` (for example `SITE_URL=https://example.org npm run build`) so the RSS feed has absolute links. On Vercel it is optional: if unset, the build uses Vercel's own production address.
 
 ## Project layout
 
